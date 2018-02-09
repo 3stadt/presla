@@ -4,3 +4,4 @@
 /release
 /*.zip
 /*.tar.gz
+/access.log
