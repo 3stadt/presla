@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1993.3845"
+   height="396.25525"
+   viewBox="0 0 527.4163 104.84254"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   sodipodi:docname="presla-logo.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-3.7748749"
+     inkscape:cy="-39.563489"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1025"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-nc/4.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-nc/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:prohibits
+           rdf:resource="http://creativecommons.org/ns#CommercialUse" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-0.41579356,-192.03599)">
+    <path
+       id="path3747"
+       d="m 50.606622,192.03599 c -3.312577,0 -7.076939,1.45537 -9.285325,5.27011 -2.40916,4.01522 -3.136992,9.13463 -1.12908,13.5514 0,0.40216 -0.87868,-0.37637 -0.87868,1.63125 -0.402159,2.00761 0.828599,4.81832 1.631097,6.02297 0.40216,0.40217 1.229242,0.85288 1.631248,1.25505 0,0 0.8286,3.56358 3.638858,6.7757 0.402159,2.40916 -2.384121,4.01536 -2.384121,4.01536 -8.030435,1.20497 -15.33319,5.24491 -16.9394,9.66168 h 51.445718 c -1.606208,-4.41707 -8.908964,-8.45747 -16.939399,-9.66197 0,0 -3.613817,-0.8028 -2.00776,-4.01538 2.00776,-2.40916 3.237304,-5.59624 3.638857,-6.39934 0,0 3.262497,-2.43419 3.262497,-5.64646 0,-3.61368 -0.878679,-3.63886 -0.878679,-3.63886 1.20496,-3.61367 1.606056,-17.16523 -8.030588,-15.55916 -0.602481,-1.80683 -3.463122,-3.26235 -6.775699,-3.26235 z m 40.152632,32.1222 c -3.326387,0 -6.022826,2.69645 -6.022826,6.02282 0,3.32639 2.696439,6.02299 6.022826,6.02299 1.14274,0 2.226293,-0.32477 3.136993,-0.87868 0.55847,0.67228 1.000087,1.35672 1.380999,2.13311 0.861987,1.75827 1.238347,3.98152 1.381,6.7757 H 4.4310108 c -2.4091607,3.1e-4 -4.01521724,1.60651 -4.01521724,4.01567 v 8.03044 l 8.03043574,12.04581 h 9.2853227 l -1.631096,-9.6617 c -0.40216,-1.20496 0.8028,-2.38411 2.007608,-2.38411 h 69.012333 c 1.20496,0 2.409161,1.17915 2.007609,2.38411 l -1.631097,9.6617 h 9.285323 l 8.030438,-12.04581 v -8.03044 c 0,-2.40916 -1.60607,-4.01536 -4.01523,-4.01536 h -0.12141 c -0.1639,-3.27738 -0.678347,-6.07686 -1.882087,-8.53246 -0.619177,-1.26414 -1.434118,-2.44588 -2.384125,-3.51335 0.215496,-0.61917 0.376361,-1.31424 0.376361,-2.00762 0,-3.32637 -2.696592,-6.02282 -6.022979,-6.02282 z m -67.8831,36.13743 c -1.20496,0 -2.007609,1.17915 -2.007609,2.38395 l 4.893595,33.75345 h 53.327821 l 5.269955,-33.75345 c 0.40216,-1.20495 -0.802802,-2.38395 -2.007609,-2.38395 z"
+       inkscape:connector-curvature="0"
+       style="stroke-width:4.01526833" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3758"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(1.4939538,0,0,1.4939538,-490.55123,161.99935)"><flowRegion
+         id="flowRegion3760"><rect
+           id="rect3762"
+           width="872.14288"
+           height="390"
+           x="402.85715"
+           y="4.2857137" /></flowRegion><flowPara
+         id="flowPara3764"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans'">PresLa</flowPara></flowRoot>  </g>
+</svg>

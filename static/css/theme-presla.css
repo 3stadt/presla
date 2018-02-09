@@ -1,0 +1,173 @@
+body {
+    font-family: sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: sans-serif;
+}
+
+/** image styles **/
+
+.cover {
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.remark-code, .remark-inline-code {
+    font-family: monospace;
+    text-align: left;
+}
+
+.leftalign {
+    text-align: left;
+}
+
+/* Two-column layout */
+.left-column {
+    width: 30%;
+    float: left;
+}
+
+.right-column {
+    width: 65%;
+    float: right;
+    padding-top: 1em;
+}
+
+/* Single centered columns */
+.single-center-column-fit {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.single-center-column-10 {
+    width: 10%;
+    margin: 0 auto;
+}
+
+.single-center-column-20 {
+    width: 20%;
+    margin: 0 auto;
+}
+
+.single-center-column-30 {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.single-center-column-40 {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.single-center-column-50 {
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* make hr fancy */
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+/* make lists fancy */
+
+ul > li {
+    list-style: none;
+    font-size: 1.45rem;
+}
+
+ul > li:before {
+    content: "\0BB \020";
+}
+
+li > p {
+    display: inline;
+}
+
+/* used in partial list to condense them */
+
+.pullup, .pullup1 {
+    margin-top: -1em
+}
+
+.pullup2 {
+    margin-top: -2em
+}
+
+.pullup3 {
+    margin-top: -3em
+}
+
+.pullup4 {
+    margin-top: -4em
+}
+
+/* style blockquote as note */
+
+blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+}
+
+blockquote p {
+    display: inline;
+}
+
+/* show shopware footer */
+
+.remark-slide-content.footer:after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 2.26rem;
+    /*max-height: 2.26rem;*/
+    width: 100%;
+
+    content: "";
+    text-align: left;
+    vertical-align: middle;
+    padding-top: 0.3rem;
+
+    background-image: url(/static/internal/img/presla-logo-white.svg), url(/svg/footer-text.svg);
+    background-color: #199eff;
+    background-repeat: no-repeat;
+    background-size: auto 2.26rem, auto 2.26rem;
+    background-position: center center, left center;
+}
+
+/* show slide numbers in footer */
+.remark-slide-number {
+    z-index: 50;
+    font-family: sans-serif;
+    font-size: 0.5em;
+    bottom: 0.8em;
+    right: 0.8em;
+    color: white;
+    opacity: initial;
+}
+
+/* Animations */
+.remark-fading {
+    z-index: 9;
+}
+
+.remark-slide-container {
+    transition: opacity 0.25s linear;
+    opacity: 0;
+}
+
+.remark-visible {
+    transition: opacity 0.25s linear;
+    opacity: 1;
+}
+
+.remark-preview-area > .remark-slide-container { /* fix preview visibility */
+    transition: none;
+    opacity: 1;
+}

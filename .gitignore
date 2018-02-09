@@ -1,0 +1,6 @@
+/.idea
+/presla.toml
+/vendor
+/release
+/*.zip
+/*.tar.gz

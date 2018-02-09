@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>[{{ .Title }}]</title>
+
+    <link rel="stylesheet" href="/static/internal/css/theme-presla.css">
+</head>
+<body>
+
+<textarea id="source"></textarea>
+
+<script src="/static/internal/js/remark-latest.min.js"></script>
+<script type="text/javascript">
+    var pres = "{{ .Pres }}";
+</script>
+<script src="/static/internal/js/remark-loader.js"></script>
+</body>
+</html>
