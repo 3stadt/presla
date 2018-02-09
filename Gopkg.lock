@@ -48,6 +48,21 @@
 
 [[projects]]
   branch = "master"
+  name = "github.com/robertkrimen/otto"
+  packages = [
+    ".",
+    "ast",
+    "dbg",
+    "file",
+    "parser",
+    "registry",
+    "token",
+    "underscore"
+  ]
+  revision = "3b44b4dcb6c00477273595c312908e2412d07da6"
+
+[[projects]]
+  branch = "master"
   name = "github.com/valyala/bytebufferpool"
   packages = ["."]
   revision = "e746df99fe4a3986f4d4f79e13c1e0117ce9c2f7"
@@ -73,9 +88,18 @@
   packages = ["unix"]
   revision = "37707fdb30a5b38865cfb95e5aab41707daec7fd"
 
+[[projects]]
+  name = "gopkg.in/sourcemap.v1"
+  packages = [
+    ".",
+    "base64vlq"
+  ]
+  revision = "6e83acea0053641eff084973fee085f0c193c61a"
+  version = "v1.0.5"
+
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "de0e6602cc6694de44c199b43df7d818ba707bdad916666cae7982d5dea9fd74"
+  inputs-digest = "3a46563dfd819331c524a380f10f220f47a71233b7e001745b865d6203641dcc"
   solver-name = "gps-cdcl"
   solver-version = 1

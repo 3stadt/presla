@@ -25,11 +25,17 @@ deps:
 done:
 	@echo "=> Done"
 
+bindata-debug:
+	@echo "=> Generating binary data..."
+	@go get -u github.com/jteeuwen/go-bindata/...
+	@rm -f src/Handlers/bindata.go
+	@go-bindata -o src/Handlers/bindata.go -debug -ignore=.*-inkscape\.svg -pkg Handlers templates/... static/... executors/...
+
 bindata:
 	@echo "=> Generating binary data..."
 	@go get -u github.com/jteeuwen/go-bindata/...
 	@rm -f src/Handlers/bindata.go
-	@go-bindata -o src/Handlers/bindata.go -ignore=.*-inkscape\.svg -pkg Handlers templates/... static/...
+	@go-bindata -o src/Handlers/bindata.go -ignore=.*-inkscape\.svg -pkg Handlers templates/... static/... executors/...
 
 .PHONY: $(PLATFORMS)
 $(PLATFORMS):
