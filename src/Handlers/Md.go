@@ -20,12 +20,12 @@ func (conf *Conf) Md(c echo.Context) error {
 
 	file = conf.MarkdownPath + "/" + file
 
-	var content []byte
-	content, err := ioutil.ReadFile(file)
+	tpl, err := ioutil.ReadFile(file)
 	if err != nil {
 		return err
 	}
-	return c.Blob(http.StatusOK, "text/markdown; charset=UTF-8", content)
+	// Rendering is needed so Code isn't commented automatically
+	return render(c, tpl, nil)
 }
 
 func (conf *Conf) showInfo(c echo.Context) error {
@@ -47,7 +47,10 @@ func (conf *Conf) showInfo(c echo.Context) error {
 	if err != nil {
 		return err
 	}
+	return render(c, tpl, data)
+}
 
+func render(c echo.Context, tpl []byte, data map[string]interface{}) error {
 	parsedTemplate, err := template.New("default").Parse(string(tpl))
 	if err != nil {
 		return err
