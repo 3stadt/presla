@@ -15,12 +15,13 @@ import (
 )
 
 type Config struct {
-	MarkdownPath  string
-	FooterText    string
-	ListenOn      string
-	TemplatePath  string
-	StaticFiles   string
-	Presentations []Handlers.PresentationConf
+	MarkdownPath    string
+	FooterText      string
+	ListenOn        string
+	TemplatePath    string
+	StaticFiles     string
+	Presentations   []Handlers.PresentationConf
+	CustomExecutors string
 }
 
 var conf Config
@@ -53,6 +54,7 @@ func main() {
 		TemplatePath:  conf.TemplatePath,
 		StaticFiles:   conf.StaticFiles,
 		Presentations: conf.Presentations,
+		CustomExecutors: conf.CustomExecutors,
 	}
 
 	e := echo.New()
@@ -61,7 +63,6 @@ func main() {
 		_, err := os.Stat(c.TemplatePath)
 		if c.TemplatePath != "" && c.PresentationName != "" && err == nil {
 			e.Renderer = PresLaTemplates.Custom(c.TemplatePath)
-			//e.View.SetTemplateLoader(c.PresentationName, )
 		}
 	}
 	e.GET("/static/internal/*", handler.InternalStatic)
@@ -70,6 +71,7 @@ func main() {
 	e.GET("/svg/footer-text.svg", handler.Svg)
 	e.GET("/md/:file", handler.Md)
 	e.GET("/md/:pres/*", handler.Assets)
+	e.POST("/exec", handler.Exec)
 	e.GET("/:pres", handler.Presentation)
 	e.GET("/", handler.Home)
 	fmt.Println()
@@ -152,6 +154,9 @@ ListenOn="localhost:8080"
 ## Optional: path to the templates static files
 ## Holds css, js, fonts and images used in your template
 # StaticFiles="/home/user/Documents/presla-theme/static"
+
+## Optional, define your own Executors for running code from the presentation
+# CustomExecutors="/home/user/Documents/presla-executors"
 
 ## Optional, can be used multiple times
 ## This way you can specify a template used for only one presentation
