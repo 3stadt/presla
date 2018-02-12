@@ -1,85 +1,67 @@
 # Presla
 
-Here you can find an useful way to create your presentation using presla. Written in go, it can be used easily on every operating system.
+Presla (Presentation Lambda) is an application that runs on your computer. It creates a local webserver that is equipped with [remarkjs](https://remarkjs.com/), allowing you to create your own presentations in markdown.
+
+Additionaly, it is configured so it can execute Code examples directly from within your presentation, using [ace editor](https://ace.c9.io/) and code executors written in JS. Everything can be completely customized.
 
 
 ## Getting Started
 
 ### Prerequisites
 
-In general, there don't have to be any programs pre-installed. 
+You'll need a x64 based Mac, Linux or Windows System and a Web Browser. Preferably Google Chrome.
 
 ### Installing
 
-At first, you just need to download the file matching your operating system [here](https://git.3stadt.com/3stadt/presla/releases). In detail, you can choose as following:
-* presla-0.0.1-linux-amd64 for Linux
-* presla-0.0.1-darwin-amd64 for Mac
-* presla-0.0.1-windows-amd64.exe for Windows
+Download the file matching your operating system [here](https://git.3stadt.com/3stadt/presla/releases). In detail, you can choose as following:
 
-Save it in a directory as you wish. Keep in mind that you may need to adjust the permissions of this file to execute it properly. Now, you should be able to access presla via [http://localhost:8080
-](http://localhost:8080), containing no presentations yet. There you go! :) ... Well, we need to get some things done first.
+* presla-x.x.x-linux-amd64 for Linux
+* presla-x.x.x-darwin-amd64 for Mac
+* presla-x.x.x-windows-amd64.exe for Windows
 
-### Doing first configuration steps
+Save it in any directory. Give it executables permissions, `chmod +x <file>` on Linux/Mac.
 
-As you execute this file the first time, you may notice that a file called "presla.toml" was created in your folder. Here you can configure the path to your markup files and which themes you're using.
+Execute the file via console. Although double clicking is fine, this will close all log output when finished.
 
-You can leave it in this directory, it will already work. However, you can save it in the .config folder of your user or in your users' folder itself if you're running Linux. Presla will search for this presla.toml in the following order:
+Access Presla via [http://localhost:8080](http://localhost:8080).
 
-```
-No config file at presla.toml ...
-No config file at /home/user/.presla.toml ...
-Using config file: /home/user/.config/presla.toml
-```
+At this point you'll only see the included info presentation, since you yet need to create your presentations. 
 
-In the case of this example, the config.toml is located in the .config folder. 
+### Configuration
 
-**Keep in mind** that presla doesn't reacts to chances at runtime. To apply your changes in presla.toml, you need to restart it.
+Presla is configured via a [toml](https://github.com/toml-lang/toml/blob/master/README.md) file. At first start, a `presla.toml` file is created in the current directory, you may want to copy it over to another directory. The possible directories are:
 
-### Defining the path to your markup-files
+- `<current dir>/presla.toml`
+- `<homde dir>/.presla.toml`
+- `<home dir>/.config/presla.toml`
 
-In Presla, you create the content of your presentation using markup-files (.md). You can save them in a location as you wish, but you need to make the corresponding path public to presla by yourself. That can be done in the presla.toml using the following line:
+**Please note:** Presla doesn't react to config changes at runtime. To apply your changes in presla.toml, you need to restart the application.
 
+The default configuration file looks like this:
 
-```
+```toml
 ## The path to your markdown files.
 ## One markdown file holds one presentation
-MarkdownPath="/home/user/Documents/Talks/"
-```
+MarkdownPath="./"
 
-Please define your path as a MarkdownPath here. If you already have some markdown-files in there, they should be listed as presentations now.
+## Whatever you want to show as text when including /svg/footer-text.svg
+## By default shown in the lower right corner
+FooterText="please edit presla.toml"
 
-As you know, the server for using presla is running on http://localhost:8080 by default. If you wish to adjust that, you can edit the following line as you please:
-
- ```
 ## The port to bind on. You should use localhost as host
 ListenOn="localhost:8080"
- ```
 
-## Working with Presla
-
-If you wish, you can use Presla right away. However, you might need further styles as provided in the default. Fortunately, you're able to use your own themes for your presentations.
-
-### Including your theme
-
-To include your theme, please edit the following lines in presla.toml:
-
-```
 ## Optional: Path to your own template.
 ## Needs the index.html holding remarkjs, an info.md as starting point and footer-text.svg 
-TemplatePath="/home/user/presla/Themes/your-presla-theme/templates"
+# TemplatePath="/home/user/Documents/presla-theme/templates"
 
 ## Optional: path to the templates static files
 ## Holds css, js, fonts and images used in your template
-StaticFiles="/home/user/presla/Themes/your-presla-theme/static"
-```
+# StaticFiles="/home/user/Documents/presla-theme/static"
 
-Just change these paths to the ones holding your theme's files and you're good to go.
+## Optional, define your own Executors for running code from the presentation
+# CustomExecutors="/home/user/Documents/presla-executors"
 
-### Using individual themes for different presentations
-
-You might wish to have individual themes depending your presentation. Therefore you just need to look at the following paragraph of your presla.toml:
-
-```
 ## Optional, can be used multiple times
 ## This way you can specify a template used for only one presentation
 # [[Presentations]]
@@ -88,22 +70,74 @@ You might wish to have individual themes depending your presentation. Therefore 
 # StaticFiles="/home/user/Documents/presla-theme-my-presentation/templates"
 ```
 
-You need to define the name of your presentation and set the path in which your individual theme and its static files are located. This way you can assign an individual theme to the corresponding presentation.
+### Defining the path to your markup-files
 
+In Presla, you create the content of your presentation using markdown files with a `.md` extension. Create them at a custom location and add that location to your config file, e.g.:
+
+
+```
+MarkdownPath="/home/user/some/path/talks/"
+```
+
+If you already have markdown files in the directory, they should be listed as presentations on the last slide of the default presentation.
+
+## Working with Presla
+
+Presla is ready to use, all styles an javascript is included in the executable. However, you might want to add your own styles.
+
+### Including your theme
+
+To include your theme, please edit the following definitions in presla.toml:
+
+```
+TemplatePath="/home/user/presla/Themes/your-presla-theme/templates"
+StaticFiles="/home/user/presla/Themes/your-presla-theme/static"
+```
+
+Your own theme sould have the following layout:
+
+```
+|-- static
+|   |-- css
+|   |   `-- theme.css
+|   |-- favicon.ico
+|   |-- img
+|   |   `-- logo.svg
+|   `-- js
+|       |-- ace
+|       |   |-- ... # the ace editor files
+|       |-- editor-loader.js
+|       |-- remark-latest.min.js
+|       `-- remark-loader.js
+`-- templates
+    |-- footer-text.svg
+    |-- index.html
+    `-- info.md
+
+```
+
+You can start by copying the directories mentioned above from the current [master branch](https://git.3stadt.com/3stadt/presla).
+
+### Using individual themes for different presentations
+
+If you need individual themes for different presentations you are able to configure that in `presla.toml`:
+
+```
+[[Presentations]]
+PresentationName="my_presentation" # The name of your markdown file without extension
+TemplatePath="/home/user/Documents/presla-theme-my-presentation/static"
+StaticFiles="/home/user/Documents/presla-theme-my-presentation/templates"
+```
+
+All of the above is optional and can be defined multiple times.
 
 ## Changing the footer text
 
-In order to change the footer text, you just need to set the following line of your presla.toml as you wish:
+In order to change the footer text, you just need to set the following line of your presla.toml:
 
 ```
-## Whatever you want to show as text when including /svg/footer-text.svg
-## By default shown in the lower right corner
-FooterText="@yourname"
+FooterText="some text"
 ```
-
-## How Presla works in detail
-
-To be continued~
 
 ## Authors
 
@@ -115,12 +149,3 @@ To be continued~
 Please see LICENSE.md for details.
 
 [![license](https://i.creativecommons.org/l/by-sa/4.0/80x15.png)](http://creativecommons.org/licenses/by-sa/4.0/)
-
-## Acknowledgments
-
-To be continued~
-
-
-
-
-
