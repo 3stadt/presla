@@ -24,6 +24,13 @@ type Conf struct {
 	Presentations   []PresentationConf
 	DefaultTemplate *PresLaTemplates.DefaultTemplate
 	CustomExecutors string
+	LogLevel        string
+	LogFormat       string
+}
+
+type CmdCommand struct {
+	cmdName string
+	cmdArgs []string
 }
 
 type CmdOutput struct {
