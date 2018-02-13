@@ -48,3 +48,7 @@
 [[constraint]]
   branch = "master"
   name = "github.com/robertkrimen/otto"
+
+[[constraint]]
+  name = "github.com/sirupsen/logrus"
+  version = "1.0.4"

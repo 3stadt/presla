@@ -3,12 +3,12 @@ package main
 import (
 	"flag"
 	"fmt"
+	"git.3stadt.com/3stadt/presla/src/Handlers"
+	"git.3stadt.com/3stadt/presla/src/PresLaTemplates"
 	"github.com/BurntSushi/toml"
 	"github.com/fatih/color"
 	"github.com/labstack/echo"
 	"github.com/mitchellh/go-homedir"
-	"git.3stadt.com/3stadt/presla/src/Handlers"
-	"git.3stadt.com/3stadt/presla/src/PresLaTemplates"
 	"io/ioutil"
 	"os"
 	"strings"
@@ -22,6 +22,8 @@ type Config struct {
 	StaticFiles     string
 	Presentations   []Handlers.PresentationConf
 	CustomExecutors string
+	LogLevel        string
+	LogFormat       string
 }
 
 var conf Config
@@ -49,12 +51,14 @@ Set up HTTP routes, start server
 */
 func main() {
 	handler := &Handlers.Conf{
-		MarkdownPath:  conf.MarkdownPath,
-		FooterText:    conf.FooterText,
-		TemplatePath:  conf.TemplatePath,
-		StaticFiles:   conf.StaticFiles,
-		Presentations: conf.Presentations,
+		MarkdownPath:    conf.MarkdownPath,
+		FooterText:      conf.FooterText,
+		TemplatePath:    conf.TemplatePath,
+		StaticFiles:     conf.StaticFiles,
+		Presentations:   conf.Presentations,
 		CustomExecutors: conf.CustomExecutors,
+		LogLevel:        conf.LogLevel,
+		LogFormat:       conf.LogFormat,
 	}
 
 	e := echo.New()
@@ -157,6 +161,12 @@ ListenOn="localhost:8080"
 
 ## Optional, define your own Executors for running code from the presentation
 # CustomExecutors="/home/user/Documents/presla-executors"
+
+## Can be set to "debug", defaults to "warning": Set log level to debug
+# LogLevel="debug"
+
+## Can be set to "json", defaults to "text": Set log format to debug
+# LogFormat="json"
 
 ## Optional, can be used multiple times
 ## This way you can specify a template used for only one presentation
