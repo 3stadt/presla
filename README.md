@@ -39,7 +39,7 @@ Presla is configured via a [toml](https://github.com/toml-lang/toml/blob/master/
 
 The default configuration file looks like this:
 
-```toml
+```
 ## The path to your markdown files.
 ## One markdown file holds one presentation
 MarkdownPath="./"
@@ -53,22 +53,23 @@ ListenOn="localhost:8080"
 
 ## Optional: Path to your own template.
 ## Needs the index.html holding remarkjs, an info.md as starting point and footer-text.svg 
-# TemplatePath="/home/user/Documents/presla-theme/templates"
+TemplatePath="/home/user/Documents/presla-theme/templates"
 
 ## Optional: path to the templates static files
 ## Holds css, js, fonts and images used in your template
-# StaticFiles="/home/user/Documents/presla-theme/static"
+StaticFiles="/home/user/Documents/presla-theme/static"
 
 ## Optional, define your own Executors for running code from the presentation
-# CustomExecutors="/home/user/Documents/presla-executors"
+CustomExecutors="/home/user/Documents/presla-executors"
 
 ## Optional, can be used multiple times
 ## This way you can specify a template used for only one presentation
-# [[Presentations]]
-# PresentationName="my_presentation"
-# TemplatePath="/home/user/Documents/presla-theme-my-presentation/static"
-# StaticFiles="/home/user/Documents/presla-theme-my-presentation/templates"
+[[Presentations]] # DOUBLE SQUARE BRACKETS!
+PresentationName="my_presentation"
+TemplatePath="/home/user/Documents/presla-theme-my-presentation/static"
+StaticFiles="/home/user/Documents/presla-theme-my-presentation/templates"
 ```
+> Important: The Presentations section has double square brackets. Due to technical limitations, they cannot be shown here. (Use the source, Luke)
 
 ### Defining the path to your markup-files
 
@@ -117,19 +118,6 @@ Your own theme sould have the following layout:
 ```
 
 You can start by copying the directories mentioned above from the current [master branch](https://git.3stadt.com/3stadt/presla).
-
-### Using individual themes for different presentations
-
-If you need individual themes for different presentations you are able to configure that in `presla.toml`:
-
-```
-[[Presentations]]
-PresentationName="my_presentation" # The name of your markdown file without extension
-TemplatePath="/home/user/Documents/presla-theme-my-presentation/static"
-StaticFiles="/home/user/Documents/presla-theme-my-presentation/templates"
-```
-
-All of the above is optional and can be defined multiple times.
 
 ## Changing the footer text
 
