@@ -257,7 +257,7 @@ type asset struct {
 
 // templatesFooterTextSvg reads file data from disk. It returns an error on failure.
 func templatesFooterTextSvg() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/templates/footer-text.svg"
+	path := "/home/n/go/src/github.com/3stadt/presla/templates/footer-text.svg"
 	name := "templates/footer-text.svg"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -275,7 +275,7 @@ func templatesFooterTextSvg() (*asset, error) {
 
 // templatesIndexHtml reads file data from disk. It returns an error on failure.
 func templatesIndexHtml() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/templates/index.html"
+	path := "/home/n/go/src/github.com/3stadt/presla/templates/index.html"
 	name := "templates/index.html"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -293,7 +293,7 @@ func templatesIndexHtml() (*asset, error) {
 
 // templatesInfoMd reads file data from disk. It returns an error on failure.
 func templatesInfoMd() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/templates/info.md"
+	path := "/home/n/go/src/github.com/3stadt/presla/templates/info.md"
 	name := "templates/info.md"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -311,7 +311,7 @@ func templatesInfoMd() (*asset, error) {
 
 // staticCssThemePreslaCss reads file data from disk. It returns an error on failure.
 func staticCssThemePreslaCss() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/css/theme-presla.css"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/css/theme-presla.css"
 	name := "static/css/theme-presla.css"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -329,7 +329,7 @@ func staticCssThemePreslaCss() (*asset, error) {
 
 // staticFaviconIco reads file data from disk. It returns an error on failure.
 func staticFaviconIco() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/favicon.ico"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/favicon.ico"
 	name := "static/favicon.ico"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -347,7 +347,7 @@ func staticFaviconIco() (*asset, error) {
 
 // staticImgPreslaLogoBlackSvg reads file data from disk. It returns an error on failure.
 func staticImgPreslaLogoBlackSvg() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/img/presla-logo-black.svg"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/img/presla-logo-black.svg"
 	name := "static/img/presla-logo-black.svg"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -365,7 +365,7 @@ func staticImgPreslaLogoBlackSvg() (*asset, error) {
 
 // staticImgPreslaLogoWhiteSvg reads file data from disk. It returns an error on failure.
 func staticImgPreslaLogoWhiteSvg() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/img/presla-logo-white.svg"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/img/presla-logo-white.svg"
 	name := "static/img/presla-logo-white.svg"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -383,7 +383,7 @@ func staticImgPreslaLogoWhiteSvg() (*asset, error) {
 
 // staticJsAceAceJs reads file data from disk. It returns an error on failure.
 func staticJsAceAceJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/ace.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/ace.js"
 	name := "static/js/ace/ace.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -401,7 +401,7 @@ func staticJsAceAceJs() (*asset, error) {
 
 // staticJsAceExtBeautifyJs reads file data from disk. It returns an error on failure.
 func staticJsAceExtBeautifyJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/ext-beautify.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/ext-beautify.js"
 	name := "static/js/ace/ext-beautify.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -419,7 +419,7 @@ func staticJsAceExtBeautifyJs() (*asset, error) {
 
 // staticJsAceExtElastic_tabstops_liteJs reads file data from disk. It returns an error on failure.
 func staticJsAceExtElastic_tabstops_liteJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/ext-elastic_tabstops_lite.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/ext-elastic_tabstops_lite.js"
 	name := "static/js/ace/ext-elastic_tabstops_lite.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -437,7 +437,7 @@ func staticJsAceExtElastic_tabstops_liteJs() (*asset, error) {
 
 // staticJsAceExtEmmetJs reads file data from disk. It returns an error on failure.
 func staticJsAceExtEmmetJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/ext-emmet.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/ext-emmet.js"
 	name := "static/js/ace/ext-emmet.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -455,7 +455,7 @@ func staticJsAceExtEmmetJs() (*asset, error) {
 
 // staticJsAceExtError_markerJs reads file data from disk. It returns an error on failure.
 func staticJsAceExtError_markerJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/ext-error_marker.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/ext-error_marker.js"
 	name := "static/js/ace/ext-error_marker.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -473,7 +473,7 @@ func staticJsAceExtError_markerJs() (*asset, error) {
 
 // staticJsAceExtKeybinding_menuJs reads file data from disk. It returns an error on failure.
 func staticJsAceExtKeybinding_menuJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/ext-keybinding_menu.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/ext-keybinding_menu.js"
 	name := "static/js/ace/ext-keybinding_menu.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -491,7 +491,7 @@ func staticJsAceExtKeybinding_menuJs() (*asset, error) {
 
 // staticJsAceExtLanguage_toolsJs reads file data from disk. It returns an error on failure.
 func staticJsAceExtLanguage_toolsJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/ext-language_tools.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/ext-language_tools.js"
 	name := "static/js/ace/ext-language_tools.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -509,7 +509,7 @@ func staticJsAceExtLanguage_toolsJs() (*asset, error) {
 
 // staticJsAceExtLinkingJs reads file data from disk. It returns an error on failure.
 func staticJsAceExtLinkingJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/ext-linking.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/ext-linking.js"
 	name := "static/js/ace/ext-linking.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -527,7 +527,7 @@ func staticJsAceExtLinkingJs() (*asset, error) {
 
 // staticJsAceExtModelistJs reads file data from disk. It returns an error on failure.
 func staticJsAceExtModelistJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/ext-modelist.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/ext-modelist.js"
 	name := "static/js/ace/ext-modelist.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -545,7 +545,7 @@ func staticJsAceExtModelistJs() (*asset, error) {
 
 // staticJsAceExtOptionsJs reads file data from disk. It returns an error on failure.
 func staticJsAceExtOptionsJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/ext-options.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/ext-options.js"
 	name := "static/js/ace/ext-options.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -563,7 +563,7 @@ func staticJsAceExtOptionsJs() (*asset, error) {
 
 // staticJsAceExtSearchboxJs reads file data from disk. It returns an error on failure.
 func staticJsAceExtSearchboxJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/ext-searchbox.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/ext-searchbox.js"
 	name := "static/js/ace/ext-searchbox.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -581,7 +581,7 @@ func staticJsAceExtSearchboxJs() (*asset, error) {
 
 // staticJsAceExtSettings_menuJs reads file data from disk. It returns an error on failure.
 func staticJsAceExtSettings_menuJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/ext-settings_menu.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/ext-settings_menu.js"
 	name := "static/js/ace/ext-settings_menu.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -599,7 +599,7 @@ func staticJsAceExtSettings_menuJs() (*asset, error) {
 
 // staticJsAceExtSpellcheckJs reads file data from disk. It returns an error on failure.
 func staticJsAceExtSpellcheckJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/ext-spellcheck.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/ext-spellcheck.js"
 	name := "static/js/ace/ext-spellcheck.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -617,7 +617,7 @@ func staticJsAceExtSpellcheckJs() (*asset, error) {
 
 // staticJsAceExtSplitJs reads file data from disk. It returns an error on failure.
 func staticJsAceExtSplitJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/ext-split.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/ext-split.js"
 	name := "static/js/ace/ext-split.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -635,7 +635,7 @@ func staticJsAceExtSplitJs() (*asset, error) {
 
 // staticJsAceExtStatic_highlightJs reads file data from disk. It returns an error on failure.
 func staticJsAceExtStatic_highlightJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/ext-static_highlight.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/ext-static_highlight.js"
 	name := "static/js/ace/ext-static_highlight.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -653,7 +653,7 @@ func staticJsAceExtStatic_highlightJs() (*asset, error) {
 
 // staticJsAceExtStatusbarJs reads file data from disk. It returns an error on failure.
 func staticJsAceExtStatusbarJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/ext-statusbar.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/ext-statusbar.js"
 	name := "static/js/ace/ext-statusbar.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -671,7 +671,7 @@ func staticJsAceExtStatusbarJs() (*asset, error) {
 
 // staticJsAceExtTextareaJs reads file data from disk. It returns an error on failure.
 func staticJsAceExtTextareaJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/ext-textarea.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/ext-textarea.js"
 	name := "static/js/ace/ext-textarea.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -689,7 +689,7 @@ func staticJsAceExtTextareaJs() (*asset, error) {
 
 // staticJsAceExtThemelistJs reads file data from disk. It returns an error on failure.
 func staticJsAceExtThemelistJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/ext-themelist.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/ext-themelist.js"
 	name := "static/js/ace/ext-themelist.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -707,7 +707,7 @@ func staticJsAceExtThemelistJs() (*asset, error) {
 
 // staticJsAceExtWhitespaceJs reads file data from disk. It returns an error on failure.
 func staticJsAceExtWhitespaceJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/ext-whitespace.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/ext-whitespace.js"
 	name := "static/js/ace/ext-whitespace.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -725,7 +725,7 @@ func staticJsAceExtWhitespaceJs() (*asset, error) {
 
 // staticJsAceKeybindingEmacsJs reads file data from disk. It returns an error on failure.
 func staticJsAceKeybindingEmacsJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/keybinding-emacs.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/keybinding-emacs.js"
 	name := "static/js/ace/keybinding-emacs.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -743,7 +743,7 @@ func staticJsAceKeybindingEmacsJs() (*asset, error) {
 
 // staticJsAceKeybindingVimJs reads file data from disk. It returns an error on failure.
 func staticJsAceKeybindingVimJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/keybinding-vim.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/keybinding-vim.js"
 	name := "static/js/ace/keybinding-vim.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -761,7 +761,7 @@ func staticJsAceKeybindingVimJs() (*asset, error) {
 
 // staticJsAceModeAbapJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeAbapJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-abap.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-abap.js"
 	name := "static/js/ace/mode-abap.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -779,7 +779,7 @@ func staticJsAceModeAbapJs() (*asset, error) {
 
 // staticJsAceModeAbcJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeAbcJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-abc.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-abc.js"
 	name := "static/js/ace/mode-abc.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -797,7 +797,7 @@ func staticJsAceModeAbcJs() (*asset, error) {
 
 // staticJsAceModeActionscriptJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeActionscriptJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-actionscript.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-actionscript.js"
 	name := "static/js/ace/mode-actionscript.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -815,7 +815,7 @@ func staticJsAceModeActionscriptJs() (*asset, error) {
 
 // staticJsAceModeAdaJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeAdaJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-ada.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-ada.js"
 	name := "static/js/ace/mode-ada.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -833,7 +833,7 @@ func staticJsAceModeAdaJs() (*asset, error) {
 
 // staticJsAceModeApache_confJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeApache_confJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-apache_conf.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-apache_conf.js"
 	name := "static/js/ace/mode-apache_conf.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -851,7 +851,7 @@ func staticJsAceModeApache_confJs() (*asset, error) {
 
 // staticJsAceModeApplescriptJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeApplescriptJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-applescript.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-applescript.js"
 	name := "static/js/ace/mode-applescript.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -869,7 +869,7 @@ func staticJsAceModeApplescriptJs() (*asset, error) {
 
 // staticJsAceModeAsciidocJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeAsciidocJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-asciidoc.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-asciidoc.js"
 	name := "static/js/ace/mode-asciidoc.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -887,7 +887,7 @@ func staticJsAceModeAsciidocJs() (*asset, error) {
 
 // staticJsAceModeAssembly_x86Js reads file data from disk. It returns an error on failure.
 func staticJsAceModeAssembly_x86Js() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-assembly_x86.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-assembly_x86.js"
 	name := "static/js/ace/mode-assembly_x86.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -905,7 +905,7 @@ func staticJsAceModeAssembly_x86Js() (*asset, error) {
 
 // staticJsAceModeAutohotkeyJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeAutohotkeyJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-autohotkey.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-autohotkey.js"
 	name := "static/js/ace/mode-autohotkey.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -923,7 +923,7 @@ func staticJsAceModeAutohotkeyJs() (*asset, error) {
 
 // staticJsAceModeBatchfileJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeBatchfileJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-batchfile.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-batchfile.js"
 	name := "static/js/ace/mode-batchfile.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -941,7 +941,7 @@ func staticJsAceModeBatchfileJs() (*asset, error) {
 
 // staticJsAceModeBroJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeBroJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-bro.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-bro.js"
 	name := "static/js/ace/mode-bro.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -959,7 +959,7 @@ func staticJsAceModeBroJs() (*asset, error) {
 
 // staticJsAceModeC9searchJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeC9searchJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-c9search.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-c9search.js"
 	name := "static/js/ace/mode-c9search.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -977,7 +977,7 @@ func staticJsAceModeC9searchJs() (*asset, error) {
 
 // staticJsAceModeC_cppJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeC_cppJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-c_cpp.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-c_cpp.js"
 	name := "static/js/ace/mode-c_cpp.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -995,7 +995,7 @@ func staticJsAceModeC_cppJs() (*asset, error) {
 
 // staticJsAceModeCirruJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeCirruJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-cirru.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-cirru.js"
 	name := "static/js/ace/mode-cirru.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1013,7 +1013,7 @@ func staticJsAceModeCirruJs() (*asset, error) {
 
 // staticJsAceModeClojureJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeClojureJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-clojure.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-clojure.js"
 	name := "static/js/ace/mode-clojure.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1031,7 +1031,7 @@ func staticJsAceModeClojureJs() (*asset, error) {
 
 // staticJsAceModeCobolJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeCobolJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-cobol.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-cobol.js"
 	name := "static/js/ace/mode-cobol.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1049,7 +1049,7 @@ func staticJsAceModeCobolJs() (*asset, error) {
 
 // staticJsAceModeCoffeeJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeCoffeeJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-coffee.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-coffee.js"
 	name := "static/js/ace/mode-coffee.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1067,7 +1067,7 @@ func staticJsAceModeCoffeeJs() (*asset, error) {
 
 // staticJsAceModeColdfusionJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeColdfusionJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-coldfusion.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-coldfusion.js"
 	name := "static/js/ace/mode-coldfusion.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1085,7 +1085,7 @@ func staticJsAceModeColdfusionJs() (*asset, error) {
 
 // staticJsAceModeCsharpJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeCsharpJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-csharp.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-csharp.js"
 	name := "static/js/ace/mode-csharp.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1103,7 +1103,7 @@ func staticJsAceModeCsharpJs() (*asset, error) {
 
 // staticJsAceModeCsound_documentJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeCsound_documentJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-csound_document.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-csound_document.js"
 	name := "static/js/ace/mode-csound_document.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1121,7 +1121,7 @@ func staticJsAceModeCsound_documentJs() (*asset, error) {
 
 // staticJsAceModeCsound_orchestraJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeCsound_orchestraJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-csound_orchestra.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-csound_orchestra.js"
 	name := "static/js/ace/mode-csound_orchestra.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1139,7 +1139,7 @@ func staticJsAceModeCsound_orchestraJs() (*asset, error) {
 
 // staticJsAceModeCsound_scoreJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeCsound_scoreJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-csound_score.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-csound_score.js"
 	name := "static/js/ace/mode-csound_score.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1157,7 +1157,7 @@ func staticJsAceModeCsound_scoreJs() (*asset, error) {
 
 // staticJsAceModeCspJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeCspJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-csp.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-csp.js"
 	name := "static/js/ace/mode-csp.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1175,7 +1175,7 @@ func staticJsAceModeCspJs() (*asset, error) {
 
 // staticJsAceModeCssJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeCssJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-css.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-css.js"
 	name := "static/js/ace/mode-css.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1193,7 +1193,7 @@ func staticJsAceModeCssJs() (*asset, error) {
 
 // staticJsAceModeCurlyJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeCurlyJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-curly.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-curly.js"
 	name := "static/js/ace/mode-curly.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1211,7 +1211,7 @@ func staticJsAceModeCurlyJs() (*asset, error) {
 
 // staticJsAceModeDJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeDJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-d.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-d.js"
 	name := "static/js/ace/mode-d.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1229,7 +1229,7 @@ func staticJsAceModeDJs() (*asset, error) {
 
 // staticJsAceModeDartJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeDartJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-dart.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-dart.js"
 	name := "static/js/ace/mode-dart.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1247,7 +1247,7 @@ func staticJsAceModeDartJs() (*asset, error) {
 
 // staticJsAceModeDiffJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeDiffJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-diff.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-diff.js"
 	name := "static/js/ace/mode-diff.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1265,7 +1265,7 @@ func staticJsAceModeDiffJs() (*asset, error) {
 
 // staticJsAceModeDjangoJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeDjangoJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-django.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-django.js"
 	name := "static/js/ace/mode-django.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1283,7 +1283,7 @@ func staticJsAceModeDjangoJs() (*asset, error) {
 
 // staticJsAceModeDockerfileJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeDockerfileJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-dockerfile.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-dockerfile.js"
 	name := "static/js/ace/mode-dockerfile.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1301,7 +1301,7 @@ func staticJsAceModeDockerfileJs() (*asset, error) {
 
 // staticJsAceModeDotJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeDotJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-dot.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-dot.js"
 	name := "static/js/ace/mode-dot.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1319,7 +1319,7 @@ func staticJsAceModeDotJs() (*asset, error) {
 
 // staticJsAceModeDroolsJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeDroolsJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-drools.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-drools.js"
 	name := "static/js/ace/mode-drools.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1337,7 +1337,7 @@ func staticJsAceModeDroolsJs() (*asset, error) {
 
 // staticJsAceModeEdifactJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeEdifactJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-edifact.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-edifact.js"
 	name := "static/js/ace/mode-edifact.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1355,7 +1355,7 @@ func staticJsAceModeEdifactJs() (*asset, error) {
 
 // staticJsAceModeEiffelJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeEiffelJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-eiffel.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-eiffel.js"
 	name := "static/js/ace/mode-eiffel.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1373,7 +1373,7 @@ func staticJsAceModeEiffelJs() (*asset, error) {
 
 // staticJsAceModeEjsJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeEjsJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-ejs.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-ejs.js"
 	name := "static/js/ace/mode-ejs.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1391,7 +1391,7 @@ func staticJsAceModeEjsJs() (*asset, error) {
 
 // staticJsAceModeElixirJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeElixirJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-elixir.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-elixir.js"
 	name := "static/js/ace/mode-elixir.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1409,7 +1409,7 @@ func staticJsAceModeElixirJs() (*asset, error) {
 
 // staticJsAceModeElmJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeElmJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-elm.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-elm.js"
 	name := "static/js/ace/mode-elm.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1427,7 +1427,7 @@ func staticJsAceModeElmJs() (*asset, error) {
 
 // staticJsAceModeErlangJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeErlangJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-erlang.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-erlang.js"
 	name := "static/js/ace/mode-erlang.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1445,7 +1445,7 @@ func staticJsAceModeErlangJs() (*asset, error) {
 
 // staticJsAceModeForthJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeForthJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-forth.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-forth.js"
 	name := "static/js/ace/mode-forth.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1463,7 +1463,7 @@ func staticJsAceModeForthJs() (*asset, error) {
 
 // staticJsAceModeFortranJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeFortranJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-fortran.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-fortran.js"
 	name := "static/js/ace/mode-fortran.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1481,7 +1481,7 @@ func staticJsAceModeFortranJs() (*asset, error) {
 
 // staticJsAceModeFtlJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeFtlJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-ftl.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-ftl.js"
 	name := "static/js/ace/mode-ftl.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1499,7 +1499,7 @@ func staticJsAceModeFtlJs() (*asset, error) {
 
 // staticJsAceModeGcodeJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeGcodeJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-gcode.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-gcode.js"
 	name := "static/js/ace/mode-gcode.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1517,7 +1517,7 @@ func staticJsAceModeGcodeJs() (*asset, error) {
 
 // staticJsAceModeGherkinJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeGherkinJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-gherkin.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-gherkin.js"
 	name := "static/js/ace/mode-gherkin.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1535,7 +1535,7 @@ func staticJsAceModeGherkinJs() (*asset, error) {
 
 // staticJsAceModeGitignoreJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeGitignoreJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-gitignore.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-gitignore.js"
 	name := "static/js/ace/mode-gitignore.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1553,7 +1553,7 @@ func staticJsAceModeGitignoreJs() (*asset, error) {
 
 // staticJsAceModeGlslJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeGlslJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-glsl.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-glsl.js"
 	name := "static/js/ace/mode-glsl.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1571,7 +1571,7 @@ func staticJsAceModeGlslJs() (*asset, error) {
 
 // staticJsAceModeGobstonesJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeGobstonesJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-gobstones.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-gobstones.js"
 	name := "static/js/ace/mode-gobstones.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1589,7 +1589,7 @@ func staticJsAceModeGobstonesJs() (*asset, error) {
 
 // staticJsAceModeGolangJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeGolangJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-golang.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-golang.js"
 	name := "static/js/ace/mode-golang.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1607,7 +1607,7 @@ func staticJsAceModeGolangJs() (*asset, error) {
 
 // staticJsAceModeGraphqlschemaJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeGraphqlschemaJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-graphqlschema.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-graphqlschema.js"
 	name := "static/js/ace/mode-graphqlschema.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1625,7 +1625,7 @@ func staticJsAceModeGraphqlschemaJs() (*asset, error) {
 
 // staticJsAceModeGroovyJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeGroovyJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-groovy.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-groovy.js"
 	name := "static/js/ace/mode-groovy.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1643,7 +1643,7 @@ func staticJsAceModeGroovyJs() (*asset, error) {
 
 // staticJsAceModeHamlJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeHamlJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-haml.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-haml.js"
 	name := "static/js/ace/mode-haml.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1661,7 +1661,7 @@ func staticJsAceModeHamlJs() (*asset, error) {
 
 // staticJsAceModeHandlebarsJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeHandlebarsJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-handlebars.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-handlebars.js"
 	name := "static/js/ace/mode-handlebars.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1679,7 +1679,7 @@ func staticJsAceModeHandlebarsJs() (*asset, error) {
 
 // staticJsAceModeHaskellJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeHaskellJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-haskell.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-haskell.js"
 	name := "static/js/ace/mode-haskell.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1697,7 +1697,7 @@ func staticJsAceModeHaskellJs() (*asset, error) {
 
 // staticJsAceModeHaskell_cabalJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeHaskell_cabalJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-haskell_cabal.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-haskell_cabal.js"
 	name := "static/js/ace/mode-haskell_cabal.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1715,7 +1715,7 @@ func staticJsAceModeHaskell_cabalJs() (*asset, error) {
 
 // staticJsAceModeHaxeJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeHaxeJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-haxe.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-haxe.js"
 	name := "static/js/ace/mode-haxe.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1733,7 +1733,7 @@ func staticJsAceModeHaxeJs() (*asset, error) {
 
 // staticJsAceModeHjsonJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeHjsonJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-hjson.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-hjson.js"
 	name := "static/js/ace/mode-hjson.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1751,7 +1751,7 @@ func staticJsAceModeHjsonJs() (*asset, error) {
 
 // staticJsAceModeHtmlJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeHtmlJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-html.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-html.js"
 	name := "static/js/ace/mode-html.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1769,7 +1769,7 @@ func staticJsAceModeHtmlJs() (*asset, error) {
 
 // staticJsAceModeHtml_elixirJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeHtml_elixirJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-html_elixir.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-html_elixir.js"
 	name := "static/js/ace/mode-html_elixir.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1787,7 +1787,7 @@ func staticJsAceModeHtml_elixirJs() (*asset, error) {
 
 // staticJsAceModeHtml_rubyJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeHtml_rubyJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-html_ruby.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-html_ruby.js"
 	name := "static/js/ace/mode-html_ruby.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1805,7 +1805,7 @@ func staticJsAceModeHtml_rubyJs() (*asset, error) {
 
 // staticJsAceModeIniJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeIniJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-ini.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-ini.js"
 	name := "static/js/ace/mode-ini.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1823,7 +1823,7 @@ func staticJsAceModeIniJs() (*asset, error) {
 
 // staticJsAceModeIoJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeIoJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-io.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-io.js"
 	name := "static/js/ace/mode-io.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1841,7 +1841,7 @@ func staticJsAceModeIoJs() (*asset, error) {
 
 // staticJsAceModeJackJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeJackJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-jack.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-jack.js"
 	name := "static/js/ace/mode-jack.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1859,7 +1859,7 @@ func staticJsAceModeJackJs() (*asset, error) {
 
 // staticJsAceModeJadeJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeJadeJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-jade.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-jade.js"
 	name := "static/js/ace/mode-jade.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1877,7 +1877,7 @@ func staticJsAceModeJadeJs() (*asset, error) {
 
 // staticJsAceModeJavaJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeJavaJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-java.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-java.js"
 	name := "static/js/ace/mode-java.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1895,7 +1895,7 @@ func staticJsAceModeJavaJs() (*asset, error) {
 
 // staticJsAceModeJavascriptJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeJavascriptJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-javascript.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-javascript.js"
 	name := "static/js/ace/mode-javascript.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1913,7 +1913,7 @@ func staticJsAceModeJavascriptJs() (*asset, error) {
 
 // staticJsAceModeJsonJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeJsonJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-json.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-json.js"
 	name := "static/js/ace/mode-json.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1931,7 +1931,7 @@ func staticJsAceModeJsonJs() (*asset, error) {
 
 // staticJsAceModeJsoniqJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeJsoniqJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-jsoniq.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-jsoniq.js"
 	name := "static/js/ace/mode-jsoniq.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1949,7 +1949,7 @@ func staticJsAceModeJsoniqJs() (*asset, error) {
 
 // staticJsAceModeJspJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeJspJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-jsp.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-jsp.js"
 	name := "static/js/ace/mode-jsp.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1967,7 +1967,7 @@ func staticJsAceModeJspJs() (*asset, error) {
 
 // staticJsAceModeJssmJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeJssmJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-jssm.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-jssm.js"
 	name := "static/js/ace/mode-jssm.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -1985,7 +1985,7 @@ func staticJsAceModeJssmJs() (*asset, error) {
 
 // staticJsAceModeJsxJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeJsxJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-jsx.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-jsx.js"
 	name := "static/js/ace/mode-jsx.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2003,7 +2003,7 @@ func staticJsAceModeJsxJs() (*asset, error) {
 
 // staticJsAceModeJuliaJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeJuliaJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-julia.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-julia.js"
 	name := "static/js/ace/mode-julia.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2021,7 +2021,7 @@ func staticJsAceModeJuliaJs() (*asset, error) {
 
 // staticJsAceModeKotlinJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeKotlinJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-kotlin.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-kotlin.js"
 	name := "static/js/ace/mode-kotlin.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2039,7 +2039,7 @@ func staticJsAceModeKotlinJs() (*asset, error) {
 
 // staticJsAceModeLatexJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeLatexJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-latex.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-latex.js"
 	name := "static/js/ace/mode-latex.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2057,7 +2057,7 @@ func staticJsAceModeLatexJs() (*asset, error) {
 
 // staticJsAceModeLessJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeLessJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-less.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-less.js"
 	name := "static/js/ace/mode-less.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2075,7 +2075,7 @@ func staticJsAceModeLessJs() (*asset, error) {
 
 // staticJsAceModeLiquidJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeLiquidJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-liquid.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-liquid.js"
 	name := "static/js/ace/mode-liquid.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2093,7 +2093,7 @@ func staticJsAceModeLiquidJs() (*asset, error) {
 
 // staticJsAceModeLispJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeLispJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-lisp.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-lisp.js"
 	name := "static/js/ace/mode-lisp.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2111,7 +2111,7 @@ func staticJsAceModeLispJs() (*asset, error) {
 
 // staticJsAceModeLivescriptJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeLivescriptJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-livescript.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-livescript.js"
 	name := "static/js/ace/mode-livescript.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2129,7 +2129,7 @@ func staticJsAceModeLivescriptJs() (*asset, error) {
 
 // staticJsAceModeLogiqlJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeLogiqlJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-logiql.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-logiql.js"
 	name := "static/js/ace/mode-logiql.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2147,7 +2147,7 @@ func staticJsAceModeLogiqlJs() (*asset, error) {
 
 // staticJsAceModeLslJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeLslJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-lsl.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-lsl.js"
 	name := "static/js/ace/mode-lsl.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2165,7 +2165,7 @@ func staticJsAceModeLslJs() (*asset, error) {
 
 // staticJsAceModeLuaJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeLuaJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-lua.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-lua.js"
 	name := "static/js/ace/mode-lua.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2183,7 +2183,7 @@ func staticJsAceModeLuaJs() (*asset, error) {
 
 // staticJsAceModeLuapageJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeLuapageJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-luapage.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-luapage.js"
 	name := "static/js/ace/mode-luapage.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2201,7 +2201,7 @@ func staticJsAceModeLuapageJs() (*asset, error) {
 
 // staticJsAceModeLuceneJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeLuceneJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-lucene.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-lucene.js"
 	name := "static/js/ace/mode-lucene.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2219,7 +2219,7 @@ func staticJsAceModeLuceneJs() (*asset, error) {
 
 // staticJsAceModeMakefileJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeMakefileJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-makefile.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-makefile.js"
 	name := "static/js/ace/mode-makefile.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2237,7 +2237,7 @@ func staticJsAceModeMakefileJs() (*asset, error) {
 
 // staticJsAceModeMarkdownJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeMarkdownJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-markdown.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-markdown.js"
 	name := "static/js/ace/mode-markdown.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2255,7 +2255,7 @@ func staticJsAceModeMarkdownJs() (*asset, error) {
 
 // staticJsAceModeMaskJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeMaskJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-mask.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-mask.js"
 	name := "static/js/ace/mode-mask.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2273,7 +2273,7 @@ func staticJsAceModeMaskJs() (*asset, error) {
 
 // staticJsAceModeMatlabJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeMatlabJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-matlab.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-matlab.js"
 	name := "static/js/ace/mode-matlab.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2291,7 +2291,7 @@ func staticJsAceModeMatlabJs() (*asset, error) {
 
 // staticJsAceModeMazeJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeMazeJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-maze.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-maze.js"
 	name := "static/js/ace/mode-maze.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2309,7 +2309,7 @@ func staticJsAceModeMazeJs() (*asset, error) {
 
 // staticJsAceModeMelJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeMelJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-mel.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-mel.js"
 	name := "static/js/ace/mode-mel.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2327,7 +2327,7 @@ func staticJsAceModeMelJs() (*asset, error) {
 
 // staticJsAceModeMixalJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeMixalJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-mixal.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-mixal.js"
 	name := "static/js/ace/mode-mixal.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2345,7 +2345,7 @@ func staticJsAceModeMixalJs() (*asset, error) {
 
 // staticJsAceModeMushcodeJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeMushcodeJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-mushcode.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-mushcode.js"
 	name := "static/js/ace/mode-mushcode.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2363,7 +2363,7 @@ func staticJsAceModeMushcodeJs() (*asset, error) {
 
 // staticJsAceModeMysqlJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeMysqlJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-mysql.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-mysql.js"
 	name := "static/js/ace/mode-mysql.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2381,7 +2381,7 @@ func staticJsAceModeMysqlJs() (*asset, error) {
 
 // staticJsAceModeNixJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeNixJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-nix.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-nix.js"
 	name := "static/js/ace/mode-nix.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2399,7 +2399,7 @@ func staticJsAceModeNixJs() (*asset, error) {
 
 // staticJsAceModeNsisJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeNsisJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-nsis.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-nsis.js"
 	name := "static/js/ace/mode-nsis.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2417,7 +2417,7 @@ func staticJsAceModeNsisJs() (*asset, error) {
 
 // staticJsAceModeObjectivecJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeObjectivecJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-objectivec.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-objectivec.js"
 	name := "static/js/ace/mode-objectivec.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2435,7 +2435,7 @@ func staticJsAceModeObjectivecJs() (*asset, error) {
 
 // staticJsAceModeOcamlJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeOcamlJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-ocaml.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-ocaml.js"
 	name := "static/js/ace/mode-ocaml.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2453,7 +2453,7 @@ func staticJsAceModeOcamlJs() (*asset, error) {
 
 // staticJsAceModePascalJs reads file data from disk. It returns an error on failure.
 func staticJsAceModePascalJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-pascal.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-pascal.js"
 	name := "static/js/ace/mode-pascal.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2471,7 +2471,7 @@ func staticJsAceModePascalJs() (*asset, error) {
 
 // staticJsAceModePerlJs reads file data from disk. It returns an error on failure.
 func staticJsAceModePerlJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-perl.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-perl.js"
 	name := "static/js/ace/mode-perl.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2489,7 +2489,7 @@ func staticJsAceModePerlJs() (*asset, error) {
 
 // staticJsAceModePgsqlJs reads file data from disk. It returns an error on failure.
 func staticJsAceModePgsqlJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-pgsql.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-pgsql.js"
 	name := "static/js/ace/mode-pgsql.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2507,7 +2507,7 @@ func staticJsAceModePgsqlJs() (*asset, error) {
 
 // staticJsAceModePhpJs reads file data from disk. It returns an error on failure.
 func staticJsAceModePhpJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-php.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-php.js"
 	name := "static/js/ace/mode-php.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2525,7 +2525,7 @@ func staticJsAceModePhpJs() (*asset, error) {
 
 // staticJsAceModePigJs reads file data from disk. It returns an error on failure.
 func staticJsAceModePigJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-pig.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-pig.js"
 	name := "static/js/ace/mode-pig.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2543,7 +2543,7 @@ func staticJsAceModePigJs() (*asset, error) {
 
 // staticJsAceModePlain_textJs reads file data from disk. It returns an error on failure.
 func staticJsAceModePlain_textJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-plain_text.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-plain_text.js"
 	name := "static/js/ace/mode-plain_text.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2561,7 +2561,7 @@ func staticJsAceModePlain_textJs() (*asset, error) {
 
 // staticJsAceModePowershellJs reads file data from disk. It returns an error on failure.
 func staticJsAceModePowershellJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-powershell.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-powershell.js"
 	name := "static/js/ace/mode-powershell.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2579,7 +2579,7 @@ func staticJsAceModePowershellJs() (*asset, error) {
 
 // staticJsAceModePraatJs reads file data from disk. It returns an error on failure.
 func staticJsAceModePraatJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-praat.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-praat.js"
 	name := "static/js/ace/mode-praat.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2597,7 +2597,7 @@ func staticJsAceModePraatJs() (*asset, error) {
 
 // staticJsAceModePrologJs reads file data from disk. It returns an error on failure.
 func staticJsAceModePrologJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-prolog.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-prolog.js"
 	name := "static/js/ace/mode-prolog.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2615,7 +2615,7 @@ func staticJsAceModePrologJs() (*asset, error) {
 
 // staticJsAceModePropertiesJs reads file data from disk. It returns an error on failure.
 func staticJsAceModePropertiesJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-properties.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-properties.js"
 	name := "static/js/ace/mode-properties.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2633,7 +2633,7 @@ func staticJsAceModePropertiesJs() (*asset, error) {
 
 // staticJsAceModeProtobufJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeProtobufJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-protobuf.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-protobuf.js"
 	name := "static/js/ace/mode-protobuf.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2651,7 +2651,7 @@ func staticJsAceModeProtobufJs() (*asset, error) {
 
 // staticJsAceModePythonJs reads file data from disk. It returns an error on failure.
 func staticJsAceModePythonJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-python.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-python.js"
 	name := "static/js/ace/mode-python.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2669,7 +2669,7 @@ func staticJsAceModePythonJs() (*asset, error) {
 
 // staticJsAceModeRJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeRJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-r.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-r.js"
 	name := "static/js/ace/mode-r.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2687,7 +2687,7 @@ func staticJsAceModeRJs() (*asset, error) {
 
 // staticJsAceModeRazorJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeRazorJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-razor.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-razor.js"
 	name := "static/js/ace/mode-razor.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2705,7 +2705,7 @@ func staticJsAceModeRazorJs() (*asset, error) {
 
 // staticJsAceModeRdocJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeRdocJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-rdoc.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-rdoc.js"
 	name := "static/js/ace/mode-rdoc.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2723,7 +2723,7 @@ func staticJsAceModeRdocJs() (*asset, error) {
 
 // staticJsAceModeRedJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeRedJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-red.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-red.js"
 	name := "static/js/ace/mode-red.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2741,7 +2741,7 @@ func staticJsAceModeRedJs() (*asset, error) {
 
 // staticJsAceModeRedshiftJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeRedshiftJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-redshift.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-redshift.js"
 	name := "static/js/ace/mode-redshift.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2759,7 +2759,7 @@ func staticJsAceModeRedshiftJs() (*asset, error) {
 
 // staticJsAceModeRhtmlJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeRhtmlJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-rhtml.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-rhtml.js"
 	name := "static/js/ace/mode-rhtml.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2777,7 +2777,7 @@ func staticJsAceModeRhtmlJs() (*asset, error) {
 
 // staticJsAceModeRstJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeRstJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-rst.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-rst.js"
 	name := "static/js/ace/mode-rst.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2795,7 +2795,7 @@ func staticJsAceModeRstJs() (*asset, error) {
 
 // staticJsAceModeRubyJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeRubyJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-ruby.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-ruby.js"
 	name := "static/js/ace/mode-ruby.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2813,7 +2813,7 @@ func staticJsAceModeRubyJs() (*asset, error) {
 
 // staticJsAceModeRustJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeRustJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-rust.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-rust.js"
 	name := "static/js/ace/mode-rust.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2831,7 +2831,7 @@ func staticJsAceModeRustJs() (*asset, error) {
 
 // staticJsAceModeSassJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeSassJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-sass.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-sass.js"
 	name := "static/js/ace/mode-sass.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2849,7 +2849,7 @@ func staticJsAceModeSassJs() (*asset, error) {
 
 // staticJsAceModeScadJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeScadJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-scad.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-scad.js"
 	name := "static/js/ace/mode-scad.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2867,7 +2867,7 @@ func staticJsAceModeScadJs() (*asset, error) {
 
 // staticJsAceModeScalaJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeScalaJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-scala.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-scala.js"
 	name := "static/js/ace/mode-scala.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2885,7 +2885,7 @@ func staticJsAceModeScalaJs() (*asset, error) {
 
 // staticJsAceModeSchemeJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeSchemeJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-scheme.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-scheme.js"
 	name := "static/js/ace/mode-scheme.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2903,7 +2903,7 @@ func staticJsAceModeSchemeJs() (*asset, error) {
 
 // staticJsAceModeScssJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeScssJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-scss.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-scss.js"
 	name := "static/js/ace/mode-scss.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2921,7 +2921,7 @@ func staticJsAceModeScssJs() (*asset, error) {
 
 // staticJsAceModeShJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeShJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-sh.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-sh.js"
 	name := "static/js/ace/mode-sh.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2939,7 +2939,7 @@ func staticJsAceModeShJs() (*asset, error) {
 
 // staticJsAceModeSjsJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeSjsJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-sjs.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-sjs.js"
 	name := "static/js/ace/mode-sjs.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2957,7 +2957,7 @@ func staticJsAceModeSjsJs() (*asset, error) {
 
 // staticJsAceModeSmartyJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeSmartyJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-smarty.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-smarty.js"
 	name := "static/js/ace/mode-smarty.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2975,7 +2975,7 @@ func staticJsAceModeSmartyJs() (*asset, error) {
 
 // staticJsAceModeSnippetsJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeSnippetsJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-snippets.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-snippets.js"
 	name := "static/js/ace/mode-snippets.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -2993,7 +2993,7 @@ func staticJsAceModeSnippetsJs() (*asset, error) {
 
 // staticJsAceModeSoy_templateJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeSoy_templateJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-soy_template.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-soy_template.js"
 	name := "static/js/ace/mode-soy_template.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3011,7 +3011,7 @@ func staticJsAceModeSoy_templateJs() (*asset, error) {
 
 // staticJsAceModeSpaceJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeSpaceJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-space.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-space.js"
 	name := "static/js/ace/mode-space.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3029,7 +3029,7 @@ func staticJsAceModeSpaceJs() (*asset, error) {
 
 // staticJsAceModeSparqlJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeSparqlJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-sparql.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-sparql.js"
 	name := "static/js/ace/mode-sparql.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3047,7 +3047,7 @@ func staticJsAceModeSparqlJs() (*asset, error) {
 
 // staticJsAceModeSqlJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeSqlJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-sql.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-sql.js"
 	name := "static/js/ace/mode-sql.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3065,7 +3065,7 @@ func staticJsAceModeSqlJs() (*asset, error) {
 
 // staticJsAceModeSqlserverJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeSqlserverJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-sqlserver.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-sqlserver.js"
 	name := "static/js/ace/mode-sqlserver.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3083,7 +3083,7 @@ func staticJsAceModeSqlserverJs() (*asset, error) {
 
 // staticJsAceModeStylusJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeStylusJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-stylus.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-stylus.js"
 	name := "static/js/ace/mode-stylus.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3101,7 +3101,7 @@ func staticJsAceModeStylusJs() (*asset, error) {
 
 // staticJsAceModeSvgJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeSvgJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-svg.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-svg.js"
 	name := "static/js/ace/mode-svg.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3119,7 +3119,7 @@ func staticJsAceModeSvgJs() (*asset, error) {
 
 // staticJsAceModeSwiftJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeSwiftJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-swift.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-swift.js"
 	name := "static/js/ace/mode-swift.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3137,7 +3137,7 @@ func staticJsAceModeSwiftJs() (*asset, error) {
 
 // staticJsAceModeTclJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeTclJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-tcl.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-tcl.js"
 	name := "static/js/ace/mode-tcl.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3155,7 +3155,7 @@ func staticJsAceModeTclJs() (*asset, error) {
 
 // staticJsAceModeTexJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeTexJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-tex.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-tex.js"
 	name := "static/js/ace/mode-tex.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3173,7 +3173,7 @@ func staticJsAceModeTexJs() (*asset, error) {
 
 // staticJsAceModeTextJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeTextJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-text.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-text.js"
 	name := "static/js/ace/mode-text.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3191,7 +3191,7 @@ func staticJsAceModeTextJs() (*asset, error) {
 
 // staticJsAceModeTextileJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeTextileJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-textile.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-textile.js"
 	name := "static/js/ace/mode-textile.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3209,7 +3209,7 @@ func staticJsAceModeTextileJs() (*asset, error) {
 
 // staticJsAceModeTomlJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeTomlJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-toml.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-toml.js"
 	name := "static/js/ace/mode-toml.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3227,7 +3227,7 @@ func staticJsAceModeTomlJs() (*asset, error) {
 
 // staticJsAceModeTsxJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeTsxJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-tsx.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-tsx.js"
 	name := "static/js/ace/mode-tsx.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3245,7 +3245,7 @@ func staticJsAceModeTsxJs() (*asset, error) {
 
 // staticJsAceModeTurtleJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeTurtleJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-turtle.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-turtle.js"
 	name := "static/js/ace/mode-turtle.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3263,7 +3263,7 @@ func staticJsAceModeTurtleJs() (*asset, error) {
 
 // staticJsAceModeTwigJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeTwigJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-twig.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-twig.js"
 	name := "static/js/ace/mode-twig.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3281,7 +3281,7 @@ func staticJsAceModeTwigJs() (*asset, error) {
 
 // staticJsAceModeTypescriptJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeTypescriptJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-typescript.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-typescript.js"
 	name := "static/js/ace/mode-typescript.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3299,7 +3299,7 @@ func staticJsAceModeTypescriptJs() (*asset, error) {
 
 // staticJsAceModeValaJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeValaJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-vala.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-vala.js"
 	name := "static/js/ace/mode-vala.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3317,7 +3317,7 @@ func staticJsAceModeValaJs() (*asset, error) {
 
 // staticJsAceModeVbscriptJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeVbscriptJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-vbscript.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-vbscript.js"
 	name := "static/js/ace/mode-vbscript.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3335,7 +3335,7 @@ func staticJsAceModeVbscriptJs() (*asset, error) {
 
 // staticJsAceModeVelocityJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeVelocityJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-velocity.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-velocity.js"
 	name := "static/js/ace/mode-velocity.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3353,7 +3353,7 @@ func staticJsAceModeVelocityJs() (*asset, error) {
 
 // staticJsAceModeVerilogJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeVerilogJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-verilog.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-verilog.js"
 	name := "static/js/ace/mode-verilog.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3371,7 +3371,7 @@ func staticJsAceModeVerilogJs() (*asset, error) {
 
 // staticJsAceModeVhdlJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeVhdlJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-vhdl.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-vhdl.js"
 	name := "static/js/ace/mode-vhdl.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3389,7 +3389,7 @@ func staticJsAceModeVhdlJs() (*asset, error) {
 
 // staticJsAceModeWollokJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeWollokJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-wollok.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-wollok.js"
 	name := "static/js/ace/mode-wollok.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3407,7 +3407,7 @@ func staticJsAceModeWollokJs() (*asset, error) {
 
 // staticJsAceModeXmlJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeXmlJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-xml.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-xml.js"
 	name := "static/js/ace/mode-xml.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3425,7 +3425,7 @@ func staticJsAceModeXmlJs() (*asset, error) {
 
 // staticJsAceModeYamlJs reads file data from disk. It returns an error on failure.
 func staticJsAceModeYamlJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/mode-yaml.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/mode-yaml.js"
 	name := "static/js/ace/mode-yaml.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3443,7 +3443,7 @@ func staticJsAceModeYamlJs() (*asset, error) {
 
 // staticJsAceThemeAmbianceJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeAmbianceJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-ambiance.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-ambiance.js"
 	name := "static/js/ace/theme-ambiance.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3461,7 +3461,7 @@ func staticJsAceThemeAmbianceJs() (*asset, error) {
 
 // staticJsAceThemeChaosJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeChaosJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-chaos.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-chaos.js"
 	name := "static/js/ace/theme-chaos.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3479,7 +3479,7 @@ func staticJsAceThemeChaosJs() (*asset, error) {
 
 // staticJsAceThemeChromeJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeChromeJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-chrome.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-chrome.js"
 	name := "static/js/ace/theme-chrome.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3497,7 +3497,7 @@ func staticJsAceThemeChromeJs() (*asset, error) {
 
 // staticJsAceThemeCloudsJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeCloudsJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-clouds.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-clouds.js"
 	name := "static/js/ace/theme-clouds.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3515,7 +3515,7 @@ func staticJsAceThemeCloudsJs() (*asset, error) {
 
 // staticJsAceThemeClouds_midnightJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeClouds_midnightJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-clouds_midnight.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-clouds_midnight.js"
 	name := "static/js/ace/theme-clouds_midnight.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3533,7 +3533,7 @@ func staticJsAceThemeClouds_midnightJs() (*asset, error) {
 
 // staticJsAceThemeCobaltJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeCobaltJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-cobalt.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-cobalt.js"
 	name := "static/js/ace/theme-cobalt.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3551,7 +3551,7 @@ func staticJsAceThemeCobaltJs() (*asset, error) {
 
 // staticJsAceThemeCrimson_editorJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeCrimson_editorJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-crimson_editor.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-crimson_editor.js"
 	name := "static/js/ace/theme-crimson_editor.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3569,7 +3569,7 @@ func staticJsAceThemeCrimson_editorJs() (*asset, error) {
 
 // staticJsAceThemeDawnJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeDawnJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-dawn.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-dawn.js"
 	name := "static/js/ace/theme-dawn.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3587,7 +3587,7 @@ func staticJsAceThemeDawnJs() (*asset, error) {
 
 // staticJsAceThemeDraculaJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeDraculaJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-dracula.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-dracula.js"
 	name := "static/js/ace/theme-dracula.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3605,7 +3605,7 @@ func staticJsAceThemeDraculaJs() (*asset, error) {
 
 // staticJsAceThemeDreamweaverJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeDreamweaverJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-dreamweaver.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-dreamweaver.js"
 	name := "static/js/ace/theme-dreamweaver.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3623,7 +3623,7 @@ func staticJsAceThemeDreamweaverJs() (*asset, error) {
 
 // staticJsAceThemeEclipseJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeEclipseJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-eclipse.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-eclipse.js"
 	name := "static/js/ace/theme-eclipse.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3641,7 +3641,7 @@ func staticJsAceThemeEclipseJs() (*asset, error) {
 
 // staticJsAceThemeGithubJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeGithubJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-github.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-github.js"
 	name := "static/js/ace/theme-github.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3659,7 +3659,7 @@ func staticJsAceThemeGithubJs() (*asset, error) {
 
 // staticJsAceThemeGobJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeGobJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-gob.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-gob.js"
 	name := "static/js/ace/theme-gob.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3677,7 +3677,7 @@ func staticJsAceThemeGobJs() (*asset, error) {
 
 // staticJsAceThemeGruvboxJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeGruvboxJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-gruvbox.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-gruvbox.js"
 	name := "static/js/ace/theme-gruvbox.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3695,7 +3695,7 @@ func staticJsAceThemeGruvboxJs() (*asset, error) {
 
 // staticJsAceThemeIdle_fingersJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeIdle_fingersJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-idle_fingers.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-idle_fingers.js"
 	name := "static/js/ace/theme-idle_fingers.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3713,7 +3713,7 @@ func staticJsAceThemeIdle_fingersJs() (*asset, error) {
 
 // staticJsAceThemeIplasticJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeIplasticJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-iplastic.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-iplastic.js"
 	name := "static/js/ace/theme-iplastic.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3731,7 +3731,7 @@ func staticJsAceThemeIplasticJs() (*asset, error) {
 
 // staticJsAceThemeKatzenmilchJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeKatzenmilchJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-katzenmilch.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-katzenmilch.js"
 	name := "static/js/ace/theme-katzenmilch.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3749,7 +3749,7 @@ func staticJsAceThemeKatzenmilchJs() (*asset, error) {
 
 // staticJsAceThemeKr_themeJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeKr_themeJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-kr_theme.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-kr_theme.js"
 	name := "static/js/ace/theme-kr_theme.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3767,7 +3767,7 @@ func staticJsAceThemeKr_themeJs() (*asset, error) {
 
 // staticJsAceThemeKuroirJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeKuroirJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-kuroir.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-kuroir.js"
 	name := "static/js/ace/theme-kuroir.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3785,7 +3785,7 @@ func staticJsAceThemeKuroirJs() (*asset, error) {
 
 // staticJsAceThemeMerbivoreJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeMerbivoreJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-merbivore.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-merbivore.js"
 	name := "static/js/ace/theme-merbivore.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3803,7 +3803,7 @@ func staticJsAceThemeMerbivoreJs() (*asset, error) {
 
 // staticJsAceThemeMerbivore_softJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeMerbivore_softJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-merbivore_soft.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-merbivore_soft.js"
 	name := "static/js/ace/theme-merbivore_soft.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3821,7 +3821,7 @@ func staticJsAceThemeMerbivore_softJs() (*asset, error) {
 
 // staticJsAceThemeMono_industrialJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeMono_industrialJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-mono_industrial.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-mono_industrial.js"
 	name := "static/js/ace/theme-mono_industrial.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3839,7 +3839,7 @@ func staticJsAceThemeMono_industrialJs() (*asset, error) {
 
 // staticJsAceThemeMonokaiJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeMonokaiJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-monokai.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-monokai.js"
 	name := "static/js/ace/theme-monokai.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3857,7 +3857,7 @@ func staticJsAceThemeMonokaiJs() (*asset, error) {
 
 // staticJsAceThemePastel_on_darkJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemePastel_on_darkJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-pastel_on_dark.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-pastel_on_dark.js"
 	name := "static/js/ace/theme-pastel_on_dark.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3875,7 +3875,7 @@ func staticJsAceThemePastel_on_darkJs() (*asset, error) {
 
 // staticJsAceThemeSolarized_darkJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeSolarized_darkJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-solarized_dark.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-solarized_dark.js"
 	name := "static/js/ace/theme-solarized_dark.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3893,7 +3893,7 @@ func staticJsAceThemeSolarized_darkJs() (*asset, error) {
 
 // staticJsAceThemeSolarized_lightJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeSolarized_lightJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-solarized_light.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-solarized_light.js"
 	name := "static/js/ace/theme-solarized_light.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3911,7 +3911,7 @@ func staticJsAceThemeSolarized_lightJs() (*asset, error) {
 
 // staticJsAceThemeSqlserverJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeSqlserverJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-sqlserver.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-sqlserver.js"
 	name := "static/js/ace/theme-sqlserver.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3929,7 +3929,7 @@ func staticJsAceThemeSqlserverJs() (*asset, error) {
 
 // staticJsAceThemeTerminalJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeTerminalJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-terminal.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-terminal.js"
 	name := "static/js/ace/theme-terminal.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3947,7 +3947,7 @@ func staticJsAceThemeTerminalJs() (*asset, error) {
 
 // staticJsAceThemeTextmateJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeTextmateJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-textmate.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-textmate.js"
 	name := "static/js/ace/theme-textmate.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3965,7 +3965,7 @@ func staticJsAceThemeTextmateJs() (*asset, error) {
 
 // staticJsAceThemeTomorrowJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeTomorrowJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-tomorrow.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-tomorrow.js"
 	name := "static/js/ace/theme-tomorrow.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -3983,7 +3983,7 @@ func staticJsAceThemeTomorrowJs() (*asset, error) {
 
 // staticJsAceThemeTomorrow_nightJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeTomorrow_nightJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-tomorrow_night.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-tomorrow_night.js"
 	name := "static/js/ace/theme-tomorrow_night.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -4001,7 +4001,7 @@ func staticJsAceThemeTomorrow_nightJs() (*asset, error) {
 
 // staticJsAceThemeTomorrow_night_blueJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeTomorrow_night_blueJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-tomorrow_night_blue.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-tomorrow_night_blue.js"
 	name := "static/js/ace/theme-tomorrow_night_blue.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -4019,7 +4019,7 @@ func staticJsAceThemeTomorrow_night_blueJs() (*asset, error) {
 
 // staticJsAceThemeTomorrow_night_brightJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeTomorrow_night_brightJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-tomorrow_night_bright.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-tomorrow_night_bright.js"
 	name := "static/js/ace/theme-tomorrow_night_bright.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -4037,7 +4037,7 @@ func staticJsAceThemeTomorrow_night_brightJs() (*asset, error) {
 
 // staticJsAceThemeTomorrow_night_eightiesJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeTomorrow_night_eightiesJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-tomorrow_night_eighties.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-tomorrow_night_eighties.js"
 	name := "static/js/ace/theme-tomorrow_night_eighties.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -4055,7 +4055,7 @@ func staticJsAceThemeTomorrow_night_eightiesJs() (*asset, error) {
 
 // staticJsAceThemeTwilightJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeTwilightJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-twilight.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-twilight.js"
 	name := "static/js/ace/theme-twilight.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -4073,7 +4073,7 @@ func staticJsAceThemeTwilightJs() (*asset, error) {
 
 // staticJsAceThemeVibrant_inkJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeVibrant_inkJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-vibrant_ink.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-vibrant_ink.js"
 	name := "static/js/ace/theme-vibrant_ink.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -4091,7 +4091,7 @@ func staticJsAceThemeVibrant_inkJs() (*asset, error) {
 
 // staticJsAceThemeXcodeJs reads file data from disk. It returns an error on failure.
 func staticJsAceThemeXcodeJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/theme-xcode.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/theme-xcode.js"
 	name := "static/js/ace/theme-xcode.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -4109,7 +4109,7 @@ func staticJsAceThemeXcodeJs() (*asset, error) {
 
 // staticJsAceWorkerCoffeeJs reads file data from disk. It returns an error on failure.
 func staticJsAceWorkerCoffeeJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/worker-coffee.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/worker-coffee.js"
 	name := "static/js/ace/worker-coffee.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -4127,7 +4127,7 @@ func staticJsAceWorkerCoffeeJs() (*asset, error) {
 
 // staticJsAceWorkerCssJs reads file data from disk. It returns an error on failure.
 func staticJsAceWorkerCssJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/worker-css.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/worker-css.js"
 	name := "static/js/ace/worker-css.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -4145,7 +4145,7 @@ func staticJsAceWorkerCssJs() (*asset, error) {
 
 // staticJsAceWorkerHtmlJs reads file data from disk. It returns an error on failure.
 func staticJsAceWorkerHtmlJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/worker-html.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/worker-html.js"
 	name := "static/js/ace/worker-html.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -4163,7 +4163,7 @@ func staticJsAceWorkerHtmlJs() (*asset, error) {
 
 // staticJsAceWorkerJavascriptJs reads file data from disk. It returns an error on failure.
 func staticJsAceWorkerJavascriptJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/worker-javascript.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/worker-javascript.js"
 	name := "static/js/ace/worker-javascript.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -4181,7 +4181,7 @@ func staticJsAceWorkerJavascriptJs() (*asset, error) {
 
 // staticJsAceWorkerJsonJs reads file data from disk. It returns an error on failure.
 func staticJsAceWorkerJsonJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/worker-json.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/worker-json.js"
 	name := "static/js/ace/worker-json.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -4199,7 +4199,7 @@ func staticJsAceWorkerJsonJs() (*asset, error) {
 
 // staticJsAceWorkerLuaJs reads file data from disk. It returns an error on failure.
 func staticJsAceWorkerLuaJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/worker-lua.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/worker-lua.js"
 	name := "static/js/ace/worker-lua.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -4217,7 +4217,7 @@ func staticJsAceWorkerLuaJs() (*asset, error) {
 
 // staticJsAceWorkerPhpJs reads file data from disk. It returns an error on failure.
 func staticJsAceWorkerPhpJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/worker-php.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/worker-php.js"
 	name := "static/js/ace/worker-php.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -4235,7 +4235,7 @@ func staticJsAceWorkerPhpJs() (*asset, error) {
 
 // staticJsAceWorkerXmlJs reads file data from disk. It returns an error on failure.
 func staticJsAceWorkerXmlJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/ace/worker-xml.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/ace/worker-xml.js"
 	name := "static/js/ace/worker-xml.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -4253,7 +4253,7 @@ func staticJsAceWorkerXmlJs() (*asset, error) {
 
 // staticJsEditorLoaderJs reads file data from disk. It returns an error on failure.
 func staticJsEditorLoaderJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/editor-loader.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/editor-loader.js"
 	name := "static/js/editor-loader.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -4271,7 +4271,7 @@ func staticJsEditorLoaderJs() (*asset, error) {
 
 // staticJsRemarkLatestMinJs reads file data from disk. It returns an error on failure.
 func staticJsRemarkLatestMinJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/remark-latest.min.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/remark-latest.min.js"
 	name := "static/js/remark-latest.min.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -4289,7 +4289,7 @@ func staticJsRemarkLatestMinJs() (*asset, error) {
 
 // staticJsRemarkLoaderJs reads file data from disk. It returns an error on failure.
 func staticJsRemarkLoaderJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/static/js/remark-loader.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/static/js/remark-loader.js"
 	name := "static/js/remark-loader.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -4307,7 +4307,7 @@ func staticJsRemarkLoaderJs() (*asset, error) {
 
 // executorsDockerPhpJs reads file data from disk. It returns an error on failure.
 func executorsDockerPhpJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/executors/docker-php.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/executors/docker-php.js"
 	name := "executors/docker-php.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -4325,7 +4325,7 @@ func executorsDockerPhpJs() (*asset, error) {
 
 // executorsGoSudoJs reads file data from disk. It returns an error on failure.
 func executorsGoSudoJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/executors/go-sudo.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/executors/go-sudo.js"
 	name := "executors/go-sudo.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -4343,7 +4343,7 @@ func executorsGoSudoJs() (*asset, error) {
 
 // executorsGoJs reads file data from disk. It returns an error on failure.
 func executorsGoJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/executors/go.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/executors/go.js"
 	name := "executors/go.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -4361,7 +4361,7 @@ func executorsGoJs() (*asset, error) {
 
 // executorsPhpJs reads file data from disk. It returns an error on failure.
 func executorsPhpJs() (*asset, error) {
-	path := "/home/n/go/src/git.3stadt.com/3stadt/presla/executors/php.js"
+	path := "/home/n/go/src/github.com/3stadt/presla/executors/php.js"
 	name := "executors/php.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -4429,235 +4429,235 @@ func AssetNames() []string {
 
 // _bindata is a table, holding each asset generator, mapped to its name.
 var _bindata = map[string]func() (*asset, error){
-	"templates/footer-text.svg":                      templatesFooterTextSvg,
-	"templates/index.html":                           templatesIndexHtml,
-	"templates/info.md":                              templatesInfoMd,
-	"static/css/theme-presla.css":                    staticCssThemePreslaCss,
-	"static/favicon.ico":                             staticFaviconIco,
-	"static/img/presla-logo-black.svg":               staticImgPreslaLogoBlackSvg,
-	"static/img/presla-logo-white.svg":               staticImgPreslaLogoWhiteSvg,
-	"static/js/ace/ace.js":                           staticJsAceAceJs,
-	"static/js/ace/ext-beautify.js":                  staticJsAceExtBeautifyJs,
-	"static/js/ace/ext-elastic_tabstops_lite.js":     staticJsAceExtElastic_tabstops_liteJs,
-	"static/js/ace/ext-emmet.js":                     staticJsAceExtEmmetJs,
-	"static/js/ace/ext-error_marker.js":              staticJsAceExtError_markerJs,
-	"static/js/ace/ext-keybinding_menu.js":           staticJsAceExtKeybinding_menuJs,
-	"static/js/ace/ext-language_tools.js":            staticJsAceExtLanguage_toolsJs,
-	"static/js/ace/ext-linking.js":                   staticJsAceExtLinkingJs,
-	"static/js/ace/ext-modelist.js":                  staticJsAceExtModelistJs,
-	"static/js/ace/ext-options.js":                   staticJsAceExtOptionsJs,
-	"static/js/ace/ext-searchbox.js":                 staticJsAceExtSearchboxJs,
-	"static/js/ace/ext-settings_menu.js":             staticJsAceExtSettings_menuJs,
-	"static/js/ace/ext-spellcheck.js":                staticJsAceExtSpellcheckJs,
-	"static/js/ace/ext-split.js":                     staticJsAceExtSplitJs,
-	"static/js/ace/ext-static_highlight.js":          staticJsAceExtStatic_highlightJs,
-	"static/js/ace/ext-statusbar.js":                 staticJsAceExtStatusbarJs,
-	"static/js/ace/ext-textarea.js":                  staticJsAceExtTextareaJs,
-	"static/js/ace/ext-themelist.js":                 staticJsAceExtThemelistJs,
-	"static/js/ace/ext-whitespace.js":                staticJsAceExtWhitespaceJs,
-	"static/js/ace/keybinding-emacs.js":              staticJsAceKeybindingEmacsJs,
-	"static/js/ace/keybinding-vim.js":                staticJsAceKeybindingVimJs,
-	"static/js/ace/mode-abap.js":                     staticJsAceModeAbapJs,
-	"static/js/ace/mode-abc.js":                      staticJsAceModeAbcJs,
-	"static/js/ace/mode-actionscript.js":             staticJsAceModeActionscriptJs,
-	"static/js/ace/mode-ada.js":                      staticJsAceModeAdaJs,
-	"static/js/ace/mode-apache_conf.js":              staticJsAceModeApache_confJs,
-	"static/js/ace/mode-applescript.js":              staticJsAceModeApplescriptJs,
-	"static/js/ace/mode-asciidoc.js":                 staticJsAceModeAsciidocJs,
-	"static/js/ace/mode-assembly_x86.js":             staticJsAceModeAssembly_x86Js,
-	"static/js/ace/mode-autohotkey.js":               staticJsAceModeAutohotkeyJs,
-	"static/js/ace/mode-batchfile.js":                staticJsAceModeBatchfileJs,
-	"static/js/ace/mode-bro.js":                      staticJsAceModeBroJs,
-	"static/js/ace/mode-c9search.js":                 staticJsAceModeC9searchJs,
-	"static/js/ace/mode-c_cpp.js":                    staticJsAceModeC_cppJs,
-	"static/js/ace/mode-cirru.js":                    staticJsAceModeCirruJs,
-	"static/js/ace/mode-clojure.js":                  staticJsAceModeClojureJs,
-	"static/js/ace/mode-cobol.js":                    staticJsAceModeCobolJs,
-	"static/js/ace/mode-coffee.js":                   staticJsAceModeCoffeeJs,
-	"static/js/ace/mode-coldfusion.js":               staticJsAceModeColdfusionJs,
-	"static/js/ace/mode-csharp.js":                   staticJsAceModeCsharpJs,
-	"static/js/ace/mode-csound_document.js":          staticJsAceModeCsound_documentJs,
-	"static/js/ace/mode-csound_orchestra.js":         staticJsAceModeCsound_orchestraJs,
-	"static/js/ace/mode-csound_score.js":             staticJsAceModeCsound_scoreJs,
-	"static/js/ace/mode-csp.js":                      staticJsAceModeCspJs,
-	"static/js/ace/mode-css.js":                      staticJsAceModeCssJs,
-	"static/js/ace/mode-curly.js":                    staticJsAceModeCurlyJs,
-	"static/js/ace/mode-d.js":                        staticJsAceModeDJs,
-	"static/js/ace/mode-dart.js":                     staticJsAceModeDartJs,
-	"static/js/ace/mode-diff.js":                     staticJsAceModeDiffJs,
-	"static/js/ace/mode-django.js":                   staticJsAceModeDjangoJs,
-	"static/js/ace/mode-dockerfile.js":               staticJsAceModeDockerfileJs,
-	"static/js/ace/mode-dot.js":                      staticJsAceModeDotJs,
-	"static/js/ace/mode-drools.js":                   staticJsAceModeDroolsJs,
-	"static/js/ace/mode-edifact.js":                  staticJsAceModeEdifactJs,
-	"static/js/ace/mode-eiffel.js":                   staticJsAceModeEiffelJs,
-	"static/js/ace/mode-ejs.js":                      staticJsAceModeEjsJs,
-	"static/js/ace/mode-elixir.js":                   staticJsAceModeElixirJs,
-	"static/js/ace/mode-elm.js":                      staticJsAceModeElmJs,
-	"static/js/ace/mode-erlang.js":                   staticJsAceModeErlangJs,
-	"static/js/ace/mode-forth.js":                    staticJsAceModeForthJs,
-	"static/js/ace/mode-fortran.js":                  staticJsAceModeFortranJs,
-	"static/js/ace/mode-ftl.js":                      staticJsAceModeFtlJs,
-	"static/js/ace/mode-gcode.js":                    staticJsAceModeGcodeJs,
-	"static/js/ace/mode-gherkin.js":                  staticJsAceModeGherkinJs,
-	"static/js/ace/mode-gitignore.js":                staticJsAceModeGitignoreJs,
-	"static/js/ace/mode-glsl.js":                     staticJsAceModeGlslJs,
-	"static/js/ace/mode-gobstones.js":                staticJsAceModeGobstonesJs,
-	"static/js/ace/mode-golang.js":                   staticJsAceModeGolangJs,
-	"static/js/ace/mode-graphqlschema.js":            staticJsAceModeGraphqlschemaJs,
-	"static/js/ace/mode-groovy.js":                   staticJsAceModeGroovyJs,
-	"static/js/ace/mode-haml.js":                     staticJsAceModeHamlJs,
-	"static/js/ace/mode-handlebars.js":               staticJsAceModeHandlebarsJs,
-	"static/js/ace/mode-haskell.js":                  staticJsAceModeHaskellJs,
-	"static/js/ace/mode-haskell_cabal.js":            staticJsAceModeHaskell_cabalJs,
-	"static/js/ace/mode-haxe.js":                     staticJsAceModeHaxeJs,
-	"static/js/ace/mode-hjson.js":                    staticJsAceModeHjsonJs,
-	"static/js/ace/mode-html.js":                     staticJsAceModeHtmlJs,
-	"static/js/ace/mode-html_elixir.js":              staticJsAceModeHtml_elixirJs,
-	"static/js/ace/mode-html_ruby.js":                staticJsAceModeHtml_rubyJs,
-	"static/js/ace/mode-ini.js":                      staticJsAceModeIniJs,
-	"static/js/ace/mode-io.js":                       staticJsAceModeIoJs,
-	"static/js/ace/mode-jack.js":                     staticJsAceModeJackJs,
-	"static/js/ace/mode-jade.js":                     staticJsAceModeJadeJs,
-	"static/js/ace/mode-java.js":                     staticJsAceModeJavaJs,
-	"static/js/ace/mode-javascript.js":               staticJsAceModeJavascriptJs,
-	"static/js/ace/mode-json.js":                     staticJsAceModeJsonJs,
-	"static/js/ace/mode-jsoniq.js":                   staticJsAceModeJsoniqJs,
-	"static/js/ace/mode-jsp.js":                      staticJsAceModeJspJs,
-	"static/js/ace/mode-jssm.js":                     staticJsAceModeJssmJs,
-	"static/js/ace/mode-jsx.js":                      staticJsAceModeJsxJs,
-	"static/js/ace/mode-julia.js":                    staticJsAceModeJuliaJs,
-	"static/js/ace/mode-kotlin.js":                   staticJsAceModeKotlinJs,
-	"static/js/ace/mode-latex.js":                    staticJsAceModeLatexJs,
-	"static/js/ace/mode-less.js":                     staticJsAceModeLessJs,
-	"static/js/ace/mode-liquid.js":                   staticJsAceModeLiquidJs,
-	"static/js/ace/mode-lisp.js":                     staticJsAceModeLispJs,
-	"static/js/ace/mode-livescript.js":               staticJsAceModeLivescriptJs,
-	"static/js/ace/mode-logiql.js":                   staticJsAceModeLogiqlJs,
-	"static/js/ace/mode-lsl.js":                      staticJsAceModeLslJs,
-	"static/js/ace/mode-lua.js":                      staticJsAceModeLuaJs,
-	"static/js/ace/mode-luapage.js":                  staticJsAceModeLuapageJs,
-	"static/js/ace/mode-lucene.js":                   staticJsAceModeLuceneJs,
-	"static/js/ace/mode-makefile.js":                 staticJsAceModeMakefileJs,
-	"static/js/ace/mode-markdown.js":                 staticJsAceModeMarkdownJs,
-	"static/js/ace/mode-mask.js":                     staticJsAceModeMaskJs,
-	"static/js/ace/mode-matlab.js":                   staticJsAceModeMatlabJs,
-	"static/js/ace/mode-maze.js":                     staticJsAceModeMazeJs,
-	"static/js/ace/mode-mel.js":                      staticJsAceModeMelJs,
-	"static/js/ace/mode-mixal.js":                    staticJsAceModeMixalJs,
-	"static/js/ace/mode-mushcode.js":                 staticJsAceModeMushcodeJs,
-	"static/js/ace/mode-mysql.js":                    staticJsAceModeMysqlJs,
-	"static/js/ace/mode-nix.js":                      staticJsAceModeNixJs,
-	"static/js/ace/mode-nsis.js":                     staticJsAceModeNsisJs,
-	"static/js/ace/mode-objectivec.js":               staticJsAceModeObjectivecJs,
-	"static/js/ace/mode-ocaml.js":                    staticJsAceModeOcamlJs,
-	"static/js/ace/mode-pascal.js":                   staticJsAceModePascalJs,
-	"static/js/ace/mode-perl.js":                     staticJsAceModePerlJs,
-	"static/js/ace/mode-pgsql.js":                    staticJsAceModePgsqlJs,
-	"static/js/ace/mode-php.js":                      staticJsAceModePhpJs,
-	"static/js/ace/mode-pig.js":                      staticJsAceModePigJs,
-	"static/js/ace/mode-plain_text.js":               staticJsAceModePlain_textJs,
-	"static/js/ace/mode-powershell.js":               staticJsAceModePowershellJs,
-	"static/js/ace/mode-praat.js":                    staticJsAceModePraatJs,
-	"static/js/ace/mode-prolog.js":                   staticJsAceModePrologJs,
-	"static/js/ace/mode-properties.js":               staticJsAceModePropertiesJs,
-	"static/js/ace/mode-protobuf.js":                 staticJsAceModeProtobufJs,
-	"static/js/ace/mode-python.js":                   staticJsAceModePythonJs,
-	"static/js/ace/mode-r.js":                        staticJsAceModeRJs,
-	"static/js/ace/mode-razor.js":                    staticJsAceModeRazorJs,
-	"static/js/ace/mode-rdoc.js":                     staticJsAceModeRdocJs,
-	"static/js/ace/mode-red.js":                      staticJsAceModeRedJs,
-	"static/js/ace/mode-redshift.js":                 staticJsAceModeRedshiftJs,
-	"static/js/ace/mode-rhtml.js":                    staticJsAceModeRhtmlJs,
-	"static/js/ace/mode-rst.js":                      staticJsAceModeRstJs,
-	"static/js/ace/mode-ruby.js":                     staticJsAceModeRubyJs,
-	"static/js/ace/mode-rust.js":                     staticJsAceModeRustJs,
-	"static/js/ace/mode-sass.js":                     staticJsAceModeSassJs,
-	"static/js/ace/mode-scad.js":                     staticJsAceModeScadJs,
-	"static/js/ace/mode-scala.js":                    staticJsAceModeScalaJs,
-	"static/js/ace/mode-scheme.js":                   staticJsAceModeSchemeJs,
-	"static/js/ace/mode-scss.js":                     staticJsAceModeScssJs,
-	"static/js/ace/mode-sh.js":                       staticJsAceModeShJs,
-	"static/js/ace/mode-sjs.js":                      staticJsAceModeSjsJs,
-	"static/js/ace/mode-smarty.js":                   staticJsAceModeSmartyJs,
-	"static/js/ace/mode-snippets.js":                 staticJsAceModeSnippetsJs,
-	"static/js/ace/mode-soy_template.js":             staticJsAceModeSoy_templateJs,
-	"static/js/ace/mode-space.js":                    staticJsAceModeSpaceJs,
-	"static/js/ace/mode-sparql.js":                   staticJsAceModeSparqlJs,
-	"static/js/ace/mode-sql.js":                      staticJsAceModeSqlJs,
-	"static/js/ace/mode-sqlserver.js":                staticJsAceModeSqlserverJs,
-	"static/js/ace/mode-stylus.js":                   staticJsAceModeStylusJs,
-	"static/js/ace/mode-svg.js":                      staticJsAceModeSvgJs,
-	"static/js/ace/mode-swift.js":                    staticJsAceModeSwiftJs,
-	"static/js/ace/mode-tcl.js":                      staticJsAceModeTclJs,
-	"static/js/ace/mode-tex.js":                      staticJsAceModeTexJs,
-	"static/js/ace/mode-text.js":                     staticJsAceModeTextJs,
-	"static/js/ace/mode-textile.js":                  staticJsAceModeTextileJs,
-	"static/js/ace/mode-toml.js":                     staticJsAceModeTomlJs,
-	"static/js/ace/mode-tsx.js":                      staticJsAceModeTsxJs,
-	"static/js/ace/mode-turtle.js":                   staticJsAceModeTurtleJs,
-	"static/js/ace/mode-twig.js":                     staticJsAceModeTwigJs,
-	"static/js/ace/mode-typescript.js":               staticJsAceModeTypescriptJs,
-	"static/js/ace/mode-vala.js":                     staticJsAceModeValaJs,
-	"static/js/ace/mode-vbscript.js":                 staticJsAceModeVbscriptJs,
-	"static/js/ace/mode-velocity.js":                 staticJsAceModeVelocityJs,
-	"static/js/ace/mode-verilog.js":                  staticJsAceModeVerilogJs,
-	"static/js/ace/mode-vhdl.js":                     staticJsAceModeVhdlJs,
-	"static/js/ace/mode-wollok.js":                   staticJsAceModeWollokJs,
-	"static/js/ace/mode-xml.js":                      staticJsAceModeXmlJs,
-	"static/js/ace/mode-yaml.js":                     staticJsAceModeYamlJs,
-	"static/js/ace/theme-ambiance.js":                staticJsAceThemeAmbianceJs,
-	"static/js/ace/theme-chaos.js":                   staticJsAceThemeChaosJs,
-	"static/js/ace/theme-chrome.js":                  staticJsAceThemeChromeJs,
-	"static/js/ace/theme-clouds.js":                  staticJsAceThemeCloudsJs,
-	"static/js/ace/theme-clouds_midnight.js":         staticJsAceThemeClouds_midnightJs,
-	"static/js/ace/theme-cobalt.js":                  staticJsAceThemeCobaltJs,
-	"static/js/ace/theme-crimson_editor.js":          staticJsAceThemeCrimson_editorJs,
-	"static/js/ace/theme-dawn.js":                    staticJsAceThemeDawnJs,
-	"static/js/ace/theme-dracula.js":                 staticJsAceThemeDraculaJs,
-	"static/js/ace/theme-dreamweaver.js":             staticJsAceThemeDreamweaverJs,
-	"static/js/ace/theme-eclipse.js":                 staticJsAceThemeEclipseJs,
-	"static/js/ace/theme-github.js":                  staticJsAceThemeGithubJs,
-	"static/js/ace/theme-gob.js":                     staticJsAceThemeGobJs,
-	"static/js/ace/theme-gruvbox.js":                 staticJsAceThemeGruvboxJs,
-	"static/js/ace/theme-idle_fingers.js":            staticJsAceThemeIdle_fingersJs,
-	"static/js/ace/theme-iplastic.js":                staticJsAceThemeIplasticJs,
-	"static/js/ace/theme-katzenmilch.js":             staticJsAceThemeKatzenmilchJs,
-	"static/js/ace/theme-kr_theme.js":                staticJsAceThemeKr_themeJs,
-	"static/js/ace/theme-kuroir.js":                  staticJsAceThemeKuroirJs,
-	"static/js/ace/theme-merbivore.js":               staticJsAceThemeMerbivoreJs,
-	"static/js/ace/theme-merbivore_soft.js":          staticJsAceThemeMerbivore_softJs,
-	"static/js/ace/theme-mono_industrial.js":         staticJsAceThemeMono_industrialJs,
-	"static/js/ace/theme-monokai.js":                 staticJsAceThemeMonokaiJs,
-	"static/js/ace/theme-pastel_on_dark.js":          staticJsAceThemePastel_on_darkJs,
-	"static/js/ace/theme-solarized_dark.js":          staticJsAceThemeSolarized_darkJs,
-	"static/js/ace/theme-solarized_light.js":         staticJsAceThemeSolarized_lightJs,
-	"static/js/ace/theme-sqlserver.js":               staticJsAceThemeSqlserverJs,
-	"static/js/ace/theme-terminal.js":                staticJsAceThemeTerminalJs,
-	"static/js/ace/theme-textmate.js":                staticJsAceThemeTextmateJs,
-	"static/js/ace/theme-tomorrow.js":                staticJsAceThemeTomorrowJs,
-	"static/js/ace/theme-tomorrow_night.js":          staticJsAceThemeTomorrow_nightJs,
-	"static/js/ace/theme-tomorrow_night_blue.js":     staticJsAceThemeTomorrow_night_blueJs,
-	"static/js/ace/theme-tomorrow_night_bright.js":   staticJsAceThemeTomorrow_night_brightJs,
+	"templates/footer-text.svg": templatesFooterTextSvg,
+	"templates/index.html": templatesIndexHtml,
+	"templates/info.md": templatesInfoMd,
+	"static/css/theme-presla.css": staticCssThemePreslaCss,
+	"static/favicon.ico": staticFaviconIco,
+	"static/img/presla-logo-black.svg": staticImgPreslaLogoBlackSvg,
+	"static/img/presla-logo-white.svg": staticImgPreslaLogoWhiteSvg,
+	"static/js/ace/ace.js": staticJsAceAceJs,
+	"static/js/ace/ext-beautify.js": staticJsAceExtBeautifyJs,
+	"static/js/ace/ext-elastic_tabstops_lite.js": staticJsAceExtElastic_tabstops_liteJs,
+	"static/js/ace/ext-emmet.js": staticJsAceExtEmmetJs,
+	"static/js/ace/ext-error_marker.js": staticJsAceExtError_markerJs,
+	"static/js/ace/ext-keybinding_menu.js": staticJsAceExtKeybinding_menuJs,
+	"static/js/ace/ext-language_tools.js": staticJsAceExtLanguage_toolsJs,
+	"static/js/ace/ext-linking.js": staticJsAceExtLinkingJs,
+	"static/js/ace/ext-modelist.js": staticJsAceExtModelistJs,
+	"static/js/ace/ext-options.js": staticJsAceExtOptionsJs,
+	"static/js/ace/ext-searchbox.js": staticJsAceExtSearchboxJs,
+	"static/js/ace/ext-settings_menu.js": staticJsAceExtSettings_menuJs,
+	"static/js/ace/ext-spellcheck.js": staticJsAceExtSpellcheckJs,
+	"static/js/ace/ext-split.js": staticJsAceExtSplitJs,
+	"static/js/ace/ext-static_highlight.js": staticJsAceExtStatic_highlightJs,
+	"static/js/ace/ext-statusbar.js": staticJsAceExtStatusbarJs,
+	"static/js/ace/ext-textarea.js": staticJsAceExtTextareaJs,
+	"static/js/ace/ext-themelist.js": staticJsAceExtThemelistJs,
+	"static/js/ace/ext-whitespace.js": staticJsAceExtWhitespaceJs,
+	"static/js/ace/keybinding-emacs.js": staticJsAceKeybindingEmacsJs,
+	"static/js/ace/keybinding-vim.js": staticJsAceKeybindingVimJs,
+	"static/js/ace/mode-abap.js": staticJsAceModeAbapJs,
+	"static/js/ace/mode-abc.js": staticJsAceModeAbcJs,
+	"static/js/ace/mode-actionscript.js": staticJsAceModeActionscriptJs,
+	"static/js/ace/mode-ada.js": staticJsAceModeAdaJs,
+	"static/js/ace/mode-apache_conf.js": staticJsAceModeApache_confJs,
+	"static/js/ace/mode-applescript.js": staticJsAceModeApplescriptJs,
+	"static/js/ace/mode-asciidoc.js": staticJsAceModeAsciidocJs,
+	"static/js/ace/mode-assembly_x86.js": staticJsAceModeAssembly_x86Js,
+	"static/js/ace/mode-autohotkey.js": staticJsAceModeAutohotkeyJs,
+	"static/js/ace/mode-batchfile.js": staticJsAceModeBatchfileJs,
+	"static/js/ace/mode-bro.js": staticJsAceModeBroJs,
+	"static/js/ace/mode-c9search.js": staticJsAceModeC9searchJs,
+	"static/js/ace/mode-c_cpp.js": staticJsAceModeC_cppJs,
+	"static/js/ace/mode-cirru.js": staticJsAceModeCirruJs,
+	"static/js/ace/mode-clojure.js": staticJsAceModeClojureJs,
+	"static/js/ace/mode-cobol.js": staticJsAceModeCobolJs,
+	"static/js/ace/mode-coffee.js": staticJsAceModeCoffeeJs,
+	"static/js/ace/mode-coldfusion.js": staticJsAceModeColdfusionJs,
+	"static/js/ace/mode-csharp.js": staticJsAceModeCsharpJs,
+	"static/js/ace/mode-csound_document.js": staticJsAceModeCsound_documentJs,
+	"static/js/ace/mode-csound_orchestra.js": staticJsAceModeCsound_orchestraJs,
+	"static/js/ace/mode-csound_score.js": staticJsAceModeCsound_scoreJs,
+	"static/js/ace/mode-csp.js": staticJsAceModeCspJs,
+	"static/js/ace/mode-css.js": staticJsAceModeCssJs,
+	"static/js/ace/mode-curly.js": staticJsAceModeCurlyJs,
+	"static/js/ace/mode-d.js": staticJsAceModeDJs,
+	"static/js/ace/mode-dart.js": staticJsAceModeDartJs,
+	"static/js/ace/mode-diff.js": staticJsAceModeDiffJs,
+	"static/js/ace/mode-django.js": staticJsAceModeDjangoJs,
+	"static/js/ace/mode-dockerfile.js": staticJsAceModeDockerfileJs,
+	"static/js/ace/mode-dot.js": staticJsAceModeDotJs,
+	"static/js/ace/mode-drools.js": staticJsAceModeDroolsJs,
+	"static/js/ace/mode-edifact.js": staticJsAceModeEdifactJs,
+	"static/js/ace/mode-eiffel.js": staticJsAceModeEiffelJs,
+	"static/js/ace/mode-ejs.js": staticJsAceModeEjsJs,
+	"static/js/ace/mode-elixir.js": staticJsAceModeElixirJs,
+	"static/js/ace/mode-elm.js": staticJsAceModeElmJs,
+	"static/js/ace/mode-erlang.js": staticJsAceModeErlangJs,
+	"static/js/ace/mode-forth.js": staticJsAceModeForthJs,
+	"static/js/ace/mode-fortran.js": staticJsAceModeFortranJs,
+	"static/js/ace/mode-ftl.js": staticJsAceModeFtlJs,
+	"static/js/ace/mode-gcode.js": staticJsAceModeGcodeJs,
+	"static/js/ace/mode-gherkin.js": staticJsAceModeGherkinJs,
+	"static/js/ace/mode-gitignore.js": staticJsAceModeGitignoreJs,
+	"static/js/ace/mode-glsl.js": staticJsAceModeGlslJs,
+	"static/js/ace/mode-gobstones.js": staticJsAceModeGobstonesJs,
+	"static/js/ace/mode-golang.js": staticJsAceModeGolangJs,
+	"static/js/ace/mode-graphqlschema.js": staticJsAceModeGraphqlschemaJs,
+	"static/js/ace/mode-groovy.js": staticJsAceModeGroovyJs,
+	"static/js/ace/mode-haml.js": staticJsAceModeHamlJs,
+	"static/js/ace/mode-handlebars.js": staticJsAceModeHandlebarsJs,
+	"static/js/ace/mode-haskell.js": staticJsAceModeHaskellJs,
+	"static/js/ace/mode-haskell_cabal.js": staticJsAceModeHaskell_cabalJs,
+	"static/js/ace/mode-haxe.js": staticJsAceModeHaxeJs,
+	"static/js/ace/mode-hjson.js": staticJsAceModeHjsonJs,
+	"static/js/ace/mode-html.js": staticJsAceModeHtmlJs,
+	"static/js/ace/mode-html_elixir.js": staticJsAceModeHtml_elixirJs,
+	"static/js/ace/mode-html_ruby.js": staticJsAceModeHtml_rubyJs,
+	"static/js/ace/mode-ini.js": staticJsAceModeIniJs,
+	"static/js/ace/mode-io.js": staticJsAceModeIoJs,
+	"static/js/ace/mode-jack.js": staticJsAceModeJackJs,
+	"static/js/ace/mode-jade.js": staticJsAceModeJadeJs,
+	"static/js/ace/mode-java.js": staticJsAceModeJavaJs,
+	"static/js/ace/mode-javascript.js": staticJsAceModeJavascriptJs,
+	"static/js/ace/mode-json.js": staticJsAceModeJsonJs,
+	"static/js/ace/mode-jsoniq.js": staticJsAceModeJsoniqJs,
+	"static/js/ace/mode-jsp.js": staticJsAceModeJspJs,
+	"static/js/ace/mode-jssm.js": staticJsAceModeJssmJs,
+	"static/js/ace/mode-jsx.js": staticJsAceModeJsxJs,
+	"static/js/ace/mode-julia.js": staticJsAceModeJuliaJs,
+	"static/js/ace/mode-kotlin.js": staticJsAceModeKotlinJs,
+	"static/js/ace/mode-latex.js": staticJsAceModeLatexJs,
+	"static/js/ace/mode-less.js": staticJsAceModeLessJs,
+	"static/js/ace/mode-liquid.js": staticJsAceModeLiquidJs,
+	"static/js/ace/mode-lisp.js": staticJsAceModeLispJs,
+	"static/js/ace/mode-livescript.js": staticJsAceModeLivescriptJs,
+	"static/js/ace/mode-logiql.js": staticJsAceModeLogiqlJs,
+	"static/js/ace/mode-lsl.js": staticJsAceModeLslJs,
+	"static/js/ace/mode-lua.js": staticJsAceModeLuaJs,
+	"static/js/ace/mode-luapage.js": staticJsAceModeLuapageJs,
+	"static/js/ace/mode-lucene.js": staticJsAceModeLuceneJs,
+	"static/js/ace/mode-makefile.js": staticJsAceModeMakefileJs,
+	"static/js/ace/mode-markdown.js": staticJsAceModeMarkdownJs,
+	"static/js/ace/mode-mask.js": staticJsAceModeMaskJs,
+	"static/js/ace/mode-matlab.js": staticJsAceModeMatlabJs,
+	"static/js/ace/mode-maze.js": staticJsAceModeMazeJs,
+	"static/js/ace/mode-mel.js": staticJsAceModeMelJs,
+	"static/js/ace/mode-mixal.js": staticJsAceModeMixalJs,
+	"static/js/ace/mode-mushcode.js": staticJsAceModeMushcodeJs,
+	"static/js/ace/mode-mysql.js": staticJsAceModeMysqlJs,
+	"static/js/ace/mode-nix.js": staticJsAceModeNixJs,
+	"static/js/ace/mode-nsis.js": staticJsAceModeNsisJs,
+	"static/js/ace/mode-objectivec.js": staticJsAceModeObjectivecJs,
+	"static/js/ace/mode-ocaml.js": staticJsAceModeOcamlJs,
+	"static/js/ace/mode-pascal.js": staticJsAceModePascalJs,
+	"static/js/ace/mode-perl.js": staticJsAceModePerlJs,
+	"static/js/ace/mode-pgsql.js": staticJsAceModePgsqlJs,
+	"static/js/ace/mode-php.js": staticJsAceModePhpJs,
+	"static/js/ace/mode-pig.js": staticJsAceModePigJs,
+	"static/js/ace/mode-plain_text.js": staticJsAceModePlain_textJs,
+	"static/js/ace/mode-powershell.js": staticJsAceModePowershellJs,
+	"static/js/ace/mode-praat.js": staticJsAceModePraatJs,
+	"static/js/ace/mode-prolog.js": staticJsAceModePrologJs,
+	"static/js/ace/mode-properties.js": staticJsAceModePropertiesJs,
+	"static/js/ace/mode-protobuf.js": staticJsAceModeProtobufJs,
+	"static/js/ace/mode-python.js": staticJsAceModePythonJs,
+	"static/js/ace/mode-r.js": staticJsAceModeRJs,
+	"static/js/ace/mode-razor.js": staticJsAceModeRazorJs,
+	"static/js/ace/mode-rdoc.js": staticJsAceModeRdocJs,
+	"static/js/ace/mode-red.js": staticJsAceModeRedJs,
+	"static/js/ace/mode-redshift.js": staticJsAceModeRedshiftJs,
+	"static/js/ace/mode-rhtml.js": staticJsAceModeRhtmlJs,
+	"static/js/ace/mode-rst.js": staticJsAceModeRstJs,
+	"static/js/ace/mode-ruby.js": staticJsAceModeRubyJs,
+	"static/js/ace/mode-rust.js": staticJsAceModeRustJs,
+	"static/js/ace/mode-sass.js": staticJsAceModeSassJs,
+	"static/js/ace/mode-scad.js": staticJsAceModeScadJs,
+	"static/js/ace/mode-scala.js": staticJsAceModeScalaJs,
+	"static/js/ace/mode-scheme.js": staticJsAceModeSchemeJs,
+	"static/js/ace/mode-scss.js": staticJsAceModeScssJs,
+	"static/js/ace/mode-sh.js": staticJsAceModeShJs,
+	"static/js/ace/mode-sjs.js": staticJsAceModeSjsJs,
+	"static/js/ace/mode-smarty.js": staticJsAceModeSmartyJs,
+	"static/js/ace/mode-snippets.js": staticJsAceModeSnippetsJs,
+	"static/js/ace/mode-soy_template.js": staticJsAceModeSoy_templateJs,
+	"static/js/ace/mode-space.js": staticJsAceModeSpaceJs,
+	"static/js/ace/mode-sparql.js": staticJsAceModeSparqlJs,
+	"static/js/ace/mode-sql.js": staticJsAceModeSqlJs,
+	"static/js/ace/mode-sqlserver.js": staticJsAceModeSqlserverJs,
+	"static/js/ace/mode-stylus.js": staticJsAceModeStylusJs,
+	"static/js/ace/mode-svg.js": staticJsAceModeSvgJs,
+	"static/js/ace/mode-swift.js": staticJsAceModeSwiftJs,
+	"static/js/ace/mode-tcl.js": staticJsAceModeTclJs,
+	"static/js/ace/mode-tex.js": staticJsAceModeTexJs,
+	"static/js/ace/mode-text.js": staticJsAceModeTextJs,
+	"static/js/ace/mode-textile.js": staticJsAceModeTextileJs,
+	"static/js/ace/mode-toml.js": staticJsAceModeTomlJs,
+	"static/js/ace/mode-tsx.js": staticJsAceModeTsxJs,
+	"static/js/ace/mode-turtle.js": staticJsAceModeTurtleJs,
+	"static/js/ace/mode-twig.js": staticJsAceModeTwigJs,
+	"static/js/ace/mode-typescript.js": staticJsAceModeTypescriptJs,
+	"static/js/ace/mode-vala.js": staticJsAceModeValaJs,
+	"static/js/ace/mode-vbscript.js": staticJsAceModeVbscriptJs,
+	"static/js/ace/mode-velocity.js": staticJsAceModeVelocityJs,
+	"static/js/ace/mode-verilog.js": staticJsAceModeVerilogJs,
+	"static/js/ace/mode-vhdl.js": staticJsAceModeVhdlJs,
+	"static/js/ace/mode-wollok.js": staticJsAceModeWollokJs,
+	"static/js/ace/mode-xml.js": staticJsAceModeXmlJs,
+	"static/js/ace/mode-yaml.js": staticJsAceModeYamlJs,
+	"static/js/ace/theme-ambiance.js": staticJsAceThemeAmbianceJs,
+	"static/js/ace/theme-chaos.js": staticJsAceThemeChaosJs,
+	"static/js/ace/theme-chrome.js": staticJsAceThemeChromeJs,
+	"static/js/ace/theme-clouds.js": staticJsAceThemeCloudsJs,
+	"static/js/ace/theme-clouds_midnight.js": staticJsAceThemeClouds_midnightJs,
+	"static/js/ace/theme-cobalt.js": staticJsAceThemeCobaltJs,
+	"static/js/ace/theme-crimson_editor.js": staticJsAceThemeCrimson_editorJs,
+	"static/js/ace/theme-dawn.js": staticJsAceThemeDawnJs,
+	"static/js/ace/theme-dracula.js": staticJsAceThemeDraculaJs,
+	"static/js/ace/theme-dreamweaver.js": staticJsAceThemeDreamweaverJs,
+	"static/js/ace/theme-eclipse.js": staticJsAceThemeEclipseJs,
+	"static/js/ace/theme-github.js": staticJsAceThemeGithubJs,
+	"static/js/ace/theme-gob.js": staticJsAceThemeGobJs,
+	"static/js/ace/theme-gruvbox.js": staticJsAceThemeGruvboxJs,
+	"static/js/ace/theme-idle_fingers.js": staticJsAceThemeIdle_fingersJs,
+	"static/js/ace/theme-iplastic.js": staticJsAceThemeIplasticJs,
+	"static/js/ace/theme-katzenmilch.js": staticJsAceThemeKatzenmilchJs,
+	"static/js/ace/theme-kr_theme.js": staticJsAceThemeKr_themeJs,
+	"static/js/ace/theme-kuroir.js": staticJsAceThemeKuroirJs,
+	"static/js/ace/theme-merbivore.js": staticJsAceThemeMerbivoreJs,
+	"static/js/ace/theme-merbivore_soft.js": staticJsAceThemeMerbivore_softJs,
+	"static/js/ace/theme-mono_industrial.js": staticJsAceThemeMono_industrialJs,
+	"static/js/ace/theme-monokai.js": staticJsAceThemeMonokaiJs,
+	"static/js/ace/theme-pastel_on_dark.js": staticJsAceThemePastel_on_darkJs,
+	"static/js/ace/theme-solarized_dark.js": staticJsAceThemeSolarized_darkJs,
+	"static/js/ace/theme-solarized_light.js": staticJsAceThemeSolarized_lightJs,
+	"static/js/ace/theme-sqlserver.js": staticJsAceThemeSqlserverJs,
+	"static/js/ace/theme-terminal.js": staticJsAceThemeTerminalJs,
+	"static/js/ace/theme-textmate.js": staticJsAceThemeTextmateJs,
+	"static/js/ace/theme-tomorrow.js": staticJsAceThemeTomorrowJs,
+	"static/js/ace/theme-tomorrow_night.js": staticJsAceThemeTomorrow_nightJs,
+	"static/js/ace/theme-tomorrow_night_blue.js": staticJsAceThemeTomorrow_night_blueJs,
+	"static/js/ace/theme-tomorrow_night_bright.js": staticJsAceThemeTomorrow_night_brightJs,
 	"static/js/ace/theme-tomorrow_night_eighties.js": staticJsAceThemeTomorrow_night_eightiesJs,
-	"static/js/ace/theme-twilight.js":                staticJsAceThemeTwilightJs,
-	"static/js/ace/theme-vibrant_ink.js":             staticJsAceThemeVibrant_inkJs,
-	"static/js/ace/theme-xcode.js":                   staticJsAceThemeXcodeJs,
-	"static/js/ace/worker-coffee.js":                 staticJsAceWorkerCoffeeJs,
-	"static/js/ace/worker-css.js":                    staticJsAceWorkerCssJs,
-	"static/js/ace/worker-html.js":                   staticJsAceWorkerHtmlJs,
-	"static/js/ace/worker-javascript.js":             staticJsAceWorkerJavascriptJs,
-	"static/js/ace/worker-json.js":                   staticJsAceWorkerJsonJs,
-	"static/js/ace/worker-lua.js":                    staticJsAceWorkerLuaJs,
-	"static/js/ace/worker-php.js":                    staticJsAceWorkerPhpJs,
-	"static/js/ace/worker-xml.js":                    staticJsAceWorkerXmlJs,
-	"static/js/editor-loader.js":                     staticJsEditorLoaderJs,
-	"static/js/remark-latest.min.js":                 staticJsRemarkLatestMinJs,
-	"static/js/remark-loader.js":                     staticJsRemarkLoaderJs,
-	"executors/docker-php.js":                        executorsDockerPhpJs,
-	"executors/go-sudo.js":                           executorsGoSudoJs,
-	"executors/go.js":                                executorsGoJs,
-	"executors/php.js":                               executorsPhpJs,
+	"static/js/ace/theme-twilight.js": staticJsAceThemeTwilightJs,
+	"static/js/ace/theme-vibrant_ink.js": staticJsAceThemeVibrant_inkJs,
+	"static/js/ace/theme-xcode.js": staticJsAceThemeXcodeJs,
+	"static/js/ace/worker-coffee.js": staticJsAceWorkerCoffeeJs,
+	"static/js/ace/worker-css.js": staticJsAceWorkerCssJs,
+	"static/js/ace/worker-html.js": staticJsAceWorkerHtmlJs,
+	"static/js/ace/worker-javascript.js": staticJsAceWorkerJavascriptJs,
+	"static/js/ace/worker-json.js": staticJsAceWorkerJsonJs,
+	"static/js/ace/worker-lua.js": staticJsAceWorkerLuaJs,
+	"static/js/ace/worker-php.js": staticJsAceWorkerPhpJs,
+	"static/js/ace/worker-xml.js": staticJsAceWorkerXmlJs,
+	"static/js/editor-loader.js": staticJsEditorLoaderJs,
+	"static/js/remark-latest.min.js": staticJsRemarkLatestMinJs,
+	"static/js/remark-loader.js": staticJsRemarkLoaderJs,
+	"executors/docker-php.js": executorsDockerPhpJs,
+	"executors/go-sudo.js": executorsGoSudoJs,
+	"executors/go.js": executorsGoJs,
+	"executors/php.js": executorsPhpJs,
 }
 
 // AssetDir returns the file names below a certain
@@ -4699,13 +4699,12 @@ type bintree struct {
 	Func     func() (*asset, error)
 	Children map[string]*bintree
 }
-
 var _bintree = &bintree{nil, map[string]*bintree{
 	"executors": &bintree{nil, map[string]*bintree{
 		"docker-php.js": &bintree{executorsDockerPhpJs, map[string]*bintree{}},
-		"go-sudo.js":    &bintree{executorsGoSudoJs, map[string]*bintree{}},
-		"go.js":         &bintree{executorsGoJs, map[string]*bintree{}},
-		"php.js":        &bintree{executorsPhpJs, map[string]*bintree{}},
+		"go-sudo.js": &bintree{executorsGoSudoJs, map[string]*bintree{}},
+		"go.js": &bintree{executorsGoJs, map[string]*bintree{}},
+		"php.js": &bintree{executorsPhpJs, map[string]*bintree{}},
 	}},
 	"static": &bintree{nil, map[string]*bintree{
 		"css": &bintree{nil, map[string]*bintree{
@@ -4718,231 +4717,231 @@ var _bintree = &bintree{nil, map[string]*bintree{
 		}},
 		"js": &bintree{nil, map[string]*bintree{
 			"ace": &bintree{nil, map[string]*bintree{
-				"ace.js":                           &bintree{staticJsAceAceJs, map[string]*bintree{}},
-				"ext-beautify.js":                  &bintree{staticJsAceExtBeautifyJs, map[string]*bintree{}},
-				"ext-elastic_tabstops_lite.js":     &bintree{staticJsAceExtElastic_tabstops_liteJs, map[string]*bintree{}},
-				"ext-emmet.js":                     &bintree{staticJsAceExtEmmetJs, map[string]*bintree{}},
-				"ext-error_marker.js":              &bintree{staticJsAceExtError_markerJs, map[string]*bintree{}},
-				"ext-keybinding_menu.js":           &bintree{staticJsAceExtKeybinding_menuJs, map[string]*bintree{}},
-				"ext-language_tools.js":            &bintree{staticJsAceExtLanguage_toolsJs, map[string]*bintree{}},
-				"ext-linking.js":                   &bintree{staticJsAceExtLinkingJs, map[string]*bintree{}},
-				"ext-modelist.js":                  &bintree{staticJsAceExtModelistJs, map[string]*bintree{}},
-				"ext-options.js":                   &bintree{staticJsAceExtOptionsJs, map[string]*bintree{}},
-				"ext-searchbox.js":                 &bintree{staticJsAceExtSearchboxJs, map[string]*bintree{}},
-				"ext-settings_menu.js":             &bintree{staticJsAceExtSettings_menuJs, map[string]*bintree{}},
-				"ext-spellcheck.js":                &bintree{staticJsAceExtSpellcheckJs, map[string]*bintree{}},
-				"ext-split.js":                     &bintree{staticJsAceExtSplitJs, map[string]*bintree{}},
-				"ext-static_highlight.js":          &bintree{staticJsAceExtStatic_highlightJs, map[string]*bintree{}},
-				"ext-statusbar.js":                 &bintree{staticJsAceExtStatusbarJs, map[string]*bintree{}},
-				"ext-textarea.js":                  &bintree{staticJsAceExtTextareaJs, map[string]*bintree{}},
-				"ext-themelist.js":                 &bintree{staticJsAceExtThemelistJs, map[string]*bintree{}},
-				"ext-whitespace.js":                &bintree{staticJsAceExtWhitespaceJs, map[string]*bintree{}},
-				"keybinding-emacs.js":              &bintree{staticJsAceKeybindingEmacsJs, map[string]*bintree{}},
-				"keybinding-vim.js":                &bintree{staticJsAceKeybindingVimJs, map[string]*bintree{}},
-				"mode-abap.js":                     &bintree{staticJsAceModeAbapJs, map[string]*bintree{}},
-				"mode-abc.js":                      &bintree{staticJsAceModeAbcJs, map[string]*bintree{}},
-				"mode-actionscript.js":             &bintree{staticJsAceModeActionscriptJs, map[string]*bintree{}},
-				"mode-ada.js":                      &bintree{staticJsAceModeAdaJs, map[string]*bintree{}},
-				"mode-apache_conf.js":              &bintree{staticJsAceModeApache_confJs, map[string]*bintree{}},
-				"mode-applescript.js":              &bintree{staticJsAceModeApplescriptJs, map[string]*bintree{}},
-				"mode-asciidoc.js":                 &bintree{staticJsAceModeAsciidocJs, map[string]*bintree{}},
-				"mode-assembly_x86.js":             &bintree{staticJsAceModeAssembly_x86Js, map[string]*bintree{}},
-				"mode-autohotkey.js":               &bintree{staticJsAceModeAutohotkeyJs, map[string]*bintree{}},
-				"mode-batchfile.js":                &bintree{staticJsAceModeBatchfileJs, map[string]*bintree{}},
-				"mode-bro.js":                      &bintree{staticJsAceModeBroJs, map[string]*bintree{}},
-				"mode-c9search.js":                 &bintree{staticJsAceModeC9searchJs, map[string]*bintree{}},
-				"mode-c_cpp.js":                    &bintree{staticJsAceModeC_cppJs, map[string]*bintree{}},
-				"mode-cirru.js":                    &bintree{staticJsAceModeCirruJs, map[string]*bintree{}},
-				"mode-clojure.js":                  &bintree{staticJsAceModeClojureJs, map[string]*bintree{}},
-				"mode-cobol.js":                    &bintree{staticJsAceModeCobolJs, map[string]*bintree{}},
-				"mode-coffee.js":                   &bintree{staticJsAceModeCoffeeJs, map[string]*bintree{}},
-				"mode-coldfusion.js":               &bintree{staticJsAceModeColdfusionJs, map[string]*bintree{}},
-				"mode-csharp.js":                   &bintree{staticJsAceModeCsharpJs, map[string]*bintree{}},
-				"mode-csound_document.js":          &bintree{staticJsAceModeCsound_documentJs, map[string]*bintree{}},
-				"mode-csound_orchestra.js":         &bintree{staticJsAceModeCsound_orchestraJs, map[string]*bintree{}},
-				"mode-csound_score.js":             &bintree{staticJsAceModeCsound_scoreJs, map[string]*bintree{}},
-				"mode-csp.js":                      &bintree{staticJsAceModeCspJs, map[string]*bintree{}},
-				"mode-css.js":                      &bintree{staticJsAceModeCssJs, map[string]*bintree{}},
-				"mode-curly.js":                    &bintree{staticJsAceModeCurlyJs, map[string]*bintree{}},
-				"mode-d.js":                        &bintree{staticJsAceModeDJs, map[string]*bintree{}},
-				"mode-dart.js":                     &bintree{staticJsAceModeDartJs, map[string]*bintree{}},
-				"mode-diff.js":                     &bintree{staticJsAceModeDiffJs, map[string]*bintree{}},
-				"mode-django.js":                   &bintree{staticJsAceModeDjangoJs, map[string]*bintree{}},
-				"mode-dockerfile.js":               &bintree{staticJsAceModeDockerfileJs, map[string]*bintree{}},
-				"mode-dot.js":                      &bintree{staticJsAceModeDotJs, map[string]*bintree{}},
-				"mode-drools.js":                   &bintree{staticJsAceModeDroolsJs, map[string]*bintree{}},
-				"mode-edifact.js":                  &bintree{staticJsAceModeEdifactJs, map[string]*bintree{}},
-				"mode-eiffel.js":                   &bintree{staticJsAceModeEiffelJs, map[string]*bintree{}},
-				"mode-ejs.js":                      &bintree{staticJsAceModeEjsJs, map[string]*bintree{}},
-				"mode-elixir.js":                   &bintree{staticJsAceModeElixirJs, map[string]*bintree{}},
-				"mode-elm.js":                      &bintree{staticJsAceModeElmJs, map[string]*bintree{}},
-				"mode-erlang.js":                   &bintree{staticJsAceModeErlangJs, map[string]*bintree{}},
-				"mode-forth.js":                    &bintree{staticJsAceModeForthJs, map[string]*bintree{}},
-				"mode-fortran.js":                  &bintree{staticJsAceModeFortranJs, map[string]*bintree{}},
-				"mode-ftl.js":                      &bintree{staticJsAceModeFtlJs, map[string]*bintree{}},
-				"mode-gcode.js":                    &bintree{staticJsAceModeGcodeJs, map[string]*bintree{}},
-				"mode-gherkin.js":                  &bintree{staticJsAceModeGherkinJs, map[string]*bintree{}},
-				"mode-gitignore.js":                &bintree{staticJsAceModeGitignoreJs, map[string]*bintree{}},
-				"mode-glsl.js":                     &bintree{staticJsAceModeGlslJs, map[string]*bintree{}},
-				"mode-gobstones.js":                &bintree{staticJsAceModeGobstonesJs, map[string]*bintree{}},
-				"mode-golang.js":                   &bintree{staticJsAceModeGolangJs, map[string]*bintree{}},
-				"mode-graphqlschema.js":            &bintree{staticJsAceModeGraphqlschemaJs, map[string]*bintree{}},
-				"mode-groovy.js":                   &bintree{staticJsAceModeGroovyJs, map[string]*bintree{}},
-				"mode-haml.js":                     &bintree{staticJsAceModeHamlJs, map[string]*bintree{}},
-				"mode-handlebars.js":               &bintree{staticJsAceModeHandlebarsJs, map[string]*bintree{}},
-				"mode-haskell.js":                  &bintree{staticJsAceModeHaskellJs, map[string]*bintree{}},
-				"mode-haskell_cabal.js":            &bintree{staticJsAceModeHaskell_cabalJs, map[string]*bintree{}},
-				"mode-haxe.js":                     &bintree{staticJsAceModeHaxeJs, map[string]*bintree{}},
-				"mode-hjson.js":                    &bintree{staticJsAceModeHjsonJs, map[string]*bintree{}},
-				"mode-html.js":                     &bintree{staticJsAceModeHtmlJs, map[string]*bintree{}},
-				"mode-html_elixir.js":              &bintree{staticJsAceModeHtml_elixirJs, map[string]*bintree{}},
-				"mode-html_ruby.js":                &bintree{staticJsAceModeHtml_rubyJs, map[string]*bintree{}},
-				"mode-ini.js":                      &bintree{staticJsAceModeIniJs, map[string]*bintree{}},
-				"mode-io.js":                       &bintree{staticJsAceModeIoJs, map[string]*bintree{}},
-				"mode-jack.js":                     &bintree{staticJsAceModeJackJs, map[string]*bintree{}},
-				"mode-jade.js":                     &bintree{staticJsAceModeJadeJs, map[string]*bintree{}},
-				"mode-java.js":                     &bintree{staticJsAceModeJavaJs, map[string]*bintree{}},
-				"mode-javascript.js":               &bintree{staticJsAceModeJavascriptJs, map[string]*bintree{}},
-				"mode-json.js":                     &bintree{staticJsAceModeJsonJs, map[string]*bintree{}},
-				"mode-jsoniq.js":                   &bintree{staticJsAceModeJsoniqJs, map[string]*bintree{}},
-				"mode-jsp.js":                      &bintree{staticJsAceModeJspJs, map[string]*bintree{}},
-				"mode-jssm.js":                     &bintree{staticJsAceModeJssmJs, map[string]*bintree{}},
-				"mode-jsx.js":                      &bintree{staticJsAceModeJsxJs, map[string]*bintree{}},
-				"mode-julia.js":                    &bintree{staticJsAceModeJuliaJs, map[string]*bintree{}},
-				"mode-kotlin.js":                   &bintree{staticJsAceModeKotlinJs, map[string]*bintree{}},
-				"mode-latex.js":                    &bintree{staticJsAceModeLatexJs, map[string]*bintree{}},
-				"mode-less.js":                     &bintree{staticJsAceModeLessJs, map[string]*bintree{}},
-				"mode-liquid.js":                   &bintree{staticJsAceModeLiquidJs, map[string]*bintree{}},
-				"mode-lisp.js":                     &bintree{staticJsAceModeLispJs, map[string]*bintree{}},
-				"mode-livescript.js":               &bintree{staticJsAceModeLivescriptJs, map[string]*bintree{}},
-				"mode-logiql.js":                   &bintree{staticJsAceModeLogiqlJs, map[string]*bintree{}},
-				"mode-lsl.js":                      &bintree{staticJsAceModeLslJs, map[string]*bintree{}},
-				"mode-lua.js":                      &bintree{staticJsAceModeLuaJs, map[string]*bintree{}},
-				"mode-luapage.js":                  &bintree{staticJsAceModeLuapageJs, map[string]*bintree{}},
-				"mode-lucene.js":                   &bintree{staticJsAceModeLuceneJs, map[string]*bintree{}},
-				"mode-makefile.js":                 &bintree{staticJsAceModeMakefileJs, map[string]*bintree{}},
-				"mode-markdown.js":                 &bintree{staticJsAceModeMarkdownJs, map[string]*bintree{}},
-				"mode-mask.js":                     &bintree{staticJsAceModeMaskJs, map[string]*bintree{}},
-				"mode-matlab.js":                   &bintree{staticJsAceModeMatlabJs, map[string]*bintree{}},
-				"mode-maze.js":                     &bintree{staticJsAceModeMazeJs, map[string]*bintree{}},
-				"mode-mel.js":                      &bintree{staticJsAceModeMelJs, map[string]*bintree{}},
-				"mode-mixal.js":                    &bintree{staticJsAceModeMixalJs, map[string]*bintree{}},
-				"mode-mushcode.js":                 &bintree{staticJsAceModeMushcodeJs, map[string]*bintree{}},
-				"mode-mysql.js":                    &bintree{staticJsAceModeMysqlJs, map[string]*bintree{}},
-				"mode-nix.js":                      &bintree{staticJsAceModeNixJs, map[string]*bintree{}},
-				"mode-nsis.js":                     &bintree{staticJsAceModeNsisJs, map[string]*bintree{}},
-				"mode-objectivec.js":               &bintree{staticJsAceModeObjectivecJs, map[string]*bintree{}},
-				"mode-ocaml.js":                    &bintree{staticJsAceModeOcamlJs, map[string]*bintree{}},
-				"mode-pascal.js":                   &bintree{staticJsAceModePascalJs, map[string]*bintree{}},
-				"mode-perl.js":                     &bintree{staticJsAceModePerlJs, map[string]*bintree{}},
-				"mode-pgsql.js":                    &bintree{staticJsAceModePgsqlJs, map[string]*bintree{}},
-				"mode-php.js":                      &bintree{staticJsAceModePhpJs, map[string]*bintree{}},
-				"mode-pig.js":                      &bintree{staticJsAceModePigJs, map[string]*bintree{}},
-				"mode-plain_text.js":               &bintree{staticJsAceModePlain_textJs, map[string]*bintree{}},
-				"mode-powershell.js":               &bintree{staticJsAceModePowershellJs, map[string]*bintree{}},
-				"mode-praat.js":                    &bintree{staticJsAceModePraatJs, map[string]*bintree{}},
-				"mode-prolog.js":                   &bintree{staticJsAceModePrologJs, map[string]*bintree{}},
-				"mode-properties.js":               &bintree{staticJsAceModePropertiesJs, map[string]*bintree{}},
-				"mode-protobuf.js":                 &bintree{staticJsAceModeProtobufJs, map[string]*bintree{}},
-				"mode-python.js":                   &bintree{staticJsAceModePythonJs, map[string]*bintree{}},
-				"mode-r.js":                        &bintree{staticJsAceModeRJs, map[string]*bintree{}},
-				"mode-razor.js":                    &bintree{staticJsAceModeRazorJs, map[string]*bintree{}},
-				"mode-rdoc.js":                     &bintree{staticJsAceModeRdocJs, map[string]*bintree{}},
-				"mode-red.js":                      &bintree{staticJsAceModeRedJs, map[string]*bintree{}},
-				"mode-redshift.js":                 &bintree{staticJsAceModeRedshiftJs, map[string]*bintree{}},
-				"mode-rhtml.js":                    &bintree{staticJsAceModeRhtmlJs, map[string]*bintree{}},
-				"mode-rst.js":                      &bintree{staticJsAceModeRstJs, map[string]*bintree{}},
-				"mode-ruby.js":                     &bintree{staticJsAceModeRubyJs, map[string]*bintree{}},
-				"mode-rust.js":                     &bintree{staticJsAceModeRustJs, map[string]*bintree{}},
-				"mode-sass.js":                     &bintree{staticJsAceModeSassJs, map[string]*bintree{}},
-				"mode-scad.js":                     &bintree{staticJsAceModeScadJs, map[string]*bintree{}},
-				"mode-scala.js":                    &bintree{staticJsAceModeScalaJs, map[string]*bintree{}},
-				"mode-scheme.js":                   &bintree{staticJsAceModeSchemeJs, map[string]*bintree{}},
-				"mode-scss.js":                     &bintree{staticJsAceModeScssJs, map[string]*bintree{}},
-				"mode-sh.js":                       &bintree{staticJsAceModeShJs, map[string]*bintree{}},
-				"mode-sjs.js":                      &bintree{staticJsAceModeSjsJs, map[string]*bintree{}},
-				"mode-smarty.js":                   &bintree{staticJsAceModeSmartyJs, map[string]*bintree{}},
-				"mode-snippets.js":                 &bintree{staticJsAceModeSnippetsJs, map[string]*bintree{}},
-				"mode-soy_template.js":             &bintree{staticJsAceModeSoy_templateJs, map[string]*bintree{}},
-				"mode-space.js":                    &bintree{staticJsAceModeSpaceJs, map[string]*bintree{}},
-				"mode-sparql.js":                   &bintree{staticJsAceModeSparqlJs, map[string]*bintree{}},
-				"mode-sql.js":                      &bintree{staticJsAceModeSqlJs, map[string]*bintree{}},
-				"mode-sqlserver.js":                &bintree{staticJsAceModeSqlserverJs, map[string]*bintree{}},
-				"mode-stylus.js":                   &bintree{staticJsAceModeStylusJs, map[string]*bintree{}},
-				"mode-svg.js":                      &bintree{staticJsAceModeSvgJs, map[string]*bintree{}},
-				"mode-swift.js":                    &bintree{staticJsAceModeSwiftJs, map[string]*bintree{}},
-				"mode-tcl.js":                      &bintree{staticJsAceModeTclJs, map[string]*bintree{}},
-				"mode-tex.js":                      &bintree{staticJsAceModeTexJs, map[string]*bintree{}},
-				"mode-text.js":                     &bintree{staticJsAceModeTextJs, map[string]*bintree{}},
-				"mode-textile.js":                  &bintree{staticJsAceModeTextileJs, map[string]*bintree{}},
-				"mode-toml.js":                     &bintree{staticJsAceModeTomlJs, map[string]*bintree{}},
-				"mode-tsx.js":                      &bintree{staticJsAceModeTsxJs, map[string]*bintree{}},
-				"mode-turtle.js":                   &bintree{staticJsAceModeTurtleJs, map[string]*bintree{}},
-				"mode-twig.js":                     &bintree{staticJsAceModeTwigJs, map[string]*bintree{}},
-				"mode-typescript.js":               &bintree{staticJsAceModeTypescriptJs, map[string]*bintree{}},
-				"mode-vala.js":                     &bintree{staticJsAceModeValaJs, map[string]*bintree{}},
-				"mode-vbscript.js":                 &bintree{staticJsAceModeVbscriptJs, map[string]*bintree{}},
-				"mode-velocity.js":                 &bintree{staticJsAceModeVelocityJs, map[string]*bintree{}},
-				"mode-verilog.js":                  &bintree{staticJsAceModeVerilogJs, map[string]*bintree{}},
-				"mode-vhdl.js":                     &bintree{staticJsAceModeVhdlJs, map[string]*bintree{}},
-				"mode-wollok.js":                   &bintree{staticJsAceModeWollokJs, map[string]*bintree{}},
-				"mode-xml.js":                      &bintree{staticJsAceModeXmlJs, map[string]*bintree{}},
-				"mode-yaml.js":                     &bintree{staticJsAceModeYamlJs, map[string]*bintree{}},
-				"theme-ambiance.js":                &bintree{staticJsAceThemeAmbianceJs, map[string]*bintree{}},
-				"theme-chaos.js":                   &bintree{staticJsAceThemeChaosJs, map[string]*bintree{}},
-				"theme-chrome.js":                  &bintree{staticJsAceThemeChromeJs, map[string]*bintree{}},
-				"theme-clouds.js":                  &bintree{staticJsAceThemeCloudsJs, map[string]*bintree{}},
-				"theme-clouds_midnight.js":         &bintree{staticJsAceThemeClouds_midnightJs, map[string]*bintree{}},
-				"theme-cobalt.js":                  &bintree{staticJsAceThemeCobaltJs, map[string]*bintree{}},
-				"theme-crimson_editor.js":          &bintree{staticJsAceThemeCrimson_editorJs, map[string]*bintree{}},
-				"theme-dawn.js":                    &bintree{staticJsAceThemeDawnJs, map[string]*bintree{}},
-				"theme-dracula.js":                 &bintree{staticJsAceThemeDraculaJs, map[string]*bintree{}},
-				"theme-dreamweaver.js":             &bintree{staticJsAceThemeDreamweaverJs, map[string]*bintree{}},
-				"theme-eclipse.js":                 &bintree{staticJsAceThemeEclipseJs, map[string]*bintree{}},
-				"theme-github.js":                  &bintree{staticJsAceThemeGithubJs, map[string]*bintree{}},
-				"theme-gob.js":                     &bintree{staticJsAceThemeGobJs, map[string]*bintree{}},
-				"theme-gruvbox.js":                 &bintree{staticJsAceThemeGruvboxJs, map[string]*bintree{}},
-				"theme-idle_fingers.js":            &bintree{staticJsAceThemeIdle_fingersJs, map[string]*bintree{}},
-				"theme-iplastic.js":                &bintree{staticJsAceThemeIplasticJs, map[string]*bintree{}},
-				"theme-katzenmilch.js":             &bintree{staticJsAceThemeKatzenmilchJs, map[string]*bintree{}},
-				"theme-kr_theme.js":                &bintree{staticJsAceThemeKr_themeJs, map[string]*bintree{}},
-				"theme-kuroir.js":                  &bintree{staticJsAceThemeKuroirJs, map[string]*bintree{}},
-				"theme-merbivore.js":               &bintree{staticJsAceThemeMerbivoreJs, map[string]*bintree{}},
-				"theme-merbivore_soft.js":          &bintree{staticJsAceThemeMerbivore_softJs, map[string]*bintree{}},
-				"theme-mono_industrial.js":         &bintree{staticJsAceThemeMono_industrialJs, map[string]*bintree{}},
-				"theme-monokai.js":                 &bintree{staticJsAceThemeMonokaiJs, map[string]*bintree{}},
-				"theme-pastel_on_dark.js":          &bintree{staticJsAceThemePastel_on_darkJs, map[string]*bintree{}},
-				"theme-solarized_dark.js":          &bintree{staticJsAceThemeSolarized_darkJs, map[string]*bintree{}},
-				"theme-solarized_light.js":         &bintree{staticJsAceThemeSolarized_lightJs, map[string]*bintree{}},
-				"theme-sqlserver.js":               &bintree{staticJsAceThemeSqlserverJs, map[string]*bintree{}},
-				"theme-terminal.js":                &bintree{staticJsAceThemeTerminalJs, map[string]*bintree{}},
-				"theme-textmate.js":                &bintree{staticJsAceThemeTextmateJs, map[string]*bintree{}},
-				"theme-tomorrow.js":                &bintree{staticJsAceThemeTomorrowJs, map[string]*bintree{}},
-				"theme-tomorrow_night.js":          &bintree{staticJsAceThemeTomorrow_nightJs, map[string]*bintree{}},
-				"theme-tomorrow_night_blue.js":     &bintree{staticJsAceThemeTomorrow_night_blueJs, map[string]*bintree{}},
-				"theme-tomorrow_night_bright.js":   &bintree{staticJsAceThemeTomorrow_night_brightJs, map[string]*bintree{}},
+				"ace.js": &bintree{staticJsAceAceJs, map[string]*bintree{}},
+				"ext-beautify.js": &bintree{staticJsAceExtBeautifyJs, map[string]*bintree{}},
+				"ext-elastic_tabstops_lite.js": &bintree{staticJsAceExtElastic_tabstops_liteJs, map[string]*bintree{}},
+				"ext-emmet.js": &bintree{staticJsAceExtEmmetJs, map[string]*bintree{}},
+				"ext-error_marker.js": &bintree{staticJsAceExtError_markerJs, map[string]*bintree{}},
+				"ext-keybinding_menu.js": &bintree{staticJsAceExtKeybinding_menuJs, map[string]*bintree{}},
+				"ext-language_tools.js": &bintree{staticJsAceExtLanguage_toolsJs, map[string]*bintree{}},
+				"ext-linking.js": &bintree{staticJsAceExtLinkingJs, map[string]*bintree{}},
+				"ext-modelist.js": &bintree{staticJsAceExtModelistJs, map[string]*bintree{}},
+				"ext-options.js": &bintree{staticJsAceExtOptionsJs, map[string]*bintree{}},
+				"ext-searchbox.js": &bintree{staticJsAceExtSearchboxJs, map[string]*bintree{}},
+				"ext-settings_menu.js": &bintree{staticJsAceExtSettings_menuJs, map[string]*bintree{}},
+				"ext-spellcheck.js": &bintree{staticJsAceExtSpellcheckJs, map[string]*bintree{}},
+				"ext-split.js": &bintree{staticJsAceExtSplitJs, map[string]*bintree{}},
+				"ext-static_highlight.js": &bintree{staticJsAceExtStatic_highlightJs, map[string]*bintree{}},
+				"ext-statusbar.js": &bintree{staticJsAceExtStatusbarJs, map[string]*bintree{}},
+				"ext-textarea.js": &bintree{staticJsAceExtTextareaJs, map[string]*bintree{}},
+				"ext-themelist.js": &bintree{staticJsAceExtThemelistJs, map[string]*bintree{}},
+				"ext-whitespace.js": &bintree{staticJsAceExtWhitespaceJs, map[string]*bintree{}},
+				"keybinding-emacs.js": &bintree{staticJsAceKeybindingEmacsJs, map[string]*bintree{}},
+				"keybinding-vim.js": &bintree{staticJsAceKeybindingVimJs, map[string]*bintree{}},
+				"mode-abap.js": &bintree{staticJsAceModeAbapJs, map[string]*bintree{}},
+				"mode-abc.js": &bintree{staticJsAceModeAbcJs, map[string]*bintree{}},
+				"mode-actionscript.js": &bintree{staticJsAceModeActionscriptJs, map[string]*bintree{}},
+				"mode-ada.js": &bintree{staticJsAceModeAdaJs, map[string]*bintree{}},
+				"mode-apache_conf.js": &bintree{staticJsAceModeApache_confJs, map[string]*bintree{}},
+				"mode-applescript.js": &bintree{staticJsAceModeApplescriptJs, map[string]*bintree{}},
+				"mode-asciidoc.js": &bintree{staticJsAceModeAsciidocJs, map[string]*bintree{}},
+				"mode-assembly_x86.js": &bintree{staticJsAceModeAssembly_x86Js, map[string]*bintree{}},
+				"mode-autohotkey.js": &bintree{staticJsAceModeAutohotkeyJs, map[string]*bintree{}},
+				"mode-batchfile.js": &bintree{staticJsAceModeBatchfileJs, map[string]*bintree{}},
+				"mode-bro.js": &bintree{staticJsAceModeBroJs, map[string]*bintree{}},
+				"mode-c9search.js": &bintree{staticJsAceModeC9searchJs, map[string]*bintree{}},
+				"mode-c_cpp.js": &bintree{staticJsAceModeC_cppJs, map[string]*bintree{}},
+				"mode-cirru.js": &bintree{staticJsAceModeCirruJs, map[string]*bintree{}},
+				"mode-clojure.js": &bintree{staticJsAceModeClojureJs, map[string]*bintree{}},
+				"mode-cobol.js": &bintree{staticJsAceModeCobolJs, map[string]*bintree{}},
+				"mode-coffee.js": &bintree{staticJsAceModeCoffeeJs, map[string]*bintree{}},
+				"mode-coldfusion.js": &bintree{staticJsAceModeColdfusionJs, map[string]*bintree{}},
+				"mode-csharp.js": &bintree{staticJsAceModeCsharpJs, map[string]*bintree{}},
+				"mode-csound_document.js": &bintree{staticJsAceModeCsound_documentJs, map[string]*bintree{}},
+				"mode-csound_orchestra.js": &bintree{staticJsAceModeCsound_orchestraJs, map[string]*bintree{}},
+				"mode-csound_score.js": &bintree{staticJsAceModeCsound_scoreJs, map[string]*bintree{}},
+				"mode-csp.js": &bintree{staticJsAceModeCspJs, map[string]*bintree{}},
+				"mode-css.js": &bintree{staticJsAceModeCssJs, map[string]*bintree{}},
+				"mode-curly.js": &bintree{staticJsAceModeCurlyJs, map[string]*bintree{}},
+				"mode-d.js": &bintree{staticJsAceModeDJs, map[string]*bintree{}},
+				"mode-dart.js": &bintree{staticJsAceModeDartJs, map[string]*bintree{}},
+				"mode-diff.js": &bintree{staticJsAceModeDiffJs, map[string]*bintree{}},
+				"mode-django.js": &bintree{staticJsAceModeDjangoJs, map[string]*bintree{}},
+				"mode-dockerfile.js": &bintree{staticJsAceModeDockerfileJs, map[string]*bintree{}},
+				"mode-dot.js": &bintree{staticJsAceModeDotJs, map[string]*bintree{}},
+				"mode-drools.js": &bintree{staticJsAceModeDroolsJs, map[string]*bintree{}},
+				"mode-edifact.js": &bintree{staticJsAceModeEdifactJs, map[string]*bintree{}},
+				"mode-eiffel.js": &bintree{staticJsAceModeEiffelJs, map[string]*bintree{}},
+				"mode-ejs.js": &bintree{staticJsAceModeEjsJs, map[string]*bintree{}},
+				"mode-elixir.js": &bintree{staticJsAceModeElixirJs, map[string]*bintree{}},
+				"mode-elm.js": &bintree{staticJsAceModeElmJs, map[string]*bintree{}},
+				"mode-erlang.js": &bintree{staticJsAceModeErlangJs, map[string]*bintree{}},
+				"mode-forth.js": &bintree{staticJsAceModeForthJs, map[string]*bintree{}},
+				"mode-fortran.js": &bintree{staticJsAceModeFortranJs, map[string]*bintree{}},
+				"mode-ftl.js": &bintree{staticJsAceModeFtlJs, map[string]*bintree{}},
+				"mode-gcode.js": &bintree{staticJsAceModeGcodeJs, map[string]*bintree{}},
+				"mode-gherkin.js": &bintree{staticJsAceModeGherkinJs, map[string]*bintree{}},
+				"mode-gitignore.js": &bintree{staticJsAceModeGitignoreJs, map[string]*bintree{}},
+				"mode-glsl.js": &bintree{staticJsAceModeGlslJs, map[string]*bintree{}},
+				"mode-gobstones.js": &bintree{staticJsAceModeGobstonesJs, map[string]*bintree{}},
+				"mode-golang.js": &bintree{staticJsAceModeGolangJs, map[string]*bintree{}},
+				"mode-graphqlschema.js": &bintree{staticJsAceModeGraphqlschemaJs, map[string]*bintree{}},
+				"mode-groovy.js": &bintree{staticJsAceModeGroovyJs, map[string]*bintree{}},
+				"mode-haml.js": &bintree{staticJsAceModeHamlJs, map[string]*bintree{}},
+				"mode-handlebars.js": &bintree{staticJsAceModeHandlebarsJs, map[string]*bintree{}},
+				"mode-haskell.js": &bintree{staticJsAceModeHaskellJs, map[string]*bintree{}},
+				"mode-haskell_cabal.js": &bintree{staticJsAceModeHaskell_cabalJs, map[string]*bintree{}},
+				"mode-haxe.js": &bintree{staticJsAceModeHaxeJs, map[string]*bintree{}},
+				"mode-hjson.js": &bintree{staticJsAceModeHjsonJs, map[string]*bintree{}},
+				"mode-html.js": &bintree{staticJsAceModeHtmlJs, map[string]*bintree{}},
+				"mode-html_elixir.js": &bintree{staticJsAceModeHtml_elixirJs, map[string]*bintree{}},
+				"mode-html_ruby.js": &bintree{staticJsAceModeHtml_rubyJs, map[string]*bintree{}},
+				"mode-ini.js": &bintree{staticJsAceModeIniJs, map[string]*bintree{}},
+				"mode-io.js": &bintree{staticJsAceModeIoJs, map[string]*bintree{}},
+				"mode-jack.js": &bintree{staticJsAceModeJackJs, map[string]*bintree{}},
+				"mode-jade.js": &bintree{staticJsAceModeJadeJs, map[string]*bintree{}},
+				"mode-java.js": &bintree{staticJsAceModeJavaJs, map[string]*bintree{}},
+				"mode-javascript.js": &bintree{staticJsAceModeJavascriptJs, map[string]*bintree{}},
+				"mode-json.js": &bintree{staticJsAceModeJsonJs, map[string]*bintree{}},
+				"mode-jsoniq.js": &bintree{staticJsAceModeJsoniqJs, map[string]*bintree{}},
+				"mode-jsp.js": &bintree{staticJsAceModeJspJs, map[string]*bintree{}},
+				"mode-jssm.js": &bintree{staticJsAceModeJssmJs, map[string]*bintree{}},
+				"mode-jsx.js": &bintree{staticJsAceModeJsxJs, map[string]*bintree{}},
+				"mode-julia.js": &bintree{staticJsAceModeJuliaJs, map[string]*bintree{}},
+				"mode-kotlin.js": &bintree{staticJsAceModeKotlinJs, map[string]*bintree{}},
+				"mode-latex.js": &bintree{staticJsAceModeLatexJs, map[string]*bintree{}},
+				"mode-less.js": &bintree{staticJsAceModeLessJs, map[string]*bintree{}},
+				"mode-liquid.js": &bintree{staticJsAceModeLiquidJs, map[string]*bintree{}},
+				"mode-lisp.js": &bintree{staticJsAceModeLispJs, map[string]*bintree{}},
+				"mode-livescript.js": &bintree{staticJsAceModeLivescriptJs, map[string]*bintree{}},
+				"mode-logiql.js": &bintree{staticJsAceModeLogiqlJs, map[string]*bintree{}},
+				"mode-lsl.js": &bintree{staticJsAceModeLslJs, map[string]*bintree{}},
+				"mode-lua.js": &bintree{staticJsAceModeLuaJs, map[string]*bintree{}},
+				"mode-luapage.js": &bintree{staticJsAceModeLuapageJs, map[string]*bintree{}},
+				"mode-lucene.js": &bintree{staticJsAceModeLuceneJs, map[string]*bintree{}},
+				"mode-makefile.js": &bintree{staticJsAceModeMakefileJs, map[string]*bintree{}},
+				"mode-markdown.js": &bintree{staticJsAceModeMarkdownJs, map[string]*bintree{}},
+				"mode-mask.js": &bintree{staticJsAceModeMaskJs, map[string]*bintree{}},
+				"mode-matlab.js": &bintree{staticJsAceModeMatlabJs, map[string]*bintree{}},
+				"mode-maze.js": &bintree{staticJsAceModeMazeJs, map[string]*bintree{}},
+				"mode-mel.js": &bintree{staticJsAceModeMelJs, map[string]*bintree{}},
+				"mode-mixal.js": &bintree{staticJsAceModeMixalJs, map[string]*bintree{}},
+				"mode-mushcode.js": &bintree{staticJsAceModeMushcodeJs, map[string]*bintree{}},
+				"mode-mysql.js": &bintree{staticJsAceModeMysqlJs, map[string]*bintree{}},
+				"mode-nix.js": &bintree{staticJsAceModeNixJs, map[string]*bintree{}},
+				"mode-nsis.js": &bintree{staticJsAceModeNsisJs, map[string]*bintree{}},
+				"mode-objectivec.js": &bintree{staticJsAceModeObjectivecJs, map[string]*bintree{}},
+				"mode-ocaml.js": &bintree{staticJsAceModeOcamlJs, map[string]*bintree{}},
+				"mode-pascal.js": &bintree{staticJsAceModePascalJs, map[string]*bintree{}},
+				"mode-perl.js": &bintree{staticJsAceModePerlJs, map[string]*bintree{}},
+				"mode-pgsql.js": &bintree{staticJsAceModePgsqlJs, map[string]*bintree{}},
+				"mode-php.js": &bintree{staticJsAceModePhpJs, map[string]*bintree{}},
+				"mode-pig.js": &bintree{staticJsAceModePigJs, map[string]*bintree{}},
+				"mode-plain_text.js": &bintree{staticJsAceModePlain_textJs, map[string]*bintree{}},
+				"mode-powershell.js": &bintree{staticJsAceModePowershellJs, map[string]*bintree{}},
+				"mode-praat.js": &bintree{staticJsAceModePraatJs, map[string]*bintree{}},
+				"mode-prolog.js": &bintree{staticJsAceModePrologJs, map[string]*bintree{}},
+				"mode-properties.js": &bintree{staticJsAceModePropertiesJs, map[string]*bintree{}},
+				"mode-protobuf.js": &bintree{staticJsAceModeProtobufJs, map[string]*bintree{}},
+				"mode-python.js": &bintree{staticJsAceModePythonJs, map[string]*bintree{}},
+				"mode-r.js": &bintree{staticJsAceModeRJs, map[string]*bintree{}},
+				"mode-razor.js": &bintree{staticJsAceModeRazorJs, map[string]*bintree{}},
+				"mode-rdoc.js": &bintree{staticJsAceModeRdocJs, map[string]*bintree{}},
+				"mode-red.js": &bintree{staticJsAceModeRedJs, map[string]*bintree{}},
+				"mode-redshift.js": &bintree{staticJsAceModeRedshiftJs, map[string]*bintree{}},
+				"mode-rhtml.js": &bintree{staticJsAceModeRhtmlJs, map[string]*bintree{}},
+				"mode-rst.js": &bintree{staticJsAceModeRstJs, map[string]*bintree{}},
+				"mode-ruby.js": &bintree{staticJsAceModeRubyJs, map[string]*bintree{}},
+				"mode-rust.js": &bintree{staticJsAceModeRustJs, map[string]*bintree{}},
+				"mode-sass.js": &bintree{staticJsAceModeSassJs, map[string]*bintree{}},
+				"mode-scad.js": &bintree{staticJsAceModeScadJs, map[string]*bintree{}},
+				"mode-scala.js": &bintree{staticJsAceModeScalaJs, map[string]*bintree{}},
+				"mode-scheme.js": &bintree{staticJsAceModeSchemeJs, map[string]*bintree{}},
+				"mode-scss.js": &bintree{staticJsAceModeScssJs, map[string]*bintree{}},
+				"mode-sh.js": &bintree{staticJsAceModeShJs, map[string]*bintree{}},
+				"mode-sjs.js": &bintree{staticJsAceModeSjsJs, map[string]*bintree{}},
+				"mode-smarty.js": &bintree{staticJsAceModeSmartyJs, map[string]*bintree{}},
+				"mode-snippets.js": &bintree{staticJsAceModeSnippetsJs, map[string]*bintree{}},
+				"mode-soy_template.js": &bintree{staticJsAceModeSoy_templateJs, map[string]*bintree{}},
+				"mode-space.js": &bintree{staticJsAceModeSpaceJs, map[string]*bintree{}},
+				"mode-sparql.js": &bintree{staticJsAceModeSparqlJs, map[string]*bintree{}},
+				"mode-sql.js": &bintree{staticJsAceModeSqlJs, map[string]*bintree{}},
+				"mode-sqlserver.js": &bintree{staticJsAceModeSqlserverJs, map[string]*bintree{}},
+				"mode-stylus.js": &bintree{staticJsAceModeStylusJs, map[string]*bintree{}},
+				"mode-svg.js": &bintree{staticJsAceModeSvgJs, map[string]*bintree{}},
+				"mode-swift.js": &bintree{staticJsAceModeSwiftJs, map[string]*bintree{}},
+				"mode-tcl.js": &bintree{staticJsAceModeTclJs, map[string]*bintree{}},
+				"mode-tex.js": &bintree{staticJsAceModeTexJs, map[string]*bintree{}},
+				"mode-text.js": &bintree{staticJsAceModeTextJs, map[string]*bintree{}},
+				"mode-textile.js": &bintree{staticJsAceModeTextileJs, map[string]*bintree{}},
+				"mode-toml.js": &bintree{staticJsAceModeTomlJs, map[string]*bintree{}},
+				"mode-tsx.js": &bintree{staticJsAceModeTsxJs, map[string]*bintree{}},
+				"mode-turtle.js": &bintree{staticJsAceModeTurtleJs, map[string]*bintree{}},
+				"mode-twig.js": &bintree{staticJsAceModeTwigJs, map[string]*bintree{}},
+				"mode-typescript.js": &bintree{staticJsAceModeTypescriptJs, map[string]*bintree{}},
+				"mode-vala.js": &bintree{staticJsAceModeValaJs, map[string]*bintree{}},
+				"mode-vbscript.js": &bintree{staticJsAceModeVbscriptJs, map[string]*bintree{}},
+				"mode-velocity.js": &bintree{staticJsAceModeVelocityJs, map[string]*bintree{}},
+				"mode-verilog.js": &bintree{staticJsAceModeVerilogJs, map[string]*bintree{}},
+				"mode-vhdl.js": &bintree{staticJsAceModeVhdlJs, map[string]*bintree{}},
+				"mode-wollok.js": &bintree{staticJsAceModeWollokJs, map[string]*bintree{}},
+				"mode-xml.js": &bintree{staticJsAceModeXmlJs, map[string]*bintree{}},
+				"mode-yaml.js": &bintree{staticJsAceModeYamlJs, map[string]*bintree{}},
+				"theme-ambiance.js": &bintree{staticJsAceThemeAmbianceJs, map[string]*bintree{}},
+				"theme-chaos.js": &bintree{staticJsAceThemeChaosJs, map[string]*bintree{}},
+				"theme-chrome.js": &bintree{staticJsAceThemeChromeJs, map[string]*bintree{}},
+				"theme-clouds.js": &bintree{staticJsAceThemeCloudsJs, map[string]*bintree{}},
+				"theme-clouds_midnight.js": &bintree{staticJsAceThemeClouds_midnightJs, map[string]*bintree{}},
+				"theme-cobalt.js": &bintree{staticJsAceThemeCobaltJs, map[string]*bintree{}},
+				"theme-crimson_editor.js": &bintree{staticJsAceThemeCrimson_editorJs, map[string]*bintree{}},
+				"theme-dawn.js": &bintree{staticJsAceThemeDawnJs, map[string]*bintree{}},
+				"theme-dracula.js": &bintree{staticJsAceThemeDraculaJs, map[string]*bintree{}},
+				"theme-dreamweaver.js": &bintree{staticJsAceThemeDreamweaverJs, map[string]*bintree{}},
+				"theme-eclipse.js": &bintree{staticJsAceThemeEclipseJs, map[string]*bintree{}},
+				"theme-github.js": &bintree{staticJsAceThemeGithubJs, map[string]*bintree{}},
+				"theme-gob.js": &bintree{staticJsAceThemeGobJs, map[string]*bintree{}},
+				"theme-gruvbox.js": &bintree{staticJsAceThemeGruvboxJs, map[string]*bintree{}},
+				"theme-idle_fingers.js": &bintree{staticJsAceThemeIdle_fingersJs, map[string]*bintree{}},
+				"theme-iplastic.js": &bintree{staticJsAceThemeIplasticJs, map[string]*bintree{}},
+				"theme-katzenmilch.js": &bintree{staticJsAceThemeKatzenmilchJs, map[string]*bintree{}},
+				"theme-kr_theme.js": &bintree{staticJsAceThemeKr_themeJs, map[string]*bintree{}},
+				"theme-kuroir.js": &bintree{staticJsAceThemeKuroirJs, map[string]*bintree{}},
+				"theme-merbivore.js": &bintree{staticJsAceThemeMerbivoreJs, map[string]*bintree{}},
+				"theme-merbivore_soft.js": &bintree{staticJsAceThemeMerbivore_softJs, map[string]*bintree{}},
+				"theme-mono_industrial.js": &bintree{staticJsAceThemeMono_industrialJs, map[string]*bintree{}},
+				"theme-monokai.js": &bintree{staticJsAceThemeMonokaiJs, map[string]*bintree{}},
+				"theme-pastel_on_dark.js": &bintree{staticJsAceThemePastel_on_darkJs, map[string]*bintree{}},
+				"theme-solarized_dark.js": &bintree{staticJsAceThemeSolarized_darkJs, map[string]*bintree{}},
+				"theme-solarized_light.js": &bintree{staticJsAceThemeSolarized_lightJs, map[string]*bintree{}},
+				"theme-sqlserver.js": &bintree{staticJsAceThemeSqlserverJs, map[string]*bintree{}},
+				"theme-terminal.js": &bintree{staticJsAceThemeTerminalJs, map[string]*bintree{}},
+				"theme-textmate.js": &bintree{staticJsAceThemeTextmateJs, map[string]*bintree{}},
+				"theme-tomorrow.js": &bintree{staticJsAceThemeTomorrowJs, map[string]*bintree{}},
+				"theme-tomorrow_night.js": &bintree{staticJsAceThemeTomorrow_nightJs, map[string]*bintree{}},
+				"theme-tomorrow_night_blue.js": &bintree{staticJsAceThemeTomorrow_night_blueJs, map[string]*bintree{}},
+				"theme-tomorrow_night_bright.js": &bintree{staticJsAceThemeTomorrow_night_brightJs, map[string]*bintree{}},
 				"theme-tomorrow_night_eighties.js": &bintree{staticJsAceThemeTomorrow_night_eightiesJs, map[string]*bintree{}},
-				"theme-twilight.js":                &bintree{staticJsAceThemeTwilightJs, map[string]*bintree{}},
-				"theme-vibrant_ink.js":             &bintree{staticJsAceThemeVibrant_inkJs, map[string]*bintree{}},
-				"theme-xcode.js":                   &bintree{staticJsAceThemeXcodeJs, map[string]*bintree{}},
-				"worker-coffee.js":                 &bintree{staticJsAceWorkerCoffeeJs, map[string]*bintree{}},
-				"worker-css.js":                    &bintree{staticJsAceWorkerCssJs, map[string]*bintree{}},
-				"worker-html.js":                   &bintree{staticJsAceWorkerHtmlJs, map[string]*bintree{}},
-				"worker-javascript.js":             &bintree{staticJsAceWorkerJavascriptJs, map[string]*bintree{}},
-				"worker-json.js":                   &bintree{staticJsAceWorkerJsonJs, map[string]*bintree{}},
-				"worker-lua.js":                    &bintree{staticJsAceWorkerLuaJs, map[string]*bintree{}},
-				"worker-php.js":                    &bintree{staticJsAceWorkerPhpJs, map[string]*bintree{}},
-				"worker-xml.js":                    &bintree{staticJsAceWorkerXmlJs, map[string]*bintree{}},
+				"theme-twilight.js": &bintree{staticJsAceThemeTwilightJs, map[string]*bintree{}},
+				"theme-vibrant_ink.js": &bintree{staticJsAceThemeVibrant_inkJs, map[string]*bintree{}},
+				"theme-xcode.js": &bintree{staticJsAceThemeXcodeJs, map[string]*bintree{}},
+				"worker-coffee.js": &bintree{staticJsAceWorkerCoffeeJs, map[string]*bintree{}},
+				"worker-css.js": &bintree{staticJsAceWorkerCssJs, map[string]*bintree{}},
+				"worker-html.js": &bintree{staticJsAceWorkerHtmlJs, map[string]*bintree{}},
+				"worker-javascript.js": &bintree{staticJsAceWorkerJavascriptJs, map[string]*bintree{}},
+				"worker-json.js": &bintree{staticJsAceWorkerJsonJs, map[string]*bintree{}},
+				"worker-lua.js": &bintree{staticJsAceWorkerLuaJs, map[string]*bintree{}},
+				"worker-php.js": &bintree{staticJsAceWorkerPhpJs, map[string]*bintree{}},
+				"worker-xml.js": &bintree{staticJsAceWorkerXmlJs, map[string]*bintree{}},
 			}},
-			"editor-loader.js":     &bintree{staticJsEditorLoaderJs, map[string]*bintree{}},
+			"editor-loader.js": &bintree{staticJsEditorLoaderJs, map[string]*bintree{}},
 			"remark-latest.min.js": &bintree{staticJsRemarkLatestMinJs, map[string]*bintree{}},
-			"remark-loader.js":     &bintree{staticJsRemarkLoaderJs, map[string]*bintree{}},
+			"remark-loader.js": &bintree{staticJsRemarkLoaderJs, map[string]*bintree{}},
 		}},
 	}},
 	"templates": &bintree{nil, map[string]*bintree{
 		"footer-text.svg": &bintree{templatesFooterTextSvg, map[string]*bintree{}},
-		"index.html":      &bintree{templatesIndexHtml, map[string]*bintree{}},
-		"info.md":         &bintree{templatesInfoMd, map[string]*bintree{}},
+		"index.html": &bintree{templatesIndexHtml, map[string]*bintree{}},
+		"info.md": &bintree{templatesInfoMd, map[string]*bintree{}},
 	}},
 }}
 
@@ -4992,3 +4991,4 @@ func _filePath(dir, name string) string {
 	cannonicalName := strings.Replace(name, "\\", "/", -1)
 	return filepath.Join(append([]string{dir}, strings.Split(cannonicalName, "/")...)...)
 }
+

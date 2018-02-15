@@ -1,7 +1,7 @@
 package Handlers
 
 import (
-	"git.3stadt.com/3stadt/presla/src/PresLaTemplates"
+	"github.com/3stadt/presla/src/PresLaTemplates"
 )
 
 type Code struct {

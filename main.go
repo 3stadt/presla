@@ -3,8 +3,8 @@ package main
 import (
 	"flag"
 	"fmt"
-	"git.3stadt.com/3stadt/presla/src/Handlers"
-	"git.3stadt.com/3stadt/presla/src/PresLaTemplates"
+	"github.com/3stadt/presla/src/Handlers"
+	"github.com/3stadt/presla/src/PresLaTemplates"
 	"github.com/BurntSushi/toml"
 	"github.com/fatih/color"
 	"github.com/labstack/echo"

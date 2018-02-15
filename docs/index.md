@@ -69,7 +69,6 @@ PresentationName="my_presentation"
 TemplatePath="/home/user/Documents/presla-theme-my-presentation/static"
 StaticFiles="/home/user/Documents/presla-theme-my-presentation/templates"
 ```
-> Important: The Presentations section has double square brackets. Due to technical limitations, they cannot be shown here. (Use the source, Luke)
 
 ### Defining the path to your markup-files
 
@@ -129,11 +128,11 @@ FooterText="some text"
 
 ## Authors
 
-* @3stadt
-* @leichteckig
+* [@3stadt](https://github.com/3stadt/)
+* [@leichteckig](https://github.com/leichteckig/)
 
 ## License
 
-Please see LICENSE.md for details.
+Please see [LICENSE.md](https://github.com/3stadt/presla/blob/master/LICENSE.md) for details.
 
 [![license](https://i.creativecommons.org/l/by-sa/4.0/80x15.png)](http://creativecommons.org/licenses/by-sa/4.0/)

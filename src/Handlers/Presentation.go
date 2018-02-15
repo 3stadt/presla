@@ -2,7 +2,7 @@ package Handlers
 
 import (
 	"bytes"
-	"git.3stadt.com/3stadt/presla/src/PresLaTemplates"
+	"github.com/3stadt/presla/src/PresLaTemplates"
 	"github.com/labstack/echo"
 	"html/template"
 	"io/ioutil"
