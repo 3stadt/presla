@@ -13,7 +13,7 @@ You'll need a x64 based Mac, Linux or Windows System and a Web Browser. Preferab
 
 ### Installing
 
-Download the file matching your operating system [here](https://git.3stadt.com/3stadt/presla/releases). In detail, you can choose as following:
+Download the file matching your operating system [here](https://github.com/3stadt/presla/releases). In detail, you can choose as following:
 
 * presla-x.x.x-linux-amd64 for Linux
 * presla-x.x.x-darwin-amd64 for Mac
@@ -117,7 +117,7 @@ Your own theme sould have the following layout:
 
 ```
 
-You can start by copying the directories mentioned above from the current [master branch](https://git.3stadt.com/3stadt/presla).
+You can start by copying the directories mentioned above from the current [master branch](https://github.com/3stadt/presla).
 
 ## Changing the footer text
 
