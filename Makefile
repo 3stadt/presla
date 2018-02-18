@@ -8,34 +8,34 @@ VERSION ?= vlatest
 PLATFORMS := windows linux darwin
 os = $(word 1, $@)
 
-all: deps bindata release done
+all: deps bindata release bindata-debug done
 
 format:
 	go fmt gitlab.com/3stadt/...
 
-run:
+run: bindata-debug
 	@echo "=> Starting Server..."
 	go run main.go
 
 deps:
 	@echo "=> Installing dependencies..."
 	@go get -u github.com/golang/dep/cmd/dep
-	@$(BIN_DIR)/dep ensure
+	@"$(BIN_DIR)"/dep ensure
 
 done:
 	@echo "=> Done"
 
 bindata-debug:
-	@echo "=> Generating binary data..."
+	@echo "=> Generating binary data for development..."
 	@go get -u github.com/jteeuwen/go-bindata/...
 	@rm -f src/Handlers/bindata.go
-	@go-bindata -o src/Handlers/bindata.go -debug -ignore=.*-inkscape\.svg -pkg Handlers templates/... static/... executors/...
+	@"$(BIN_DIR)"/go-bindata -o src/Handlers/bindata.go -debug -ignore=.*-inkscape\.svg -pkg Handlers templates/... static/... executors/...
 
 bindata:
-	@echo "=> Generating binary data..."
+	@echo "=> Generating binary data for production..."
 	@go get -u github.com/jteeuwen/go-bindata/...
 	@rm -f src/Handlers/bindata.go
-	@go-bindata -o src/Handlers/bindata.go -ignore=.*-inkscape\.svg -pkg Handlers templates/... static/... executors/...
+	@"$(BIN_DIR)"/go-bindata -o src/Handlers/bindata.go -ignore=.*-inkscape\.svg -pkg Handlers templates/... static/... executors/...
 
 .PHONY: $(PLATFORMS)
 $(PLATFORMS):
