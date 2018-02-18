@@ -28,7 +28,8 @@ h1, h2, h3 {
 }
 .outputlog > pre > span {
     display: block;
-    line-height: 1.5rem;
+    line-height: 1rem;
+    font-size: 1rem;
 }
 .outputlog > pre > span:before {
     counter-increment: line;
@@ -38,6 +39,10 @@ h1, h2, h3 {
     padding: 0 .5em;
     margin-right: .5em;
     color: #888;
+}
+
+.editorbutton{
+    margin: 0 1rem;
 }
 
 

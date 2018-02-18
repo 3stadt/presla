@@ -11,8 +11,9 @@ slideshow.on("showSlide", function () {
             mode = "php",
             filename,
             execButton,
+            clearButton,
             outputLog,
-            outputpre,
+            outputPre,
             editor;
         if (elem.dataset.filename) {
             filename = elem.dataset.filename;
@@ -46,14 +47,23 @@ slideshow.on("showSlide", function () {
         });
 
         execButton = document.createElement('button');
+        clearButton = document.createElement('button');
         outputLog = document.createElement("div");
         outputLog.classList.add("outputlog");
-        outputpre = document.createElement("pre");
-        outputLog.appendChild(outputpre);
-        execButton.innerHTML = "Execute";
+        outputPre = document.createElement("pre");
+        outputLog.appendChild(outputPre);
+        execButton.innerHTML = "Execute code";
+        execButton.classList.add("editorbutton");
+        execButton.setAttribute("accesskey", "x");
+        clearButton.innerHTML = "Clear log";
+        clearButton.classList.add("editorbutton");
+        clearButton.setAttribute("accesskey", "l");
+        clearButton.onclick = function () {
+            outputPre.innerText = "";
+        };
         execButton.onclick = function () {
             var last_index = 0,
-                postdata = "executor=" + executor + "&filename=" + encodeURIComponent(filename) + "&payload=" + encodeURIComponent(editor.getValue()),
+                postData = "executor=" + executor + "&filename=" + encodeURIComponent(filename) + "&payload=" + encodeURIComponent(editor.getValue()),
                 xhr = new XMLHttpRequest();
 
             xhr.open("POST", "/exec", true);
@@ -71,17 +81,18 @@ slideshow.on("showSlide", function () {
                 stdout = resp.stdout;
                 stderr = resp.stderr;
                 if (stdout !== undefined && stdout !== "") {
-                    outputpre.innerHTML += "<span>" + resp.stdout + "</span>";
+                    outputPre.innerHTML += "<span>" + resp.stdout + "</span>";
                 }
                 if (stderr !== undefined && stderr !== "") {
-                    outputpre.innerHTML += "<span style='color: red;'>" + resp.stderr + "</span>";
+                    outputPre.innerHTML += "<span style='color: red;'>" + resp.stderr + "</span>";
                 }
-                outputpre.scrollTop = outputpre.scrollHeight;
+                outputPre.scrollTop = outputPre.scrollHeight;
             };
-            xhr.send(postdata);
+            xhr.send(postData);
         };
+        elem.insertAdjacentElement("afterend", clearButton);
         elem.insertAdjacentElement("afterend", execButton);
-        execButton.insertAdjacentElement("afterend", outputLog);
+        clearButton.insertAdjacentElement("afterend", outputLog);
 
         i++;
     });
