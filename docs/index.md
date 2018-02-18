@@ -4,6 +4,9 @@ Presla (Presentation Lambda) is an application that runs on your computer. It cr
 
 Additionaly, it is configured so it can execute Code examples directly from within your presentation, using [ace editor](https://ace.c9.io/) and code executors written in JS. Everything can be completely customized.
 
+## Roadmap
+
+The current Roadmap can be found [here](http://presla.io/roadmap).
 
 ## Getting Started
 
