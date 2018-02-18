@@ -163,9 +163,9 @@ func (code *Code) execute(c echo.Context, commands []CmdCommand) (err error) {
 			continue
 		}
 
-		// scanner is needed for continously getting the output
+		// scanners are needed for continuously getting the output
 		errScanner := bufio.NewScanner(cmdErrReader)
-		scanner := bufio.NewScanner(cmdReader)
+		outScanner := bufio.NewScanner(cmdReader)
 		chanSend := make(chan *CmdOutput, 10) // used for sending stdout and stderr to browser without overlapping
 		var wg sync.WaitGroup                 // used to keep browser connection open until all messages are sent
 
@@ -203,10 +203,10 @@ func (code *Code) execute(c echo.Context, commands []CmdCommand) (err error) {
 
 		// Capture Stdout and send it
 		go func() error {
-			for scanner.Scan() {
+			for outScanner.Scan() {
 				wg.Add(1)
 				text := CmdOutput{
-					StdOut: scanner.Text(),
+					StdOut: outScanner.Text(),
 				}
 				// send to browser
 				chanSend <- &text

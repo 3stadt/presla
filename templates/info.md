@@ -1,26 +1,9 @@
 layout: true
-class: center, middle, footer
+class: center, middle, top, footer
 
 ---
 
 [![:scaleImg 100%](/static/internal/img/presla-logo-black.svg "Presla")](http://presla.io/)
-
----
-
-## Url parameters
-
-.single-center-column-fit.leftalign[
-To load your presentation, add the file name without extension to the url.
-
-For example to load the presentation `foo.md` from your `md` folder, use:
-
-```
-http://localhost:8080/foo
-```
-
-> If you've altered the server port, use yours.
-
-]
 
 ---
 
@@ -36,13 +19,35 @@ http://localhost:8080/foo
 
 ---
 
-class: top
+## You can execute code with presla!
+.single-center-column-fit.leftalign[
 
-.single-center-column-fit[
+- All temporary files for the examples are created in this directory when you press execute:
+  - ***`{{ .TempDir }}`***
+- To insert an editor/logview in your presentations, create a div like this:
+
+```golang
+<div class="editor" data-filename="/some/dir/file.go" data-executor="go" data-mode="golang">
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello presla!")
+}
+</div>
+```
+]
+.single-center-column-fit.leftalign[
+> [PHP](http://php.net/manual/install.php) needs to be installed to execute php code!   
+> [Golang](https://golang.org/doc/install) needs to be installed to execute go code!
+]
+
+---
 
 ## Here, execute some php code!
 
-php needs to be installed and the examples need a `tmp` dir in your root.
+.single-center-column-fit[
 
 <div class="editor" data-filename="{{ .TempDir }}/main.php" data-executor="php"><?php
 
@@ -60,7 +65,18 @@ echo "bar\n";
 
 ---
 
-class: top
+## Errors show up in red
+
+.single-center-column-fit[
+
+<div class="editor" data-filename="{{ .TempDir }}/main.php" data-executor="php"><?php
+
+echo foobar(); // undefined function
+
+</div>
+]
+
+---
 
 .single-center-column-fit[
 
@@ -84,8 +100,6 @@ echo "bar\n";
 
 ---
 
-class: top
-
 .single-center-column-fit[
 
 ## Other languages? Sure!
@@ -102,8 +116,23 @@ import (
 func main() {
     fmt.Println("Hello go!")
     usr, _ := user.Current()
-    fmt.Println("Hello " + usr.Name + "!")
+    fmt.Println("Hello " + usr.Username + "!")
 }
+</div>
+]
+
+---
+
+## Whatever is installed on your system.. :)
+
+.single-center-column-fit[
+<div class="editor" data-filename="{{ .TempDir }}/main.py" data-executor="python" data-mode="python"># Want some python?
+def greet(name):
+    print('Hello', name + '!')
+
+greet('python')
+greet('world')
+greet('presla')
 </div>
 ]
 
@@ -115,7 +144,7 @@ For creating your own theme, static files and templates, take a look at the [rep
 
 ---
 
-## available presentations
+## Available presentations
 
 .single-center-column-fit.leftalign[
 
