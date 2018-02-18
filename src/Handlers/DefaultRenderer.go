@@ -2,7 +2,7 @@ package Handlers
 
 import (
 	"bytes"
-	"github.com/3stadt/presla/src/PresLaTemplates"
+	"github.com/3stadt/presla/src/PreslaTemplates"
 	"github.com/labstack/echo"
 	"html/template"
 	"net/http"
@@ -17,7 +17,7 @@ func renderWithDefaultTemplate(data map[string]interface{}, c echo.Context) erro
 	if err != nil {
 		return err
 	}
-	t := &PresLaTemplates.DefaultTemplate{
+	t := &PreslaTemplates.DefaultTemplate{
 		Template: parsedTemplate,
 	}
 	buf := new(bytes.Buffer)

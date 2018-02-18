@@ -3,7 +3,7 @@ class: center, middle, footer
 
 ---
 
-![:scaleImg 100%](/static/internal/img/presla-logo-black.svg "PresLa")
+[![:scaleImg 100%](/static/internal/img/presla-logo-black.svg "Presla")](http://presla.io/)
 
 ---
 
@@ -24,13 +24,14 @@ http://localhost:8080/foo
 
 ---
 
-.left-column.leftalign[
 ## Creating new Presentations
-]
-.right-column.leftalign[
-- Edit the `config.toml` and create some markdown files according to the `README.md`
-- At the end of the presentation you'll find a list of your presentation files
-- Fill in markdown according to the [wiki](https://github.com/gnab/remark/wiki)
+
+.single-center-column-fit.leftalign[
+- Your config file is: `{{ .ConfigFile }}`
+- Edit the `MarkdownPath` and create markdown file according to the `README.md`
+- Put markdown into the file according to the [wiki](https://github.com/gnab/remark/wiki)
+  - Restart presla so it picks up your newly created file
+- At the end of this presentation you'll find a list of your current presentation files
 ]
 
 ---
@@ -43,7 +44,7 @@ class: top
 
 php needs to be installed and the examples need a `tmp` dir in your root.
 
-<div class="editor" data-filename="/tmp/main.php" data-executor="php"><?php
+<div class="editor" data-filename="{{ .TempDir }}/main.php" data-executor="php"><?php
 
 echo time()."\n";
 
@@ -67,7 +68,7 @@ class: top
 
 You can set this via data attributes
 
-<div class="editor" data-filename="/tmp/main.php" data-executor="php" data-theme="solarized_light"><?php
+<div class="editor" data-filename="{{ .TempDir }}/main.php" data-executor="php" data-theme="solarized_light"><?php
 
 echo time()."\n";
 
@@ -91,7 +92,7 @@ class: top
 
 You can easily write own executors with javascript
 
-<div class="editor" data-filename="/tmp/main.go" data-executor="go">package main
+<div class="editor" data-filename="{{ .TempDir }}/main.go" data-executor="go" data-mode="golang">package main
 
 import (
     "fmt"

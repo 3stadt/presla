@@ -1,7 +1,7 @@
 package Handlers
 
 import (
-	"github.com/3stadt/presla/src/PresLaTemplates"
+	"github.com/3stadt/presla/src/PreslaTemplates"
 )
 
 type Code struct {
@@ -17,12 +17,13 @@ type PresentationConf struct {
 }
 
 type Conf struct {
+	ConfigFile      string
 	MarkdownPath    string
 	FooterText      string
 	TemplatePath    string
 	StaticFiles     string
 	Presentations   []PresentationConf
-	DefaultTemplate *PresLaTemplates.DefaultTemplate
+	DefaultTemplate *PreslaTemplates.DefaultTemplate
 	CustomExecutors string
 	LogLevel        string
 	LogFormat       string

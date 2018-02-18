@@ -1,4 +1,4 @@
-package PresLaTemplates
+package PreslaTemplates
 
 import (
 	"github.com/labstack/echo"
