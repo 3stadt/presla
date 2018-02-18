@@ -2,7 +2,7 @@ package Handlers
 
 import (
 	"bytes"
-	"github.com/3stadt/presla/src/PresLaTemplates"
+	"github.com/3stadt/presla/src/PreslaTemplates"
 	"github.com/labstack/echo"
 	"html/template"
 	"io/ioutil"
@@ -39,8 +39,14 @@ func (conf *Conf) showInfo(c echo.Context) error {
 	for _, file := range files {
 		presentations = append(presentations, strings.TrimSuffix(filepath.Base(file), ".md"))
 	}
+	tmpDir, err := ioutil.TempDir("", "presla")
+	if err != nil {
+		tmpDir = "/tmp"
+	}
 	data := map[string]interface{}{
 		"Presentations": presentations,
+		"ConfigFile":    conf.ConfigFile,
+		"TempDir":       tmpDir,
 	}
 
 	tpl, err := Asset("templates/info.md")
@@ -55,7 +61,7 @@ func render(c echo.Context, tpl []byte, data map[string]interface{}) error {
 	if err != nil {
 		return err
 	}
-	t := &PresLaTemplates.DefaultTemplate{
+	t := &PreslaTemplates.DefaultTemplate{
 		Template: parsedTemplate,
 	}
 

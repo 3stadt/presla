@@ -4,17 +4,20 @@ import (
 	"flag"
 	"fmt"
 	"github.com/3stadt/presla/src/Handlers"
-	"github.com/3stadt/presla/src/PresLaTemplates"
+	"github.com/3stadt/presla/src/PreslaTemplates"
 	"github.com/BurntSushi/toml"
 	"github.com/fatih/color"
 	"github.com/labstack/echo"
 	"github.com/mitchellh/go-homedir"
+	log "github.com/sirupsen/logrus"
 	"io/ioutil"
 	"os"
+	"path/filepath"
 	"strings"
 )
 
 type Config struct {
+	ConfigFile      string
 	MarkdownPath    string
 	FooterText      string
 	ListenOn        string
@@ -27,12 +30,15 @@ type Config struct {
 }
 
 var conf Config
+var errorColor *color.Color
 
 /**
 Get config values from `config.toml`.
 Will create the file with default values if it doesn't exist
 */
 func init() {
+
+	errorColor = color.New(color.FgWhite, color.BgRed, color.Bold)
 
 	configPath, err := getConfPath()
 	checkErr(err)
@@ -41,9 +47,20 @@ func init() {
 	checkErr(err)
 
 	_, err = toml.Decode(string(tomlData), &conf)
+	if err != nil {
+		if strings.Contains(err.Error(), "expected eight hexadecimal digits after") { // make error message from toml lexer readable for users
+			msg := "ERROR: please check your config file for unescaped backslashes. E.g. on windows use 'C:\\\\Users\\\\' instead of 'C:\\Users\\'"
+			errorColor.Printf("\n%s\n\n", msg)
+			log.Fatal(err)
+		}
+		checkErr(err)
+	}
+
+	conf.ConfigFile, err = filepath.Abs(configPath)
 	checkErr(err)
 
-	conf.MarkdownPath = strings.TrimSuffix(conf.MarkdownPath, "/")
+	conf.MarkdownPath, err = filepath.Abs(conf.MarkdownPath)
+	checkErr(err)
 }
 
 /**
@@ -51,6 +68,7 @@ Set up HTTP routes, start server
 */
 func main() {
 	handler := &Handlers.Conf{
+		ConfigFile:      conf.ConfigFile,
 		MarkdownPath:    conf.MarkdownPath,
 		FooterText:      conf.FooterText,
 		TemplatePath:    conf.TemplatePath,
@@ -66,7 +84,7 @@ func main() {
 	for _, c := range conf.Presentations {
 		_, err := os.Stat(c.TemplatePath)
 		if c.TemplatePath != "" && c.PresentationName != "" && err == nil {
-			e.Renderer = PresLaTemplates.Custom(c.TemplatePath)
+			e.Renderer = PreslaTemplates.Custom(c.TemplatePath)
 		}
 	}
 	e.GET("/static/internal/*", handler.InternalStatic)
@@ -80,12 +98,11 @@ func main() {
 	e.GET("/", handler.Home)
 	fmt.Println()
 	color.Green("Starting server at: " + color.HiBlueString("http://"+conf.ListenOn))
-	color.Green("=> Use Ctrl+c to quit PresLa")
+	color.Green("=> Use Ctrl+c to quit Presla")
 	e.Start(conf.ListenOn)
 }
 
 func checkErr(e error) {
-	errorColor := color.New(color.FgWhite, color.BgRed, color.Bold)
 	if e != nil {
 		errorColor.Println("A critical error occured:")
 		if e.Error() == "toml: cannot load TOML value of type map[string]interface {} into a Go slice" {
@@ -108,13 +125,15 @@ func getConfPath() (string, error) {
 		configPath = "presla.toml"
 	}
 
+	configPath = filepath.Clean(configPath)
+
 	locations := []string{configPath}
 
 	home, err := homedir.Dir()
 
 	// Only search other configs when we have a home directory
 	if err == nil {
-		locations = append(locations, home+"/.presla.toml", home+"/.config/presla.toml")
+		locations = append(locations, filepath.Clean(home+"/.presla.toml"), filepath.Clean(home+"/.config/presla.toml"))
 	} else {
 		fmt.Println("Error searching for the config in Home directory: ")
 		fmt.Println(err.Error())
