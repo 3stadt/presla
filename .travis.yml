@@ -7,6 +7,7 @@ deploy:
   provider: releases
   script: make all
   env: VERSION="${TRAVIS_TAG}"
+  user: 3stadt
   api_key:
     secure: o8kyFa70+H73aCzb4vCFes7HSOPpRKUyY4RKXXRFZ584YcpWQGXpthR/xYvSinkuCMWLwPOGBr9E0hIQwfS27tM0ABimDHD/YuvdEsIsmcP2R8DBO+E80Da4Lxvwtms/jSWIShDk3/E9x1DzUdL7i4UcXbIaVYNieXISDAneCWEe3KM+SmBgjIUN5ESoYS75QtPHY0aBzrFpw7Pj5J3q5VT56h7s1V/RS8JdqQEFIwd08lFpLDLRgEiCZomPFN7rMKdoh3J5Qvf5+dX4zIC5lNwYcgPXLCiynpUVNiZQaVI855mcjhG+6R+gLGo3xQsdJvoOScO0IaGwWyuNRCXeS8pZpBiY2JFvqMOYREtLReiT6w5z/IEE0OpFkET6t77bt4p/0L2YRFrj9BENRf7x60H3i5EVdUSoO0sTnAt39wXmazCT2nC63X7+PEGkpLgS+gbBZAyDSQlJeUAqVSWKeu5eJyjW7pk9Nx7kL4EmajsuAsfyp10f1GbarUvAOXkWAZAo75M/W86el9zESn/QRZ78I0JBVc+juHEdQ7+5+vzRLcDfBwKyME5KvVnGcK9x2iF+37aaVfKn+MwOqYjPa57K0yHgDLOusAH6xEWp5HY1zmrRoLQvcuzwZLFo6O+GAgigs+Usy4qURBc3zxmLwKf/xGKT3oUB156UNm7Jscs=
   file_glob: true
@@ -14,8 +15,8 @@ deploy:
   skip_cleanup: true
   on:
     tags: true
-    branch: master
     repo: 3stadt/presla
+    go: 1.9.x
 notifications:
   email:
     on_success: change
