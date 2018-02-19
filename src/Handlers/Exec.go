@@ -185,7 +185,6 @@ func (code *Code) execute(c echo.Context, commands []CmdCommand) (err error) {
 				}).Debug("sent output to browser")
 				wg.Done()
 			}
-			return nil
 		}()
 
 		// Capture error output and send it
