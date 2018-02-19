@@ -2,6 +2,7 @@ package Handlers
 
 import (
 	"github.com/3stadt/presla/src/PreslaTemplates"
+	"github.com/spf13/afero"
 )
 
 type Code struct {
@@ -27,6 +28,7 @@ type Conf struct {
 	CustomExecutors string
 	LogLevel        string
 	LogFormat       string
+	Fs              afero.Fs
 }
 
 type CmdCommand struct {

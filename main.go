@@ -1,16 +1,16 @@
 package main
 
 import (
+	"errors"
 	"flag"
 	"fmt"
 	"github.com/3stadt/presla/src/Handlers"
 	"github.com/3stadt/presla/src/PreslaTemplates"
 	"github.com/BurntSushi/toml"
-	"github.com/fatih/color"
 	"github.com/labstack/echo"
 	"github.com/mitchellh/go-homedir"
 	log "github.com/sirupsen/logrus"
-	"io/ioutil"
+	"github.com/spf13/afero"
 	"os"
 	"path/filepath"
 	"strings"
@@ -30,43 +30,29 @@ type Config struct {
 }
 
 var conf Config
-var errorColor *color.Color
-
-/**
-Get config values from `config.toml`.
-Will create the file with default values if it doesn't exist
-*/
-func init() {
-
-	errorColor = color.New(color.FgWhite, color.BgRed, color.Bold)
-
-	configPath, err := getConfPath()
-	checkErr(err)
-
-	tomlData, err := ioutil.ReadFile(configPath)
-	checkErr(err)
-
-	_, err = toml.Decode(string(tomlData), &conf)
-	if err != nil {
-		if strings.Contains(err.Error(), "expected eight hexadecimal digits after") { // make error message from toml lexer readable for users
-			msg := "ERROR: please check your config file for unescaped backslashes. E.g. on windows use 'C:\\\\Users\\\\' instead of 'C:\\Users\\'"
-			errorColor.Printf("\n%s\n\n", msg)
-			log.Fatal(err)
-		}
-		checkErr(err)
-	}
-
-	conf.ConfigFile, err = filepath.Abs(configPath)
-	checkErr(err)
-
-	conf.MarkdownPath, err = filepath.Abs(conf.MarkdownPath)
-	checkErr(err)
-}
+var logger = log.New()
 
 /**
 Set up HTTP routes, start server
 */
 func main() {
+
+	// Use Disk
+	fs := afero.NewOsFs()
+
+	// If user sets conf param, use that as starting point
+	configPathFlag := ""
+	flag.StringVar(&configPathFlag, "conf", "", "The path to the configuration file")
+	flag.Parse()
+
+	// Search for the config file to use or create one in working dir
+	configPath, err := getConfPath(configPathFlag, fs)
+	checkErr(err)
+
+	// Read in config from above into global conf var
+	err = readMainConfig(configPath, fs)
+	checkErr(err)
+
 	handler := &Handlers.Conf{
 		ConfigFile:      conf.ConfigFile,
 		MarkdownPath:    conf.MarkdownPath,
@@ -77,6 +63,7 @@ func main() {
 		CustomExecutors: conf.CustomExecutors,
 		LogLevel:        conf.LogLevel,
 		LogFormat:       conf.LogFormat,
+		Fs:              afero.NewOsFs(),
 	}
 
 	e := echo.New()
@@ -96,33 +83,56 @@ func main() {
 	e.POST("/exec", handler.Exec)
 	e.GET("/:pres", handler.Presentation)
 	e.GET("/", handler.Home)
-	fmt.Println()
-	color.Green("Starting server at: " + color.HiBlueString("http://"+conf.ListenOn))
-	color.Green("=> Use Ctrl+c to quit Presla")
+	logger.Infof("Starting server at: %s", fmt.Sprintf("http://%s", conf.ListenOn))
+	logger.Infof("=> Use Ctrl+c to quit Presla")
 	e.Start(conf.ListenOn)
 }
 
 func checkErr(e error) {
 	if e != nil {
-		errorColor.Println("A critical error occured:")
+		msg := e.Error()
 		if e.Error() == "toml: cannot load TOML value of type map[string]interface {} into a Go slice" {
-			errorColor.Println("You must use double brackets in your config file, like [[This]], instead of single brackets like [This]")
-		} else {
-			errorColor.Println(e.Error())
+			msg = "You must use double brackets in your config file, like [[This]], instead of single brackets like [This]"
 		}
-		os.Exit(1)
+		logger.Fatalf("A critical error occurred: %s", msg)
 	}
 }
 
-func getConfPath() (string, error) {
+func readMainConfig(configPath string, fs afero.Fs) error {
+	tomlData, err := afero.ReadFile(fs, configPath)
+	if err != nil {
+		return err
+	}
 
-	var configPath string
-	flag.StringVar(&configPath, "conf", "", "The path to the configuration file")
-	flag.Parse()
+	_, err = toml.Decode(string(tomlData), &conf)
+	if err != nil {
+		if strings.Contains(err.Error(), "expected eight hexadecimal digits after") { // make error message from toml lexer readable for users
+			msg := "ERROR: please check your config file for unescaped backslashes. E.g. on windows use 'C:\\\\Users\\\\' instead of 'C:\\Users\\'"
+			return errors.New(msg)
+		}
+		return err
+	}
+
+	if conf.ConfigFile, err = filepath.Abs(configPath); err != nil {
+		return err
+	}
+
+	if conf.MarkdownPath, err = filepath.Abs(conf.MarkdownPath); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func getConfPath(configPath string, fs afero.Fs) (string, error) {
 
 	// By preserving user input, default config will be created on user specified if it doesn't exist yet
 	if configPath == "" {
-		configPath = "presla.toml"
+		dir, err := os.Getwd()
+		if err != nil {
+			return "", err
+		}
+		configPath = dir + "/presla.toml"
 	}
 
 	configPath = filepath.Clean(configPath)
@@ -135,26 +145,25 @@ func getConfPath() (string, error) {
 	if err == nil {
 		locations = append(locations, filepath.Clean(home+"/.presla.toml"), filepath.Clean(home+"/.config/presla.toml"))
 	} else {
-		fmt.Println("Error searching for the config in Home directory: ")
-		fmt.Println(err.Error())
+		logger.Errorf("could not find home directory: ", err.Error())
 	}
 
 	for _, location := range locations {
-		// If file exists, return the path immediatly
-		if _, err := os.Stat(location); err == nil {
-			color.Green("Using config file: " + location)
+		// If file exists, return the path immediately
+		if _, err := fs.Stat(location); err == nil {
+			logger.Infof("using config file: %s", location)
 			return location, nil
 		} else {
-			color.Yellow("No config file at " + location + " ...")
+			logger.Infof("no config file at %s", location)
 		}
 	}
 
 	defaultConfig := []byte(getDefaultConfig())
-	err = ioutil.WriteFile(configPath, defaultConfig, 0644)
+	err = afero.WriteFile(fs, configPath, defaultConfig, 0644)
 	if err != nil {
 		return "", err
 	}
-	fmt.Println("Created config file with default values: " + configPath)
+	logger.Infof("created and using config file with default values: %s", configPath)
 	return configPath, nil
 }
 
