@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/3stadt/presla.svg?branch=master)](https://travis-ci.org/3stadt/presla)
+
 # Presla
 
 Presla (Presentation Lambda) is an application that runs on your computer. It creates a local webserver that is equipped with [remarkjs](https://remarkjs.com/), allowing you to create your own presentations in markdown.
