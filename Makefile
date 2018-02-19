@@ -8,18 +8,24 @@ VERSION ?= vlatest
 PLATFORMS := windows linux darwin
 os = $(word 1, $@)
 
-all: deps bindata release bindata-debug done
+all: deps bindata vet release bindata-debug done
+
+vet:
+	@echo "=> Running go vet, please mind the output..."
+	@go vet -v ./...
 
 format:
-	go fmt gitlab.com/3stadt/...
+	@echo "=> Running go fmt..."
+	@go fmt gitlab.com/3stadt/...
 
 run: bindata-debug
 	@echo "=> Starting Server..."
-	go run main.go
+	@go run main.go
 
 deps:
 	@echo "=> Installing dependencies..."
 	@go get -u github.com/golang/dep/cmd/dep
+	@"$(BIN_DIR)"/dep version
 	@"$(BIN_DIR)"/dep ensure
 
 done:
