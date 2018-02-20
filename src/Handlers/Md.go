@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"github.com/3stadt/presla/src/PreslaTemplates"
 	"github.com/labstack/echo"
+	"github.com/spf13/afero"
 	"html/template"
-	"io/ioutil"
 	"net/http"
 	"path/filepath"
 	"strings"
@@ -20,8 +20,9 @@ func (conf *Conf) Md(c echo.Context) error {
 
 	file = conf.MarkdownPath + "/" + file
 
-	tpl, err := ioutil.ReadFile(file)
+	tpl, err := afero.ReadFile(conf.Fs, file)
 	if err != nil {
+		c.NoContent(http.StatusNotFound)
 		return err
 	}
 	// Rendering is needed so Code isn't commented automatically
@@ -32,14 +33,14 @@ func (conf *Conf) showInfo(c echo.Context) error {
 	var presentations []string
 
 	files := make([]string, 1)
-	files, err := filepath.Glob(conf.MarkdownPath + "/*.md")
+	files, err := afero.Glob(conf.Fs, conf.MarkdownPath+"/*.md")
 	if err != nil {
 		files[0] = "Error loading presentations: " + err.Error()
 	}
 	for _, file := range files {
 		presentations = append(presentations, strings.TrimSuffix(filepath.Base(file), ".md"))
 	}
-	tmpDir, err := ioutil.TempDir("", "presla")
+	tmpDir, err := afero.TempDir(conf.Fs, "", "presla")
 	if err != nil {
 		tmpDir = "/tmp"
 	}
@@ -70,5 +71,5 @@ func render(c echo.Context, tpl []byte, data map[string]interface{}) error {
 	if err != nil {
 		return err
 	}
-	return c.Blob(http.StatusOK, "text/markdown; charset=UTF-8", buf.Bytes())
+	return c.Blob(http.StatusOK, "text/markdown; charset=utf-8", buf.Bytes())
 }

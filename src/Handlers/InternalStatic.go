@@ -1,6 +1,8 @@
 package Handlers
 
 import (
+	"errors"
+	"fmt"
 	"github.com/labstack/echo"
 	"mime"
 	"net/http"
@@ -13,7 +15,8 @@ func (conf *Conf) InternalStatic(c echo.Context) error {
 	content, err := Asset(path)
 
 	if err != nil {
-		return c.String(http.StatusInternalServerError, "Asset not found: "+path)
+		c.NoContent(http.StatusNotFound)
+		return errors.New(fmt.Sprintf("asset not found: %s", path))
 	}
 
 	mimeType := mime.TypeByExtension(filepath.Ext(path))
