@@ -145,7 +145,7 @@ func getConfPath(configPath string, fs afero.Fs) (string, error) {
 	if err == nil {
 		locations = append(locations, filepath.Clean(home+"/.presla.toml"), filepath.Clean(home+"/.config/presla.toml"))
 	} else {
-		logger.Errorf("could not find home directory: ", err.Error())
+		logger.Errorf("could not find home directory: %s", err.Error())
 	}
 
 	for _, location := range locations {

@@ -8,11 +8,11 @@ VERSION ?= vlatest
 PLATFORMS := windows linux darwin
 os = $(word 1, $@)
 
-all: deps bindata vet test release bindata-debug done
+all: deps vet test bindata release bindata-debug done
 
 vet:
-	@echo "=> Running go vet, please mind the output..."
-	@go vet -v ./...
+	@echo "=> Running go vet, please check if there is output..."
+	@go vet ./...
 
 format:
 	@echo "=> Running go fmt..."
