@@ -2,6 +2,7 @@ package Handlers
 
 import (
 	"github.com/3stadt/presla/src/PreslaTemplates"
+	"github.com/robertkrimen/otto"
 	"github.com/spf13/afero"
 )
 
@@ -34,9 +35,21 @@ type Conf struct {
 type CmdCommand struct {
 	cmdName string
 	cmdArgs []string
+	quiet   bool
 }
 
 type CmdOutput struct {
 	StdOut string `json:"stdout"`
 	StdErr string `json:"stderr"`
+}
+
+type ottoOut struct {
+	cmd    CmdCommand
+	stdOut string
+	stdErr string
+}
+
+type ottoConf struct {
+	out []ottoOut
+	vm  *otto.Otto
 }

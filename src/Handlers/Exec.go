@@ -12,6 +12,7 @@ import (
 	"net/http"
 	"os"
 	"os/exec"
+	"runtime"
 	"strings"
 	"sync"
 	"time"
@@ -84,7 +85,7 @@ func (conf *Conf) Exec(c echo.Context) error {
 		}
 	}
 
-	cmdCommands, err := code.getCmdString(string(js))
+	cmdCommands, err := code.getCmdCommands(string(js))
 	if err != nil {
 		return c.JSON(http.StatusInternalServerError, err.Error())
 	}
@@ -97,47 +98,63 @@ func (conf *Conf) Exec(c echo.Context) error {
 	return err
 }
 
-func (code *Code) getCmdString(js string) (commands []CmdCommand, err error) {
+func (code *Code) getCmdCommands(js string) (out []ottoOut, err error) {
 	vm := otto.New()
+
+	oc := &ottoConf{
+		out: out,
+		vm:  vm,
+	}
 
 	// make the filename/path available to the JS script
 	vm.Set("codePath", code.Filename)
 
+	// The current OS. See https://github.com/golang/go/blob/master/src/go/build/syslist.go
+	vm.Set("os", runtime.GOOS)
+
+	// The current architecture, see https://github.com/golang/go/blob/master/src/go/build/syslist.go
+	vm.Set("arch", runtime.GOARCH)
+
 	// make exec function available in JS, takes all arguments and creates the command parameters cmdName and cmdString.
-	// can be called multiple times, all commands will be executed in order
-	vm.Set("exec", func(call otto.FunctionCall) otto.Value {
-		cmd := CmdCommand{}
-		cmdString := call.ArgumentList
-		CurCmdName, err := cmdString[0].ToString()
-		if err != nil {
-			errVal, _ := otto.ToValue(err.Error())
-			return errVal
-		}
-		cmd.cmdName = CurCmdName
-		cmd.cmdArgs = []string{}
-		for _, arg := range cmdString[1:] {
-			val, err := arg.ToString()
-			if err != nil {
-				errVal, _ := otto.ToValue(err.Error())
-				return errVal
-			}
-			cmd.cmdArgs = append(cmd.cmdArgs, val)
-		}
-		result, _ := vm.ToValue(true)
-		commands = append(commands, cmd)
-		return result
-	})
+	// can be called multiple times, all commands will be executed in order of calling.
+	// Execution takes place on the system presla is running on!
+	vm.Set("exec", oc.ottoExec)
+	vm.Set("execQuiet", oc.ottoExecQuiet)
+
+	// Check if the given program is installed.
+	// Supports Windows and any OS that knows the "which" command
+	vm.Set("isInstalled", oc.ottoCheckProgramInstalled)
+
+	// Checks if a given image, e.g. php or php:7.2 is installed on the system
+	vm.Set("isDockerImageInstalled", oc.ottoCheckDockerImageInstalled)
+	vm.Set("pullDockerImage", oc.ottoPullDockerImage)
+
+	vm.Set("sendStdOut", oc.ottoSendstdOut)
+
+	vm.Set("sendStdErr", oc.ottoSendstdErr)
 
 	// execute the javascript code from the executor with the exposed function and var from above
 	_, err = vm.Run(string(js))
 
 	// return the command, created by the executor
-	return commands, err
+	return oc.out, err
 }
 
-func (code *Code) execute(c echo.Context, commands []CmdCommand) (err error) {
+func (code *Code) execute(c echo.Context, commands []ottoOut) (err error) {
+
 	// Execute each command in order
-	for _, command := range commands {
+	for _, out := range commands {
+		command := out.cmd
+		if out.stdErr != "" || out.stdOut != "" {
+			c.Response().Header().Set(echo.HeaderContentType, echo.MIMEApplicationJSON)
+			c.JSON(http.StatusOK, CmdOutput{
+				StdOut: out.stdOut,
+				StdErr: out.stdErr,
+			})
+			c.Response().Flush()
+			time.Sleep(100 * time.Millisecond) // Used to prevent spamming the browser with responses since JS can only send OR exec at a time
+			continue
+		}
 		log.WithFields(log.Fields{
 			"binary":     command.cmdName,
 			"parameters": command.cmdArgs,
@@ -152,6 +169,7 @@ func (code *Code) execute(c echo.Context, commands []CmdCommand) (err error) {
 
 		// prepare the command
 		cmd := exec.Command(command.cmdName, command.cmdArgs...)
+
 		cmdReader, err := cmd.StdoutPipe()
 		if err != nil {
 			log.Warningf("error creating StdoutPipe for Cmd: %s", err.Error())
@@ -190,6 +208,9 @@ func (code *Code) execute(c echo.Context, commands []CmdCommand) (err error) {
 		// Capture error output and send it
 		go func() error {
 			for errScanner.Scan() {
+				if command.quiet {
+					continue
+				}
 				wg.Add(1)
 				text := CmdOutput{
 					StdErr: errScanner.Text(),
@@ -203,6 +224,9 @@ func (code *Code) execute(c echo.Context, commands []CmdCommand) (err error) {
 		// Capture Stdout and send it
 		go func() error {
 			for outScanner.Scan() {
+				if command.quiet {
+					continue
+				}
 				wg.Add(1)
 				text := CmdOutput{
 					StdOut: outScanner.Text(),
