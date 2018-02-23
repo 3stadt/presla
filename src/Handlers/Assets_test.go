@@ -18,10 +18,10 @@ func TestPresentationNotFound(t *testing.T) {
 		Fs:           fs,
 	}
 
-	xNotFound(t, conf)
+	xAssetNotFound(t, conf)
 }
 
-func TestFileNotFound(t *testing.T) {
+func TestAssetFileNotFound(t *testing.T) {
 	fs := afero.NewMemMapFs()
 	fs.MkdirAll("/markdown/foobar", 0755)
 
@@ -30,10 +30,10 @@ func TestFileNotFound(t *testing.T) {
 		Fs:           fs,
 	}
 
-	xNotFound(t, conf)
+	xAssetNotFound(t, conf)
 }
 
-func TestFileFound(t *testing.T) {
+func TestAssetFileFound(t *testing.T) {
 	fs := afero.NewMemMapFs()
 	fs.MkdirAll("/markdown/foobar", 0755)
 	gif := []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x72\xf7\x74\xb3\xb0\x4c\x64\x64\x60\x64\x60\xf8\xcf\xa0\xc3\xc0\xc0\xc0\x00\x66\x33\x31\x58\x03\x02\x00\x00\xff\xff\xc7\x52\xbc\x6d\x1a\x00\x00\x00")
@@ -61,7 +61,7 @@ func TestFileFound(t *testing.T) {
 	assert.Equal(t, "image/gif", rec.HeaderMap.Get("Content-Type"))
 }
 
-func xNotFound(t *testing.T, conf *Conf) {
+func xAssetNotFound(t *testing.T, conf *Conf) {
 	e := echo.New()
 	e.GET("/md/:pres/*", conf.Assets)
 	req, _ := http.NewRequest(echo.GET, "/md/foobar/bar.gif", nil)
