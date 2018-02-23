@@ -1,6 +1,7 @@
-[![Build Status](https://travis-ci.org/3stadt/presla.svg?branch=master)](https://travis-ci.org/3stadt/presla)
-
-# Presla
+---
+show_downloads: true
+---
+## About
 
 Presla (Presentation Lambda) is an application that runs on your computer. It creates a local webserver that is equipped with [remarkjs](https://remarkjs.com/), allowing you to create your own presentations in markdown.
 
@@ -18,15 +19,11 @@ You'll need a x64 based Mac, Linux or Windows System and a Web Browser. Preferab
 
 ### Installing
 
-Download the file matching your operating system [here](https://github.com/3stadt/presla/releases). In detail, you can choose as following:
-
-* presla-x.x.x-linux-amd64 for Linux
-* presla-x.x.x-darwin-amd64 for Mac
-* presla-x.x.x-windows-amd64.exe for Windows
+Download the [release](https://github.com/3stadt/presla/releases) file matching your operating system.
 
 Save it in any directory. Give it executables permissions, `chmod +x <file>` on Linux/Mac.
 
-Execute the file via console. Although double clicking is fine, this will close all log output when finished.
+Execute the file via console. Although double clicking is fine, it would close all log output when finished.
 
 Access Presla via [http://localhost:8080](http://localhost:8080).
 
@@ -99,7 +96,7 @@ TemplatePath="/home/user/presla/Themes/your-presla-theme/templates"
 StaticFiles="/home/user/presla/Themes/your-presla-theme/static"
 ```
 
-Your own theme sould have the following layout:
+Your own theme should have the following layout:
 
 ```
 |-- static
