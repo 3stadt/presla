@@ -49,7 +49,7 @@ func main() {
 
 .single-center-column-fit[
 
-<div class="editor" data-filename="{{ .TempDir }}/main.php" data-executor="php"><?php
+<div class="editor" data-filename="{{ .TempDir }}/main.php" data-executor="php" data-theme="solarized_dark"><?php
 
 echo time()."\n";
 
@@ -69,7 +69,7 @@ echo "bar\n";
 
 .single-center-column-fit[
 
-<div class="editor" data-filename="{{ .TempDir }}/main.php" data-executor="php"><?php
+<div class="editor" data-filename="{{ .TempDir }}/main.php" data-executor="php" data-theme="solarized_dark"><?php
 
 echo foobar(); // undefined function
 
@@ -106,7 +106,7 @@ echo "bar\n";
 
 You can easily write own executors with javascript
 
-<div class="editor" data-filename="{{ .TempDir }}/main.go" data-executor="go" data-mode="golang">package main
+<div class="editor" data-filename="{{ .TempDir }}/main.go" data-executor="go" data-mode="golang" data-theme="solarized_dark">package main
 
 import (
     "fmt"
@@ -126,7 +126,7 @@ func main() {
 ## Whatever is installed on your system.. :)
 
 .single-center-column-fit[
-<div class="editor" data-filename="{{ .TempDir }}/main.py" data-executor="python" data-mode="python"># Want some python?
+<div class="editor" data-filename="{{ .TempDir }}/main.py" data-executor="python" data-mode="python" data-theme="gob"># Want some python?
 def greet(name):
     print('Hello', name + '!')
 
