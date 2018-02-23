@@ -6,3 +6,4 @@
 /*.tar.gz
 /access.log
 /src/Handlers/bindata.go
+/docs/_site

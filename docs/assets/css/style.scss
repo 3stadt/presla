@@ -1,0 +1,15 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.container {
+  width: 92%;
+  max-width: 92%;
+}
+
+@media only screen and (min-width: 1025px) {
+  .container {
+    max-width: 60%;
+  }
+}
