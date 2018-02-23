@@ -8,11 +8,15 @@ VERSION ?= vlatest
 PLATFORMS := windows linux darwin
 os = $(word 1, $@)
 
-all: deps vet test bindata release bindata-debug done
+all: deps vet test bindata release compress bindata-debug done
 
 vet:
 	@echo "=> Running go vet, please check if there is output..."
 	@go vet ./...
+
+compress:
+	@echo "=> Compressing binaries for version $(VERSION)"
+	@find ./release -iname "*$(VERSION)*" -exec upx {} -o {}-compressed \; && mv release/presla-"$(VERSION)"-windows-amd64.exe-compressed release/presla-"$(VERSION)"-windows-amd64-compressed.exe
 
 format:
 	@echo "=> Running go fmt..."
