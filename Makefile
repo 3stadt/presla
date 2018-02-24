@@ -20,7 +20,7 @@ compress:
 
 format:
 	@echo "=> Running go fmt..."
-	@go fmt gitlab.com/3stadt/...
+	@go fmt github.com/3stadt/presla/...
 
 test: bindata-debug
 	@echo "=> Running tests..."
