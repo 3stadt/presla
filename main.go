@@ -1,14 +1,17 @@
 package main
 
 import (
+	"bufio"
 	"errors"
 	"flag"
 	"fmt"
 	"github.com/3stadt/presla/src/Handlers"
 	"github.com/3stadt/presla/src/PreslaTemplates"
 	"github.com/BurntSushi/toml"
+	"github.com/blang/semver"
 	"github.com/labstack/echo"
 	"github.com/mitchellh/go-homedir"
+	"github.com/rhysd/go-github-selfupdate/selfupdate"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/afero"
 	"os"
@@ -32,10 +35,13 @@ type Config struct {
 var conf Config
 var logger = log.New()
 
+var version = "vlatest"
+
 /**
 Set up HTTP routes, start server
 */
 func main() {
+	checkForUpdate()
 
 	// Use Disk
 	fs := afero.NewOsFs()
@@ -86,6 +92,52 @@ func main() {
 	logger.Infof("Starting server at: %s", fmt.Sprintf("http://%s", conf.ListenOn))
 	logger.Infof("=> Use Ctrl+c to quit Presla")
 	e.Start(conf.ListenOn)
+}
+
+func checkForUpdate() {
+	if version == "vlatest" { // version is changed on compile via ldflags, see makefile
+		log.Info("using development version, update check deactivated")
+		return
+	}
+
+	ver := version[1:]
+	latest, found, err := selfupdate.DetectLatest("3stadt/presla")
+	if err != nil {
+		log.Error("error occurred while detecting version: ", err.Error())
+		return
+	}
+
+	v, err := semver.Parse(ver)
+	if err != nil {
+		log.Error("could not parse current version: ", err.Error())
+		return
+	}
+
+	if !found || latest.Version.LTE(v) {
+		log.Info("using latest version")
+		return
+	}
+
+	log.Warn("New version available")
+	fmt.Println("Please note: Automatic update to a new version always uses the uncompressed binary.")
+	fmt.Println("----------")
+	fmt.Println(latest.ReleaseNotes)
+	fmt.Println("----------")
+	fmt.Print("Do you want to update to version ", latest.Version, "? (y/N): ")
+	input, err := bufio.NewReader(os.Stdin).ReadString('\n')
+	if err != nil || strings.ToLower(strings.TrimSpace(input)) != "y" {
+		fmt.Println("Skipping update")
+		fmt.Printf("You can download the update manually at %s\n", latest.URL)
+		return
+	}
+
+	log.Warn("Updating to latest version, please be patient...")
+
+	if err := selfupdate.UpdateTo(latest.AssetURL, os.Args[0]); err != nil {
+		log.Error("error occurred while updating binary: ", err)
+		return
+	}
+	log.Info("successfully updated to version ", latest.Version)
 }
 
 func checkErr(e error) {

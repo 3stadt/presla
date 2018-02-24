@@ -55,7 +55,7 @@ bindata:
 $(PLATFORMS):
 	@echo "=> Creating release for $(os)..."
 	@mkdir -p release/
-	@GOOS=$(os) GOARCH=amd64 go build -o release/$(BINARY)-$(RELEASE_VERSION)-$(os)-amd64
+	@GOOS=$(os) GOARCH=amd64 go build -ldflags "-X main.version=$(RELEASE_VERSION)" -o release/$(BINARY)-$(RELEASE_VERSION)-$(os)-amd64
 	@if [ "$(os)" = "windows" ]; then mv release/"$(BINARY)"-"$(RELEASE_VERSION)"-"$(os)"-amd64 release/"$(BINARY)"-"$(RELEASE_VERSION)"-"$(os)"-amd64.exe; fi;
 	@echo "> Created $(os) version: $(RELEASE_VERSION)"
 
