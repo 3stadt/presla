@@ -4,7 +4,7 @@ BIN_DIR := $(GOPATH)/bin
 
 BINARY := presla
 
-VERSION ?= vlatest
+RELEASE_VERSION ?= vlatest
 PLATFORMS := windows linux darwin
 os = $(word 1, $@)
 
@@ -15,8 +15,8 @@ vet:
 	@go vet ./...
 
 compress:
-	@echo "=> Compressing binaries for version $(VERSION)"
-	@find ./release -iname "*$(VERSION)*" -exec upx {} -o {}-compressed \; && mv release/presla-"$(VERSION)"-windows-amd64.exe-compressed release/presla-"$(VERSION)"-windows-amd64-compressed.exe
+	@echo "=> Compressing binaries for version $(RELEASE_VERSION)"
+	@find ./release -iname "*$(RELEASE_VERSION)*" -exec upx {} -v -o {}-compressed \; && mv release/presla-"$(RELEASE_VERSION)"-windows-amd64.exe-compressed release/presla-"$(RELEASE_VERSION)"-windows-amd64-compressed.exe
 
 format:
 	@echo "=> Running go fmt..."
@@ -55,9 +55,9 @@ bindata:
 $(PLATFORMS):
 	@echo "=> Creating release for $(os)..."
 	@mkdir -p release/
-	@GOOS=$(os) GOARCH=amd64 go build -o release/$(BINARY)-$(VERSION)-$(os)-amd64
-	@if [ "$(os)" == "windows" ]; then mv release/"$(BINARY)"-"$(VERSION)"-"$(os)"-amd64 release/"$(BINARY)"-"$(VERSION)"-"$(os)"-amd64.exe; fi;
-	@echo "> Created $(os)-$(VERSION).tar.gz"
+	@GOOS=$(os) GOARCH=amd64 go build -o release/$(BINARY)-$(RELEASE_VERSION)-$(os)-amd64
+	@if [ "$(os)" = "windows" ]; then mv release/"$(BINARY)"-"$(RELEASE_VERSION)"-"$(os)"-amd64 release/"$(BINARY)"-"$(RELEASE_VERSION)"-"$(os)"-amd64.exe; fi;
+	@echo "> Created $(os) version: $(RELEASE_VERSION)"
 
 .PHONY: release
 release: windows linux darwin
