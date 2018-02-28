@@ -6,7 +6,7 @@ env:
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y upx
-script: make test
+script: make bindata-debug && make deps && make test
 #deploy:
 #  provider: releases
 #  api_key:
