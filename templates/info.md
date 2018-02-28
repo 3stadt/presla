@@ -123,6 +123,25 @@ func main() {
 
 ---
 
+## Even multiple executors are possible
+
+You could show differences between language versions
+
+.single-center-column-fit[
+<div class="editor" data-filename="{{ .TempDir }}/main.go" data-executors="go;go-1.6;php" data-mode="golang" data-theme="solarized_dark">package main
+
+import (
+    "fmt"
+    "runtime"
+)
+
+func main() {
+    fmt.Println("Version: " + runtime.Version())
+}</div>
+]
+
+---
+
 ## Whatever is installed on your system.. :)
 
 .single-center-column-fit[
