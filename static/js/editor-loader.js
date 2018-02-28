@@ -9,6 +9,8 @@ slideshow.on("showSlide", function () {
     elems.forEach(function (elem) {
         var theme = "solarized_dark",
             mode = "php",
+            executor,
+            executors,
             filename,
             execButton,
             clearButton,
@@ -22,12 +24,17 @@ slideshow.on("showSlide", function () {
             console.error("No filename defined! One editor div is missing the data-filename attribute");
             return;
         }
-        var executor;
         if (elem.dataset.executor) {
             executor = elem.dataset.executor;
+        } else if (elem.dataset.executors) {
+            var execs = elem.dataset.executors.split(';');
+            executor = execs[0];
+            if (execs.length > 1) {
+                executors = execs;
+            }
         }
         if (!executor) {
-            console.error("No executor defined! One editor div is missing the data-executor attribute");
+            console.error("No executor defined! One editor div is missing the data-executor and data-executors attribute");
             return;
         }
         if (elem.dataset.theme) {
@@ -92,6 +99,16 @@ slideshow.on("showSlide", function () {
         };
         elem.insertAdjacentElement("afterend", clearButton);
         elem.insertAdjacentElement("afterend", execButton);
+        if (executors) {
+            var select = document.createElement("select");
+            executors.forEach(function (exec) {
+                select.options.add(new Option(exec, exec));
+            });
+            select.onchange = function () {
+                executor = select.value;
+            };
+            execButton.insertAdjacentElement("afterend", select);
+        }
         clearButton.insertAdjacentElement("afterend", outputLog);
 
         i++;

@@ -6,4 +6,4 @@ var filename = getFileName(codePath);
 
 var base = codePath.substring(0, codePath.length - filename.length - 1);
 
-exec("docker", "run", "--rm", "-v", base + ":/code", "-w", "/code", "php:7.2-cli", "php", filename);
+exec("docker", "run", "--rm", "-v", base + ":/code", "-w", "/code", "golang:1.6", "go", "run", filename);
