@@ -31,7 +31,7 @@
         <ul>
             {% for asset in site.github.releases[0].assets %}
             <li>
-                <a href="{{ asset.browser_download_url }}">{{ asset.name | remove:repl | remove:'-upx'}}</a> <small>(Downloaded {{ asset.download_count }} times)</small>
+                <a href="{{ asset.browser_download_url }}">{{ asset.name | remove:repl | remove:'-upx'}}</a>
             </li>
             {% endfor %}
         </ul>
