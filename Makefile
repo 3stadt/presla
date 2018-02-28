@@ -16,7 +16,7 @@ vet:
 
 compress:
 	@echo "=> Compressing binaries for version $(RELEASE_VERSION)"
-	@find ./release -iname "*$(RELEASE_VERSION)*" -exec upx {} -v -o {}-compressed \; && mv release/presla-"$(RELEASE_VERSION)"-windows-amd64.exe-compressed release/presla-"$(RELEASE_VERSION)"-windows-amd64-compressed.exe
+	@find ./release -iname "*$(RELEASE_VERSION)*" ! -iname "*compressed*" -exec upx {} -v -o {}-compressed \; && mv release/presla-"$(RELEASE_VERSION)"-windows-amd64.exe-compressed release/presla-"$(RELEASE_VERSION)"-windows-amd64-compressed.exe
 
 format:
 	@echo "=> Running go fmt..."
