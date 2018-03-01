@@ -4,18 +4,14 @@ The features below are a loose plan of things that need to happen before presla 
 
 Expect changes as this is a spare time project.
 
-## v0.0.6
-
-- More executors
-- More beautiful default template
-- Slimmed down ace editor
-- Better documentation of template creation
-- One alternative template
-- Default and alternative templates downloadable via zip from default presentation // generally better docs on custom templates
-- "passthrough" executor that acts like a minmal shell in the presentation
-
 ## v0.0.7
 
+- More executors
+- One alternative template
+- More beautiful default template
+- Better documentation of template creation
+- Default and alternative templates downloadable via zip from default presentation // generally better docs on custom templates
+- "passthrough" executor that acts like a minmal shell in the presentation
 - Better [decktape](https://github.com/astefanutti/decktape) integration or documentation for PDF generation
 - Some sort of [slideshare](https://slideshare.net)/[speakerdeck](https://speakerdeck.com/) integration of documentation
 
@@ -39,3 +35,9 @@ Expect changes as this is a spare time project.
     - See [docker-registry-client](https://github.com/heroku/docker-registry-client) and [go-dockerclient](https://github.com/fsouza/go-dockerclient)
   - Browser log output directly from executors
   - execSilent function that sends no log output to browser
+
+## v0.0.6
+
+- Slimmed down ace editor
+- Auto update mechanism
+- Multiple executors per editor  
