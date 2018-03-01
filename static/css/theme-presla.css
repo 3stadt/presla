@@ -182,7 +182,7 @@ blockquote p {
     background-color: #199eff;
     background-repeat: no-repeat;
     background-size: auto 2.26rem, auto 2.26rem;
-    background-position: center center, left center;
+    background-position: left center;
 }
 
 /* show slide numbers in footer */

@@ -1,13 +1,13 @@
-var aceInit = false;
+let aceInit = false;
 
 slideshow.on("showSlide", function () {
     if (aceInit) {
         return;
     }
-    var elems = document.querySelectorAll(".editor");
-    var i = 1;
+    const elems = document.querySelectorAll(".editor");
+    let i = 1;
     elems.forEach(function (elem) {
-        var theme = "solarized_dark",
+        let theme = "solarized_dark",
             mode = "php",
             executor,
             executors,
@@ -27,7 +27,7 @@ slideshow.on("showSlide", function () {
         if (elem.dataset.executor) {
             executor = elem.dataset.executor;
         } else if (elem.dataset.executors) {
-            var execs = elem.dataset.executors.split(';');
+            let execs = elem.dataset.executors.split(';');
             executor = execs[0];
             if (execs.length > 1) {
                 executors = execs;
@@ -69,14 +69,14 @@ slideshow.on("showSlide", function () {
             outputPre.innerText = "";
         };
         execButton.onclick = function () {
-            var last_index = 0,
+            let last_index = 0,
                 postData = "executor=" + executor + "&filename=" + encodeURIComponent(filename) + "&payload=" + encodeURIComponent(editor.getValue()),
                 xhr = new XMLHttpRequest();
 
             xhr.open("POST", "/exec", true);
             xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhr.onprogress = function () {
-                var curr_index = xhr.responseText.length,
+                let curr_index = xhr.responseText.length,
                     s,
                     resp,
                     stdout,
@@ -100,7 +100,7 @@ slideshow.on("showSlide", function () {
         elem.insertAdjacentElement("afterend", clearButton);
         elem.insertAdjacentElement("afterend", execButton);
         if (executors) {
-            var select = document.createElement("select");
+            let select = document.createElement("select");
             executors.forEach(function (exec) {
                 select.options.add(new Option(exec, exec));
             });
