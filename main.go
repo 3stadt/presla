@@ -133,7 +133,13 @@ func checkForUpdate() {
 
 	log.Warn("Updating to latest version, please be patient...")
 
-	if err := selfupdate.UpdateTo(latest.AssetURL, os.Args[0]); err != nil {
+	ex, err := os.Executable()
+	if err != nil {
+		log.Error("error occurred while updating binary: ", err)
+		return
+	}
+
+	if err := selfupdate.UpdateTo(latest.AssetURL, ex); err != nil {
 		log.Error("error occurred while updating binary: ", err)
 		return
 	}
