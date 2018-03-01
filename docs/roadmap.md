@@ -4,7 +4,7 @@ The features below are a loose plan of things that need to happen before presla 
 
 Expect changes as this is a spare time project.
 
-## v0.0.7
+## v0.0.8
 
 - More executors
 - One alternative template
@@ -41,3 +41,10 @@ Expect changes as this is a spare time project.
 - Slimmed down ace editor
 - Auto update mechanism
 - Multiple executors per editor  
+
+## v0.0.7
+
+Minor fixes
+
+- Footer text left aligned
+- Mode python included in default presentation
