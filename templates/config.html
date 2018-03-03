@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>[{{ .Title }}]</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+<body>
+<section class="section">
+    <div class="container">
+<!--
+type Conf struct {
+ConfigFile string
+MarkdownPath string
+FooterText string
+TemplatePath string
+StaticFiles string
+Presentations []PresentationConf
+DefaultTemplate *PreslaTemplates.DefaultTemplate
+CustomExecutors string
+LogLevel string
+LogFormat string
+Fs afero.Fs
+}
+-->
+        <h1>Presla configuration</h1>
+
+        <form action="/config" method="post">
+            <div class="field">
+                <label class="label" for="ConfigFile">Config File</label>
+                <div class="control">
+                    <div class="select">
+                        <select name="ConfigFile" id="ConfigFile">
+                            <option>Select dropdown</option>
+                            <option>With options</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Markdown Path</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Directory holding all your md files">
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+</body>
+</html>

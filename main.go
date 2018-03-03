@@ -87,6 +87,8 @@ func main() {
 	e.GET("/md/:file", handler.Md)
 	e.GET("/md/:pres/*", handler.Assets)
 	e.POST("/exec", handler.Exec)
+	e.GET("/config", handler.Config)
+	e.POST("/config", handler.SaveConfig)
 	e.GET("/:pres", handler.Presentation)
 	e.GET("/", handler.Home)
 	logger.Infof("Starting server at: %s", fmt.Sprintf("http://%s", conf.ListenOn))
