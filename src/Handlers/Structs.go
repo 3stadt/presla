@@ -2,11 +2,22 @@ package Handlers
 
 import (
 	"github.com/3stadt/presla/src/PreslaTemplates"
+	"github.com/gorilla/websocket"
 	"github.com/robertkrimen/otto"
 	"github.com/spf13/afero"
 )
 
+type SyncedEditor struct {
+	Update string
+}
+
+type SyncedEditorWriter struct {
+	Ws     *websocket.Conn
+	Writer func(e SyncedEditor, ws *websocket.Conn) error
+}
+
 type Code struct {
+	EditorId int    `form:"editorId"`
 	Executor string `form:"executor"`
 	Filename string `form:"filename"`
 	Payload  string `form:"payload"`
@@ -30,6 +41,8 @@ type Conf struct {
 	LogLevel        string
 	LogFormat       string
 	Fs              afero.Fs
+	SyncedEditorPub chan SyncedEditor
+	SyncedEditorSub map[int]*SyncedEditorWriter
 }
 
 type CmdCommand struct {

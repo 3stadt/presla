@@ -90,7 +90,7 @@ func (conf *Conf) Exec(c echo.Context) error {
 		return c.JSON(http.StatusInternalServerError, err.Error())
 	}
 
-	err = code.execute(c, cmdCommands)
+	err = code.execute(c, conf, cmdCommands)
 	if err != nil {
 		return c.JSON(http.StatusInternalServerError, err.Error())
 	}
@@ -140,19 +140,25 @@ func (code *Code) getCmdCommands(js string) (out []ottoOut, err error) {
 	return oc.out, err
 }
 
-func (code *Code) execute(c echo.Context, commands []ottoOut) (err error) {
+func (code *Code) execute(c echo.Context, conf *Conf, commands []ottoOut) (err error) {
 
 	// Execute each command in order
 	for _, out := range commands {
 		command := out.cmd
 		if out.stdErr != "" || out.stdOut != "" {
-			c.Response().Header().Set(echo.HeaderContentType, echo.MIMEApplicationJSON)
-			c.JSON(http.StatusOK, CmdOutput{
-				StdOut: out.stdOut,
-				StdErr: out.stdErr,
+			update, err := json.Marshal(map[string]interface{}{
+				"type":     "logupdate",
+				"editorId": code.EditorId,
+				"stdout":   out.stdOut,
+				"stderr":   out.stdErr,
+				"clear":    false,
 			})
-			c.Response().Flush()
-			time.Sleep(100 * time.Millisecond) // Used to prevent spamming the browser with responses since JS can only send OR exec at a time
+			if err != nil {
+				log.Error(err.Error())
+			}
+			conf.SyncedEditorPub <- SyncedEditor{
+				Update: string(update),
+			}
 			continue
 		}
 		log.WithFields(log.Fields{
@@ -191,16 +197,29 @@ func (code *Code) execute(c echo.Context, commands []ottoOut) (err error) {
 		go func() error {
 			for {
 				text := <-chanSend
-				if err := json.NewEncoder(c.Response()).Encode(text); err != nil {
-					log.Warningf("error encoding output for Cmd: %#s", err.Error())
-					return err
+				//if err := json.NewEncoder(c.Response()).Encode(text); err != nil {
+				//	log.Warningf("error encoding output for Cmd: %#s", err.Error())
+				//	return err
+				//}
+				//c.Response().Flush()
+				//time.Sleep(100 * time.Millisecond) // Used to prevent spamming the browser with responses
+				update, err := json.Marshal(map[string]interface{}{
+					"type":     "logupdate",
+					"editorId": code.EditorId,
+					"stdout":   text.StdOut,
+					"stderr":   text.StdErr,
+					"clear":    false,
+				})
+				if err != nil {
+					log.Error(err.Error())
 				}
-				c.Response().Flush()
-				time.Sleep(100 * time.Millisecond) // Used to prevent spamming the browser with responses
+				conf.SyncedEditorPub <- SyncedEditor{
+					Update: string(update),
+				}
 				log.WithFields(log.Fields{
 					"stdout": text.StdOut,
 					"stderr": text.StdErr,
-				}).Debug("sent output to browser")
+				}).Debug("sent output to websockets")
 				wg.Done()
 			}
 		}()
