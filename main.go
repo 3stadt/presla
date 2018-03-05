@@ -17,6 +17,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"github.com/labstack/echo/middleware"
 )
 
 type Config struct {
@@ -73,6 +74,7 @@ func main() {
 	}
 
 	e := echo.New()
+	e.Use(middleware.Recover())
 
 	for _, c := range conf.Presentations {
 		_, err := os.Stat(c.TemplatePath)
