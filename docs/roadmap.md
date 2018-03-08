@@ -51,7 +51,7 @@ Minor fixes
 
 ## v0.0.8
 
-- When cloning a presentation via `c` in browser, the editors are now synced
+- When cloning a presentation via `c` in the browser, the editors are now synced
   - Useful when presentation view + beamer view
 - Editor/log view height & width can now be set via data attributes
   - Usage: `data-editorwidth="60rem" data-editorheight="20rem" data-logwidth="59rem" data-logheight="5rem"`
