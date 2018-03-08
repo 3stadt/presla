@@ -67,9 +67,31 @@ slideshow.on('showSlide', function () {
         clearButton.classList.add('editorbutton');
         clearButton.setAttribute('accesskey', 'l');
 
+        let textarea = editor.textInput.getElement();
+
+        /******** Dynamic Editor/Log view width&height ********/
+
+         if (elem.dataset.editorheight) {
+            elem.style.height = elem.dataset.editorheight;
+        }
+
+        if (elem.dataset.editorwidth) {
+            elem.style.width = elem.dataset.editorwidth;
+        }
+
+        if (elem.dataset.logheight) {
+            outputLog.style.height = elem.dataset.logheight;
+            outputPre.style.height = elem.dataset.logheight;
+        }
+
+        if (elem.dataset.logwidth) {
+            outputLog.style.width = elem.dataset.logwidth;
+            outputPre.style.width = elem.dataset.logwidth;
+        }
+
         /******** Event Setup ************/
 
-        let textarea = editor.textInput.getElement();
+
 
         editor.on('click', function (evt) {
             sendCursorPosition(editor.getCursorPosition(), editorId);
