@@ -1,14 +1,15 @@
 let aceInit = false;
 
-slideshow.on("showSlide", function () {
+slideshow.on('showSlide', function () {
     if (aceInit) {
         return;
     }
-    const elems = document.querySelectorAll(".editor");
+    const elems = document.querySelectorAll('.editor');
     let i = 1;
     elems.forEach(function (elem) {
-        let theme = "solarized_dark",
-            mode = "php",
+        let theme = 'solarized_dark',
+            mode = 'php',
+            editorId = i,
             executor,
             executors,
             filename,
@@ -21,7 +22,7 @@ slideshow.on("showSlide", function () {
             filename = elem.dataset.filename;
         }
         if (!filename) {
-            console.error("No filename defined! One editor div is missing the data-filename attribute");
+            console.error('No filename defined! One editor div is missing the data-filename attribute');
             return;
         }
         if (elem.dataset.executor) {
@@ -34,7 +35,7 @@ slideshow.on("showSlide", function () {
             }
         }
         if (!executor) {
-            console.error("No executor defined! One editor div is missing the data-executor and data-executors attribute");
+            console.error('No executor defined! One editor div is missing the data-executor and data-executors attribute');
             return;
         }
         if (elem.dataset.theme) {
@@ -44,72 +45,138 @@ slideshow.on("showSlide", function () {
             mode = elem.dataset.mode;
         }
         editor = ace.edit(elem);
-        editor.setTheme("ace/theme/" + theme);
-        editor.session.setMode("ace/mode/" + mode);
-        editor.on("focus", function () {
+        editor.setTheme('ace/theme/' + theme);
+        editor.session.setMode('ace/mode/' + mode);
+        editor.on('focus', function () {
             slideshow.pause()
         });
-        editor.on("blur", function () {
+        editor.on('blur', function () {
             slideshow.resume()
         });
 
         execButton = document.createElement('button');
         clearButton = document.createElement('button');
-        outputLog = document.createElement("div");
-        outputLog.classList.add("outputlog");
-        outputPre = document.createElement("pre");
+        outputLog = document.createElement('div');
+        outputLog.classList.add('outputlog');
+        outputPre = document.createElement('pre');
         outputLog.appendChild(outputPre);
-        execButton.innerHTML = "Execute code";
-        execButton.classList.add("editorbutton");
-        execButton.setAttribute("accesskey", "x");
-        clearButton.innerHTML = "Clear log";
-        clearButton.classList.add("editorbutton");
-        clearButton.setAttribute("accesskey", "l");
-        clearButton.onclick = function () {
-            outputPre.innerText = "";
-        };
-        execButton.onclick = function () {
-            let last_index = 0,
-                postData = "executor=" + executor + "&filename=" + encodeURIComponent(filename) + "&payload=" + encodeURIComponent(editor.getValue()),
-                xhr = new XMLHttpRequest();
+        execButton.innerHTML = 'Execute code';
+        execButton.classList.add('editorbutton');
+        execButton.setAttribute('accesskey', 'x');
+        clearButton.innerHTML = 'Clear log';
+        clearButton.classList.add('editorbutton');
+        clearButton.setAttribute('accesskey', 'l');
 
-            xhr.open("POST", "/exec", true);
-            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            xhr.onprogress = function () {
-                let curr_index = xhr.responseText.length,
-                    s,
-                    resp,
-                    stdout,
-                    stderr;
-                if (last_index === curr_index) return;
-                s = xhr.responseText.substring(last_index, curr_index);
-                last_index = curr_index;
-                resp = JSON.parse(s);
-                stdout = resp.stdout;
-                stderr = resp.stderr;
-                if (stdout !== undefined && stdout !== "") {
-                    outputPre.innerHTML += "<span>" + resp.stdout + "</span>";
+        /******** Event Setup ************/
+
+        let textarea = editor.textInput.getElement();
+
+        editor.on('click', function (evt) {
+            sendCursorPosition(editor.getCursorPosition(), editorId);
+        });
+
+        textarea.addEventListener('keydown', function (evt) {
+            if (document.activeElement !== textarea) { // prevent event listener loop
+                return
+            }
+            sendKeyEvent(editor.getValue(), evt, editorId);
+            if (!isModifierKey(evt.keyCode)) { // synchronize cursor position after content update
+                sendCursorPosition(editor.getCursorPosition(), editorId);
+            }
+        });
+
+        textarea.addEventListener('keyup', function (evt) {
+            if (document.activeElement !== textarea) { // prevent event listener loop
+                return
+            }
+            sendKeyEvent(editor.getValue(), evt, editorId);
+            if (!isModifierKey(evt.keyCode)) { // synchronize cursor position after content update
+                sendCursorPosition(editor.getCursorPosition(), editorId);
+            }
+        });
+
+        EditorSync.sub.push(function (evt) {
+            let event = JSON.parse(evt);
+            if (editorId === event.editorId && event.type === 'logupdate') {
+                if (event.clear === true) {
+                    outputPre.innerText = "";
+                    return;
                 }
-                if (stderr !== undefined && stderr !== "") {
-                    outputPre.innerHTML += "<span style='color: red;'>" + resp.stderr + "</span>";
+                if (event.stdout !== undefined && event.stdout !== "") {
+                    outputPre.innerHTML += "<span>" + event.stdout + "</span>";
+                }
+                if (event.stderr !== undefined && event.stderr !== "") {
+                    outputPre.innerHTML += "<span style='color: red;'>" + event.stderr + "</span>";
                 }
                 outputPre.scrollTop = outputPre.scrollHeight;
-            };
+                return;
+            }
+            else if (editorId === event.editorId && document.activeElement !== textarea) {
+                if (event.type === 'click') {
+                    editor.selection.moveTo(event.row, event.column);
+                    return;
+                }
+
+                // if there is a content update, replace editor content and return.
+                if (!isModifierKey(event.keyCode)) {
+                    editor.setValue(event.editorContent, 1);
+                    return;
+                }
+
+                // position/modifier keys can be sent directly to the textarea. "content" keys don't work.
+                let e = document.createEvent("Event");
+                e.initEvent(event.type, true, true);
+                e.altKey = event.altKey;
+                e.charCode = event.charCode;
+                e.code = event.code;
+                e.ctrlKey = event.ctrlKey;
+                e.key = event.key;
+                e.metaKey = event.metaKey;
+                e.repeat = event.repeat;
+                e.shiftKey = event.shiftKey;
+                e.keyCodeVal = event.keyCode;
+                e.whichVal = event.which;
+                Object.defineProperty(e, 'keyCode', {
+                    get: function () {
+                        return this.keyCodeVal;
+                    }
+                });
+                Object.defineProperty(e, 'which', {
+                    get: function () {
+                        return this.whichVal;
+                    }
+                });
+                textarea.dispatchEvent(e);
+            }
+        });
+
+        clearButton.onclick = function () {
+            sendLogUpdate(editorId, true)
+        };
+
+        execButton.onclick = function () {
+            let postData = 'editorId=' + editorId + '&executor=' + executor + '&filename=' + encodeURIComponent(filename) + '&payload=' + encodeURIComponent(editor.getValue()),
+                xhr = new XMLHttpRequest();
+            xhr.open('POST', '/exec', true);
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
             xhr.send(postData);
         };
-        elem.insertAdjacentElement("afterend", clearButton);
-        elem.insertAdjacentElement("afterend", execButton);
+
+        /******** /Event Setup ************/
+
+        elem.insertAdjacentElement('afterend', clearButton);
+        elem.insertAdjacentElement('afterend', execButton);
         if (executors) {
-            let select = document.createElement("select");
+            let select = document.createElement('select');
             executors.forEach(function (exec) {
                 select.options.add(new Option(exec, exec));
             });
             select.onchange = function () {
                 executor = select.value;
             };
-            execButton.insertAdjacentElement("afterend", select);
+            execButton.insertAdjacentElement('afterend', select);
         }
-        clearButton.insertAdjacentElement("afterend", outputLog);
+        clearButton.insertAdjacentElement('afterend', outputLog);
 
         i++;
     });

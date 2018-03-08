@@ -10,6 +10,7 @@ import (
 	"github.com/BurntSushi/toml"
 	"github.com/blang/semver"
 	"github.com/labstack/echo"
+	"github.com/labstack/echo/middleware"
 	"github.com/mitchellh/go-homedir"
 	"github.com/rhysd/go-github-selfupdate/selfupdate"
 	log "github.com/sirupsen/logrus"
@@ -70,9 +71,23 @@ func main() {
 		LogLevel:        conf.LogLevel,
 		LogFormat:       conf.LogFormat,
 		Fs:              afero.NewOsFs(),
+		SyncedEditorPub: make(chan Handlers.SyncedEditor),
+		SyncedEditorSub: make(map[int]*Handlers.SyncedEditorWriter),
 	}
 
+	// Used for synchronization between editors in presenter view and copied browser on beamer/monitor.
+	// If there is a message from a browser on any open websocket, this message is pushed to all websockets on all browsers
+	go func() {
+		for {
+			sep := <-handler.SyncedEditorPub // Wait for message from any websocket/browser
+			for _, ses := range handler.SyncedEditorSub {
+				ses.Writer(sep, ses.Ws) // write the message to all websockets/browsers.
+			}
+		}
+	}()
+
 	e := echo.New()
+	e.Use(middleware.Recover())
 
 	for _, c := range conf.Presentations {
 		_, err := os.Stat(c.TemplatePath)
@@ -86,6 +101,7 @@ func main() {
 	e.GET("/svg/footer-text.svg", handler.Svg)
 	e.GET("/md/:file", handler.Md)
 	e.GET("/md/:pres/*", handler.Assets)
+	e.GET("/editorsync", handler.EditorSync)
 	e.POST("/exec", handler.Exec)
 	e.GET("/:pres", handler.Presentation)
 	e.GET("/", handler.Home)
