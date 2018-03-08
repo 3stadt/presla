@@ -4,7 +4,7 @@ The features below are a loose plan of things that need to happen before presla 
 
 Expect changes as this is a spare time project.
 
-## v0.0.8
+## v0.0.9
 
 - More executors
 - One alternative template
@@ -48,3 +48,10 @@ Minor fixes
 
 - Footer text left aligned
 - Mode python included in default presentation
+
+## v0.0.8
+
+- When cloning a presentation via `c` in browser, the editors are now synced
+  - Useful when presentation view + beamer view
+- Editor/log view height & width can now be set via data attributes
+  - Usage: `data-editorwidth="60rem" data-editorheight="20rem" data-logwidth="59rem" data-logheight="5rem"`
