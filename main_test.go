@@ -44,16 +44,17 @@ func TestBasicConfContentIsCreated(t *testing.T) {
 	assert.Nil(t, err)
 
 	expected := Config{
-		ConfigFile:      defaultConfigFile,
-		MarkdownPath:    defaultMarkdownPath,
-		FooterText:      "please edit presla.toml",
-		ListenOn:        "localhost:8080",
-		TemplatePath:    "",
-		StaticFiles:     "",
-		Presentations:   []Handlers.PresentationConf(nil),
-		CustomExecutors: "",
-		LogLevel:        "",
-		LogFormat:       "",
+		ConfigFile:         defaultConfigFile,
+		MarkdownPath:       defaultMarkdownPath,
+		FooterText:         "please edit presla.toml",
+		ListenOn:           "localhost:8080",
+		TemplatePath:       "",
+		StaticFiles:        "",
+		Presentations:      []Handlers.PresentationConf(nil),
+		CustomExecutors:    "",
+		LogLevel:           "",
+		LogFormat:          "",
+		CheckUpdateOnStart: true,
 	}
 
 	fs := new(afero.MemMapFs)
