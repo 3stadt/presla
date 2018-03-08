@@ -21,19 +21,20 @@ import (
 )
 
 type Config struct {
-	ConfigFile      string
-	MarkdownPath    string
-	FooterText      string
-	ListenOn        string
-	TemplatePath    string
-	StaticFiles     string
-	Presentations   []Handlers.PresentationConf
-	CustomExecutors string
-	LogLevel        string
-	LogFormat       string
+	ConfigFile         string
+	MarkdownPath       string
+	FooterText         string
+	ListenOn           string
+	TemplatePath       string
+	StaticFiles        string
+	Presentations      []Handlers.PresentationConf
+	CustomExecutors    string
+	LogLevel           string
+	LogFormat          string
+	CheckUpdateOnStart bool
 }
 
-var conf Config
+var conf = Config{CheckUpdateOnStart: true}
 var logger = log.New()
 
 var version = "vlatest"
@@ -42,14 +43,13 @@ var version = "vlatest"
 Set up HTTP routes, start server
 */
 func main() {
-	checkForUpdate()
-
 	// Use Disk
 	fs := afero.NewOsFs()
 
 	// If user sets conf param, use that as starting point
 	configPathFlag := ""
 	flag.StringVar(&configPathFlag, "conf", "", "The path to the configuration file")
+	flag.BoolVar(&conf.CheckUpdateOnStart, "auto-update", conf.CheckUpdateOnStart, "Whether to enable or disable update check on start")
 	flag.Parse()
 
 	// Search for the config file to use or create one in working dir
@@ -59,6 +59,8 @@ func main() {
 	// Read in config from above into global conf var
 	err = readMainConfig(configPath, fs)
 	checkErr(err)
+
+	conf.checkForUpdate()
 
 	handler := &Handlers.Conf{
 		ConfigFile:      conf.ConfigFile,
@@ -110,9 +112,14 @@ func main() {
 	e.Start(conf.ListenOn)
 }
 
-func checkForUpdate() {
+func (conf *Config) checkForUpdate() {
 	if version == "vlatest" { // version is changed on compile via ldflags, see makefile
 		log.Info("using development version, update check deactivated")
+		return
+	}
+
+	if conf.CheckUpdateOnStart == false {
+		log.Info("Auto update check is disabled in config.")
 		return
 	}
 
@@ -269,6 +276,9 @@ ListenOn="localhost:8080"
 
 ## Can be set to "json", defaults to "text": Set log format to debug
 # LogFormat="json"
+
+## Controls if presla looks for a newer version on start
+# CheckUpdateOnStart=true
 
 ## Optional, can be used multiple times
 ## This way you can specify a template used for only one presentation
