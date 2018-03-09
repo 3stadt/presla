@@ -4,14 +4,13 @@ The features below are a loose plan of things that need to happen before presla 
 
 Expect changes as this is a spare time project.
 
-## v0.0.9
+## v0.0.10
 
 - More executors
 - One alternative template
 - More beautiful default template
 - Better documentation of template creation
 - Default and alternative templates downloadable via zip from default presentation // generally better docs on custom templates
-- "passthrough" executor that acts like a minmal shell in the presentation
 - Better [decktape](https://github.com/astefanutti/decktape) integration or documentation for PDF generation
 - Some sort of [slideshare](https://slideshare.net)/[speakerdeck](https://speakerdeck.com/) integration of documentation
 
@@ -55,3 +54,7 @@ Minor fixes
   - Useful when presentation view + beamer view
 - Editor/log view height & width can now be set via data attributes
   - Usage: `data-editorwidth="60rem" data-editorheight="20rem" data-logwidth="59rem" data-logheight="5rem"`
+
+## v0.0.9
+
+- optional command line underneath the presentation for sending arguments to the code
