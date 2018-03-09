@@ -94,8 +94,10 @@ slideshow.on('showSlide', function () {
 
         if (elem.dataset.editorwidth) {
             elem.style.width = elem.dataset.editorwidth;
-            cmdContainer.width = elem.dataset.editorwidth;
-            cmdLine.width = elem.dataset.editorwidth;
+            if (cmdContainer) {
+                cmdContainer.width = elem.dataset.editorwidth;
+                cmdLine.width = elem.dataset.editorwidth;
+            }
         }
 
         if (elem.dataset.logheight) {
