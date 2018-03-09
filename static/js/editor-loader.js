@@ -17,7 +17,9 @@ slideshow.on('showSlide', function () {
             clearButton,
             outputLog,
             outputPre,
-            editor;
+            editor,
+            cmdContainer,
+            cmdLine;
         if (elem.dataset.filename) {
             filename = elem.dataset.filename;
         }
@@ -54,6 +56,21 @@ slideshow.on('showSlide', function () {
             slideshow.resume()
         });
 
+        if (elem.dataset.showcmd === "true") {
+            cmdContainer = document.createElement('div');
+            cmdContainer.setAttribute('class', 'cmdLineContainer');
+            cmdLine = document.createElement('input');
+            cmdLine.setAttribute('type', 'text');
+            cmdLine.setAttribute('class', 'cmdLine');
+            cmdLine.addEventListener('focus', function () {
+                slideshow.pause();
+            });
+            cmdLine.addEventListener('blur', function () {
+                slideshow.resume();
+            });
+            cmdContainer.appendChild(cmdLine);
+        }
+
         execButton = document.createElement('button');
         clearButton = document.createElement('button');
         outputLog = document.createElement('div');
@@ -71,12 +88,14 @@ slideshow.on('showSlide', function () {
 
         /******** Dynamic Editor/Log view width&height ********/
 
-         if (elem.dataset.editorheight) {
+        if (elem.dataset.editorheight) {
             elem.style.height = elem.dataset.editorheight;
         }
 
         if (elem.dataset.editorwidth) {
             elem.style.width = elem.dataset.editorwidth;
+            cmdContainer.width = elem.dataset.editorwidth;
+            cmdLine.width = elem.dataset.editorwidth;
         }
 
         if (elem.dataset.logheight) {
@@ -177,7 +196,11 @@ slideshow.on('showSlide', function () {
         };
 
         execButton.onclick = function () {
-            let postData = 'editorId=' + editorId + '&executor=' + executor + '&filename=' + encodeURIComponent(filename) + '&payload=' + encodeURIComponent(editor.getValue()),
+            let cmdArgs = "";
+            if(cmdLine){
+                cmdArgs = cmdLine.value;
+            }
+            let postData = 'editorId=' + editorId + '&executor=' + executor + '&filename=' + encodeURIComponent(filename) + '&payload=' + encodeURIComponent(editor.getValue()) + '&cmdargs='+encodeURIComponent(cmdArgs),
                 xhr = new XMLHttpRequest();
             xhr.open('POST', '/exec', true);
             xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
@@ -185,7 +208,6 @@ slideshow.on('showSlide', function () {
         };
 
         /******** /Event Setup ************/
-
         elem.insertAdjacentElement('afterend', clearButton);
         elem.insertAdjacentElement('afterend', execButton);
         if (executors) {
@@ -199,7 +221,9 @@ slideshow.on('showSlide', function () {
             execButton.insertAdjacentElement('afterend', select);
         }
         clearButton.insertAdjacentElement('afterend', outputLog);
-
+        if (cmdContainer) {
+            elem.insertAdjacentElement('afterend', cmdContainer)
+        }
         i++;
     });
     aceInit = true;
