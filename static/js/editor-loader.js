@@ -136,9 +136,21 @@ slideshow.on('showSlide', function () {
             }
         });
 
+        if (cmdLine) {
+            cmdLine.addEventListener('keyup', function (evt) {
+                if (document.activeElement !== cmdLine) { // prevent event listener loop
+                    return
+                }
+                sendCmdKeyEvent(cmdLine.value, editorId);
+            });
+        }
+
         EditorSync.sub.push(function (evt) {
             let event = JSON.parse(evt);
-            if (editorId === event.editorId && event.type === 'logupdate') {
+            if (editorId === event.editorId && event.type === 'cmdUpdate' && cmdLine) {
+                cmdLine.value = event.cmdContent;
+            }
+            else if (editorId === event.editorId && event.type === 'logupdate') {
                 if (event.clear === true) {
                     outputPre.innerText = "";
                     return;
@@ -150,7 +162,6 @@ slideshow.on('showSlide', function () {
                     outputPre.innerHTML += "<span style='color: red;'>" + event.stderr + "</span>";
                 }
                 outputPre.scrollTop = outputPre.scrollHeight;
-                return;
             }
             else if (editorId === event.editorId && document.activeElement !== textarea) {
                 if (event.type === 'click') {
@@ -197,10 +208,10 @@ slideshow.on('showSlide', function () {
 
         execButton.onclick = function () {
             let cmdArgs = "";
-            if(cmdLine){
+            if (cmdLine) {
                 cmdArgs = cmdLine.value;
             }
-            let postData = 'editorId=' + editorId + '&executor=' + executor + '&filename=' + encodeURIComponent(filename) + '&payload=' + encodeURIComponent(editor.getValue()) + '&cmdargs='+encodeURIComponent(cmdArgs),
+            let postData = 'editorId=' + editorId + '&executor=' + executor + '&filename=' + encodeURIComponent(filename) + '&payload=' + encodeURIComponent(editor.getValue()) + '&cmdargs=' + encodeURIComponent(cmdArgs),
                 xhr = new XMLHttpRequest();
             xhr.open('POST', '/exec', true);
             xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');

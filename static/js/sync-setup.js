@@ -53,6 +53,15 @@ function sendCursorPosition(pos, editorId) {
     ws.send(JSON.stringify(position));
 }
 
+function sendCmdKeyEvent(cmdContent, editorId) {
+    let event = {
+        cmdContent: cmdContent,
+        editorId: editorId,
+        type: 'cmdUpdate'
+    };
+    ws.send(JSON.stringify(event));
+}
+
 function sendKeyEvent(editorVal, evt, editorId) {
     let event = {
         editorContent: editorVal,
