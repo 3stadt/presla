@@ -174,6 +174,7 @@ func (code *Code) execute(c echo.Context, conf *Conf, commands []ottoOut) (err e
 		c.Response().Header().Set(echo.HeaderContentType, echo.MIMEApplicationJSON)
 
 		// prepare the command
+		command.cmdArgs = append(command.cmdArgs, strings.Split(code.CmdArgs, " ")...)
 		cmd := exec.Command(command.cmdName, command.cmdArgs...)
 
 		cmdReader, err := cmd.StdoutPipe()

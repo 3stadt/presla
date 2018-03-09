@@ -21,6 +21,7 @@ type Code struct {
 	Executor string `form:"executor"`
 	Filename string `form:"filename"`
 	Payload  string `form:"payload"`
+	CmdArgs  string `form:"cmdargs"`
 }
 
 type PresentationConf struct {

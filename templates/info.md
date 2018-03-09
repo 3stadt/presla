@@ -65,6 +65,17 @@ echo "bar\n";
 
 ---
 
+## Need to pass some arguments? Sure!
+
+.single-center-column-fit[
+
+<div class="editor" data-showcmd="true" data-filename="{{ .TempDir }}/main.php" data-executor="php" data-theme="solarized_dark"><?php
+var_dump($argv);
+</div>
+]
+
+---
+
 ## Errors show up in red
 
 .single-center-column-fit[

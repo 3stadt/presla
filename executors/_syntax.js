@@ -32,6 +32,7 @@ function isInstalled(bin){}
 
 /***
  * A binary and some optional arguments. This will be executed on the host system, be careful!
+ * Additionally, all arguments from the editors cmdLine field will be applied
  * Command output will be sent to the browser
  * @param bin string
  * @param args ...string
@@ -41,6 +42,7 @@ function exec(bin, ...args) {}
 
 /***
  * A binary and some optional arguments. This will be executed on the host system, be careful!
+ * Additionally, all arguments from the editors cmdLine field will be applied
  * Command output will not be sent to the browser
  * @param bin string
  * @param args ...string

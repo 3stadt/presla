@@ -13,6 +13,14 @@ h1, h2, h3 {
     height: 14.5rem;
 }
 
+.cmdLineContainer {
+    width: 40rem;
+}
+
+.cmdLine {
+    width: 40rem;
+}
+
 .outputlog > pre {
     font-family: monospace;
     background-color: #fff;
