@@ -170,7 +170,7 @@ greet('presla')
 
 # Customizing
 
-For creating your own theme, static files and templates, take a look at the [repository](https://git.3stadt.com/3stadt/presla).
+For creating your own theme, static files and templates, take a look at the [repository](https://github.com/3stadt/presla).
 
 ---
 
