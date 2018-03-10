@@ -38,7 +38,7 @@ At this point you'll only see the included info presentation, since you yet need
 Presla is configured via a [toml](https://github.com/toml-lang/toml/blob/master/README.md) file. At first start, a `presla.toml` file is created in the current directory, you may want to copy it over to another directory. The possible directories are:
 
 - `<current dir>/presla.toml`
-- `<homde dir>/.presla.toml`
+- `<home dir>/.presla.toml`
 - `<home dir>/.config/presla.toml`
 
 **Please note:** Presla doesn't react to config changes at runtime. To apply your changes in presla.toml, you need to restart the application.
