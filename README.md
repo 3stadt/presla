@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/3stadt/presla.svg?branch=master)](https://travis-ci.org/3stadt/presla)
+[![Travis](https://img.shields.io/travis/3stadt/presla.svg)](https://travis-ci.org/3stadt/presla) [![GitHub release](https://img.shields.io/github/release/3stadt/presla.svg)](http://presla.io) [![Github All Releases](https://img.shields.io/github/downloads/3stadt/presla/total.svg)](http://presla.io)
 
 # Presla
 
