@@ -9,6 +9,7 @@
     <title>[{{ .Title }}]</title>
 
     <link rel="stylesheet" href="/static/internal/css/theme-presla.css">
+    <link rel="stylesheet" href="/static/internal/css/mermaid.css">
 </head>
 <body>
 
@@ -16,9 +17,10 @@
 
 <script src="/static/internal/js/sync-setup.js" type="text/javascript"></script>
 <script src="/static/internal/js/remark-latest.min.js" type="text/javascript"></script>
+<script src="/static/internal/js/mermaid.min.js"></script>
 <script src="/static/internal/js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-    var pres = "{{ .Pres }}";
+    let pres = "{{ .Pres }}";
 </script>
 <script src="/static/internal/js/remark-loader.js" type="text/javascript"></script>
 <script src="/static/internal/js/editor-loader.js" type="text/javascript"></script>

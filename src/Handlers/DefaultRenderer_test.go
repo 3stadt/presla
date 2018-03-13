@@ -35,7 +35,7 @@ func TestDefaultTemplate(t *testing.T) {
 
 	varSetter := doc.Find("script[type='text/javascript']:not([src])")
 	assert.Equal(t, 1, varSetter.Length())
-	assert.Equal(t, "var pres = \"PRES\";", strings.TrimSpace(varSetter.First().Text()))
+	assert.Equal(t, "let pres = \"PRES\";", strings.TrimSpace(varSetter.First().Text()))
 
 	css := doc.Find("link[rel='stylesheet'][href='/static/internal/css/theme-presla.css']")
 	assert.Equal(t, 1, css.Length())
