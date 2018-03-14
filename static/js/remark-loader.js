@@ -22,3 +22,13 @@ let slideshow = remark.create({
     sourceUrl: 'md/' + pres + '.md',
     countIncrementalSlides: false
 });
+
+slideshow.on('afterShowSlide', function (s) {
+    let diagrams = document.querySelectorAll('.mermaid');
+    let i;
+    for (i = 0; i < diagrams.length; i++) {
+        if (diagrams[i].offsetWidth > 0) {
+            mermaid.init(undefined, diagrams[i]);
+        }
+    }
+});
