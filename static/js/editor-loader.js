@@ -110,6 +110,18 @@ slideshow.on('showSlide', function () {
             outputPre.style.width = elem.dataset.logwidth;
         }
 
+        if (elem.dataset.contenturl) {
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', '/md'+elem.dataset.contenturl);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState > 3 && xhr.status === 200) {
+                    editor.setValue(xhr.responseText, 1);
+                }
+            };
+            xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+            xhr.send();
+        }
+
         /******** Event Setup ************/
 
 
