@@ -1,4 +1,4 @@
-[![Travis](https://img.shields.io/travis/3stadt/presla.svg)](https://travis-ci.org/3stadt/presla) [![GitHub release](https://img.shields.io/github/release/3stadt/presla.svg)](http://presla.io) [![Github All Releases](https://img.shields.io/github/downloads/3stadt/presla/total.svg)](http://presla.io)
+[![Travis](https://img.shields.io/travis/3stadt/presla.svg)](https://travis-ci.org/3stadt/presla) [![GitHub release](https://img.shields.io/github/release/3stadt/presla.svg)](http://presla.io) [![Github All Releases](https://img.shields.io/github/downloads/3stadt/presla/total.svg)](http://presla.io) [![Floobits Status](https://floobits.com/3stadt/presla.svg)](https://floobits.com/3stadt/presla/redirect)
 
 # Presla
 
