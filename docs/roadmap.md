@@ -4,7 +4,7 @@ The features below are a loose plan of things that need to happen before presla 
 
 Expect changes as this is a spare time project.
 
-## v0.0.10
+## v0.0.11
 
 - More executors
 - One alternative template
@@ -58,3 +58,9 @@ Minor fixes
 ## v0.0.9
 
 - optional command line underneath the presentation for sending arguments to the code
+
+## v0.0.10
+
+- Add [mermaidjs](https://mermaidjs.github.io/) diagrams
+- Add possibility to load code files from markdown folder
+  - Usage: Add an attribute to your editor definition, example: `data-contenturl="/some/path/file.php"`
