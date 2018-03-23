@@ -1,7 +1,6 @@
 package Handlers
 
 import (
-	"errors"
 	"fmt"
 	"github.com/labstack/echo"
 	"github.com/spf13/afero"
@@ -11,6 +10,8 @@ import (
 	"path/filepath"
 )
 
+// Assets serves assets like js and css files via http.
+// Depending on the configuration, the assets are loaded from bindata or the file system
 func (conf *Conf) Assets(c echo.Context) error {
 	pres := c.Param("pres")
 	file := c.Param("*")
@@ -26,7 +27,7 @@ func (conf *Conf) Assets(c echo.Context) error {
 	_, err := conf.Fs.Stat(path)
 	if os.IsNotExist(err) {
 		c.NoContent(http.StatusNotFound)
-		return errors.New(fmt.Sprintf("file not found: %s", path))
+		return fmt.Errorf("file not found: %s", path)
 	}
 
 	var content []byte

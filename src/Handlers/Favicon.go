@@ -5,6 +5,7 @@ import (
 	"net/http"
 )
 
+// Favicon returns the default presla favicon to the browser
 func (conf *Conf) Favicon(c echo.Context) error {
 	content, err := Asset("static/favicon.ico")
 

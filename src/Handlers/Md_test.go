@@ -44,7 +44,7 @@ func TestMdFromFs(t *testing.T) {
 	fs := afero.NewMemMapFs()
 	err := fs.MkdirAll(mdPath, 0755)
 	assert.Nil(t, err)
-	afero.WriteFile(fs, fmt.Sprintf("%s/%s", mdPath, filename), content, 644)
+	afero.WriteFile(fs, fmt.Sprintf("%s/%s", mdPath, filename), content, 0644)
 	conf := &Conf{
 		MarkdownPath: mdPath,
 		Fs:           fs,

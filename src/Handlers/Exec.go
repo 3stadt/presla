@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"github.com/labstack/echo"
 	"github.com/robertkrimen/otto"
-	_ "github.com/robertkrimen/otto/underscore"
+	_ "github.com/robertkrimen/otto/underscore" // allows the use of underscorejs functions in executors
 	log "github.com/sirupsen/logrus"
 	"io/ioutil"
 	"net/http"
@@ -18,6 +18,8 @@ import (
 	"time"
 )
 
+// Exec executes code on your system according to the post parameters it gets.
+// This function is the reason presla should only listen on localhost
 func (conf *Conf) Exec(c echo.Context) error {
 	if strings.ToLower(conf.LogFormat) == "json" {
 		log.SetFormatter(&log.JSONFormatter{})
@@ -25,9 +27,8 @@ func (conf *Conf) Exec(c echo.Context) error {
 	logLevel := func() log.Level {
 		if strings.ToLower(conf.LogLevel) == "debug" {
 			return log.DebugLevel
-		} else {
-			return log.WarnLevel
 		}
+		return log.WarnLevel
 	}
 	log.SetLevel(logLevel())
 
@@ -38,14 +39,7 @@ func (conf *Conf) Exec(c echo.Context) error {
 	}
 
 	// The created file is deleted at the end. In case the file exists on the system, rename it. Can't be ours.
-	if fileExists(code.Filename) {
-		newFileName := code.Filename + "_" + fmt.Sprintf("%d", makeTimestamp())
-		log.WithFields(log.Fields{
-			"oldName": code.Filename,
-			"newName": newFileName,
-		}).Warning("file exists, renaming.")
-		os.Rename(code.Filename, newFileName)
-	}
+	code.renameExistingFile()
 
 	file, err := os.Create(code.Filename)
 	if err != nil {
@@ -66,23 +60,9 @@ func (conf *Conf) Exec(c echo.Context) error {
 	file.Close()
 
 	// Check for custom executors first, only load internal executor when no custom on exists
-	var js []byte
-	if conf.CustomExecutors != "" && fileExists(conf.CustomExecutors+"/"+code.Executor+".js") {
-		log.WithFields(log.Fields{
-			"executor": conf.CustomExecutors + "/" + code.Executor + ".js",
-		}).Debug("using custom executor")
-		js, err = ioutil.ReadFile(conf.CustomExecutors + "/" + code.Executor + ".js")
-		if err != nil {
-			return c.JSON(http.StatusInternalServerError, err.Error())
-		}
-	} else {
-		log.WithFields(log.Fields{
-			"executor": "executors/" + code.Executor + ".js",
-		}).Debug("using internal executor")
-		js, err = Asset("executors/" + code.Executor + ".js")
-		if err != nil {
-			return c.JSON(http.StatusInternalServerError, err.Error())
-		}
+	js, err := conf.getExecutor(code.Executor)
+	if err != nil {
+		return c.JSON(http.StatusInternalServerError, err.Error())
 	}
 
 	cmdCommands, err := code.getCmdCommands(string(js))
@@ -96,6 +76,30 @@ func (conf *Conf) Exec(c echo.Context) error {
 	}
 
 	return err
+}
+
+func (conf *Conf) getExecutor(executorName string) (js []byte, err error) {
+	if conf.CustomExecutors != "" && fileExists(conf.CustomExecutors+"/"+executorName+".js") {
+		log.WithFields(log.Fields{
+			"executor": conf.CustomExecutors + "/" + executorName + ".js",
+		}).Debug("using custom executor")
+		return ioutil.ReadFile(conf.CustomExecutors + "/" + executorName + ".js")
+	}
+	log.WithFields(log.Fields{
+		"executor": "executors/" + executorName + ".js",
+	}).Debug("using internal executor")
+	return Asset("executors/" + executorName + ".js")
+}
+
+func (code *Code) renameExistingFile() {
+	if fileExists(code.Filename) {
+		newFileName := code.Filename + "_" + fmt.Sprintf("%d", makeTimestamp())
+		log.WithFields(log.Fields{
+			"oldName": code.Filename,
+			"newName": newFileName,
+		}).Warning("file exists, renaming.")
+		os.Rename(code.Filename, newFileName)
+	}
 }
 
 func (code *Code) getCmdCommands(js string) (out []ottoOut, err error) {
@@ -148,7 +152,7 @@ func (code *Code) execute(c echo.Context, conf *Conf, commands []ottoOut) (err e
 		if out.stdErr != "" || out.stdOut != "" {
 			update, err := json.Marshal(map[string]interface{}{
 				"type":     "logupdate",
-				"editorId": code.EditorId,
+				"editorId": code.EditorID,
 				"stdout":   out.stdOut,
 				"stderr":   out.stdErr,
 				"clear":    false,
@@ -195,67 +199,13 @@ func (code *Code) execute(c echo.Context, conf *Conf, commands []ottoOut) (err e
 		var wg sync.WaitGroup                 // used to keep browser connection open until all messages are sent
 
 		// go functions run until the command is finished, sending output to the browser
-		go func() error {
-			for {
-				text := <-chanSend
-				//if err := json.NewEncoder(c.Response()).Encode(text); err != nil {
-				//	log.Warningf("error encoding output for Cmd: %#s", err.Error())
-				//	return err
-				//}
-				//c.Response().Flush()
-				//time.Sleep(100 * time.Millisecond) // Used to prevent spamming the browser with responses
-				update, err := json.Marshal(map[string]interface{}{
-					"type":     "logupdate",
-					"editorId": code.EditorId,
-					"stdout":   text.StdOut,
-					"stderr":   text.StdErr,
-					"clear":    false,
-				})
-				if err != nil {
-					log.Error(err.Error())
-				}
-				conf.SyncedEditorPub <- SyncedEditor{
-					Update: string(update),
-				}
-				log.WithFields(log.Fields{
-					"stdout": text.StdOut,
-					"stderr": text.StdErr,
-				}).Debug("sent output to websockets")
-				wg.Done()
-			}
-		}()
+		go code.responseLoop(chanSend, conf, &wg)
 
 		// Capture error output and send it
-		go func() error {
-			for errScanner.Scan() {
-				if command.quiet {
-					continue
-				}
-				wg.Add(1)
-				text := CmdOutput{
-					StdErr: errScanner.Text(),
-				}
-				// send to browser
-				chanSend <- &text
-			}
-			return nil
-		}()
+		go captureScanner(command, chanSend, errScanner, &wg, true)
 
 		// Capture Stdout and send it
-		go func() error {
-			for outScanner.Scan() {
-				if command.quiet {
-					continue
-				}
-				wg.Add(1)
-				text := CmdOutput{
-					StdOut: outScanner.Text(),
-				}
-				// send to browser
-				chanSend <- &text
-			}
-			return nil
-		}()
+		go captureScanner(command, chanSend, outScanner, &wg, false)
 
 		// Start() runs the command and continues
 		err = cmd.Start()
@@ -271,6 +221,47 @@ func (code *Code) execute(c echo.Context, conf *Conf, commands []ottoOut) (err e
 		wg.Wait()
 	}
 	return err
+}
+
+func captureScanner(command CmdCommand, chanSend chan *CmdOutput, scanner *bufio.Scanner, wg *sync.WaitGroup, isErrScanner bool) {
+	for scanner.Scan() {
+		if command.quiet {
+			continue
+		}
+		wg.Add(1)
+		text := CmdOutput{}
+		if isErrScanner {
+			text.StdErr = scanner.Text()
+		} else {
+			text.StdOut = scanner.Text()
+		}
+		// send to browser
+		chanSend <- &text
+	}
+}
+
+func (code *Code) responseLoop(chanSend chan *CmdOutput, conf *Conf, wg *sync.WaitGroup) {
+	for {
+		text := <-chanSend
+		update, err := json.Marshal(map[string]interface{}{
+			"type":     "logupdate",
+			"editorId": code.EditorID,
+			"stdout":   text.StdOut,
+			"stderr":   text.StdErr,
+			"clear":    false,
+		})
+		if err != nil {
+			log.Error(err.Error())
+		}
+		conf.SyncedEditorPub <- SyncedEditor{
+			Update: string(update),
+		}
+		log.WithFields(log.Fields{
+			"stdout": text.StdOut,
+			"stderr": text.StdErr,
+		}).Debug("sent output to websockets")
+		wg.Done()
+	}
 }
 
 func fileExists(name string) bool {
