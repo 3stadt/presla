@@ -199,13 +199,13 @@ func (code *Code) execute(c echo.Context, conf *Conf, commands []ottoOut) (err e
 		var wg sync.WaitGroup                 // used to keep browser connection open until all messages are sent
 
 		// go functions run until the command is finished, sending output to the browser
-		go code.responseLoop(chanSend, conf, wg)
+		go code.responseLoop(chanSend, conf, &wg)
 
 		// Capture error output and send it
-		go captureScanner(command, chanSend, errScanner, wg, true)
+		go captureScanner(command, chanSend, errScanner, &wg, true)
 
 		// Capture Stdout and send it
-		go captureScanner(command, chanSend, outScanner, wg, false)
+		go captureScanner(command, chanSend, outScanner, &wg, false)
 
 		// Start() runs the command and continues
 		err = cmd.Start()
@@ -223,7 +223,7 @@ func (code *Code) execute(c echo.Context, conf *Conf, commands []ottoOut) (err e
 	return err
 }
 
-func captureScanner(command CmdCommand, chanSend chan *CmdOutput, scanner *bufio.Scanner, wg sync.WaitGroup, isErrScanner bool) {
+func captureScanner(command CmdCommand, chanSend chan *CmdOutput, scanner *bufio.Scanner, wg *sync.WaitGroup, isErrScanner bool) {
 	for scanner.Scan() {
 		if command.quiet {
 			continue
@@ -240,7 +240,7 @@ func captureScanner(command CmdCommand, chanSend chan *CmdOutput, scanner *bufio
 	}
 }
 
-func (code *Code) responseLoop(chanSend chan *CmdOutput, conf *Conf, wg sync.WaitGroup) {
+func (code *Code) responseLoop(chanSend chan *CmdOutput, conf *Conf, wg *sync.WaitGroup) {
 	for {
 		text := <-chanSend
 		update, err := json.Marshal(map[string]interface{}{
