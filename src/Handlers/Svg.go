@@ -9,6 +9,7 @@ import (
 	"net/http"
 )
 
+// Svg is used to deliver the footer text as svg image
 func (conf *Conf) Svg(c echo.Context) error {
 	text := conf.FooterText
 	if text == "" {

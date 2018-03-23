@@ -9,6 +9,8 @@ var (
 	upgrader = websocket.Upgrader{}
 )
 
+// EditorSync provides websocket broadcasting
+// When a websocket sends data, the data is broadcasted to all connected websockets, including the sender
 func (conf *Conf) EditorSync(c echo.Context) error {
 	ws, err := upgrader.Upgrade(c.Response(), c.Request(), nil)
 	if err != nil {

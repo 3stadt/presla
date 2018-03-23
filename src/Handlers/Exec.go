@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"github.com/labstack/echo"
 	"github.com/robertkrimen/otto"
-	_ "github.com/robertkrimen/otto/underscore"
+	_ "github.com/robertkrimen/otto/underscore" // allows the use of underscorejs functions in executors
 	log "github.com/sirupsen/logrus"
 	"io/ioutil"
 	"net/http"
@@ -18,6 +18,8 @@ import (
 	"time"
 )
 
+// Exec executes code on your system according to the post parameters it gets.
+// This function is the reason presla should only listen on localhost
 func (conf *Conf) Exec(c echo.Context) error {
 	if strings.ToLower(conf.LogFormat) == "json" {
 		log.SetFormatter(&log.JSONFormatter{})
@@ -25,9 +27,8 @@ func (conf *Conf) Exec(c echo.Context) error {
 	logLevel := func() log.Level {
 		if strings.ToLower(conf.LogLevel) == "debug" {
 			return log.DebugLevel
-		} else {
-			return log.WarnLevel
 		}
+		return log.WarnLevel
 	}
 	log.SetLevel(logLevel())
 
@@ -151,7 +152,7 @@ func (code *Code) execute(c echo.Context, conf *Conf, commands []ottoOut) (err e
 		if out.stdErr != "" || out.stdOut != "" {
 			update, err := json.Marshal(map[string]interface{}{
 				"type":     "logupdate",
-				"editorId": code.EditorId,
+				"editorId": code.EditorID,
 				"stdout":   out.stdOut,
 				"stderr":   out.stdErr,
 				"clear":    false,
@@ -244,7 +245,7 @@ func (code *Code) responseLoop(chanSend chan *CmdOutput, conf *Conf, wg sync.Wai
 		text := <-chanSend
 		update, err := json.Marshal(map[string]interface{}{
 			"type":     "logupdate",
-			"editorId": code.EditorId,
+			"editorId": code.EditorID,
 			"stdout":   text.StdOut,
 			"stderr":   text.StdErr,
 			"clear":    false,

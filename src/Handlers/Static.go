@@ -8,6 +8,7 @@ import (
 	"path/filepath"
 )
 
+// Static loads files like js and css from the static folder on the disk
 func (conf *Conf) Static(c echo.Context) error {
 	file := c.Param("*")
 	pres := c.Param("pres")

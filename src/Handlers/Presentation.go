@@ -10,6 +10,7 @@ import (
 	"strings"
 )
 
+// Presentation serves the index file and sets the pres parameter used by the default remarkjs template to load markdown content
 func (conf *Conf) Presentation(c echo.Context) error {
 	data := map[string]interface{}{
 		"Pres":  c.Param("pres"),

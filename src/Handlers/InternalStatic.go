@@ -1,7 +1,6 @@
 package Handlers
 
 import (
-	"errors"
 	"fmt"
 	"github.com/labstack/echo"
 	"mime"
@@ -9,6 +8,7 @@ import (
 	"path/filepath"
 )
 
+// InternalStatic is used to fetch assets explicit from the bindata file
 func (conf *Conf) InternalStatic(c echo.Context) error {
 	path := "static/" + c.Param("*")
 
@@ -16,7 +16,7 @@ func (conf *Conf) InternalStatic(c echo.Context) error {
 
 	if err != nil {
 		c.NoContent(http.StatusNotFound)
-		return errors.New(fmt.Sprintf("asset not found: %s", path))
+		return fmt.Errorf("asset not found: %s", path)
 	}
 
 	mimeType := mime.TypeByExtension(filepath.Ext(path))

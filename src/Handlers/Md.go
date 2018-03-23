@@ -11,6 +11,7 @@ import (
 	"strings"
 )
 
+// Md is used to serve content for the presentation, typically markdown files and images belonging to a specific presentation
 func (conf *Conf) Md(c echo.Context) error {
 	file := c.Param("file")
 

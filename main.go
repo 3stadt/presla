@@ -20,6 +20,7 @@ import (
 	"strings"
 )
 
+// Config holds the main configuration. The config file presla.toml is loaded into this struct.
 type Config struct {
 	ConfigFile         string
 	MarkdownPath       string
@@ -234,9 +235,8 @@ func getConfPath(configPath string, fs afero.Fs) (string, error) {
 		if _, err := fs.Stat(location); err == nil {
 			logger.Infof("using config file: %s", location)
 			return location, nil
-		} else {
-			logger.Infof("no config file at %s", location)
 		}
+		logger.Infof("no config file at %s", location)
 	}
 
 	defaultConfig := []byte(getDefaultConfig())
