@@ -1,4 +1,4 @@
-[![Travis](https://img.shields.io/travis/3stadt/presla.svg)](https://travis-ci.org/3stadt/presla) [![GitHub release](https://img.shields.io/github/release/3stadt/presla.svg)](http://presla.io) [![Github All Releases](https://img.shields.io/github/downloads/3stadt/presla/total.svg)](http://www.somsubhra.com/github-release-stats/?username=3stadt&repository=presla) [![Floobits Status](https://floobits.com/3stadt/presla.svg)](https://floobits.com/3stadt/presla/redirect)
+[![Travis](https://img.shields.io/travis/3stadt/presla.svg)](https://travis-ci.org/3stadt/presla) [![GitHub release](https://img.shields.io/github/release/3stadt/presla.svg)](http://presla.io) [![Github All Releases](https://img.shields.io/github/downloads/3stadt/presla/total.svg)](http://www.somsubhra.com/github-release-stats/?username=3stadt&repository=presla) [![Go Report Card](https://goreportcard.com/badge/github.com/3stadt/presla)](https://goreportcard.com/report/github.com/3stadt/presla) [![Floobits Status](https://floobits.com/3stadt/presla.svg)](https://floobits.com/3stadt/presla/redirect)
 
 # Presla
 
