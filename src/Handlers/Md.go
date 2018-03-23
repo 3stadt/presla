@@ -33,7 +33,6 @@ func (conf *Conf) Md(c echo.Context) error {
 func (conf *Conf) showInfo(c echo.Context) error {
 	var presentations []string
 
-	files := make([]string, 1)
 	files, err := afero.Glob(conf.Fs, conf.MarkdownPath+"/*.md")
 	if err != nil {
 		files[0] = "Error loading presentations: " + err.Error()
