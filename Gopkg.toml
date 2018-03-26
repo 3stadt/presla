@@ -68,3 +68,7 @@
 [prune]
   go-tests = true
   unused-packages = true
+
+[[constraint]]
+  name = "github.com/phayes/freeport"
+  version = "1.0.2"

@@ -12,11 +12,14 @@ import (
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
 	"github.com/mitchellh/go-homedir"
+	"github.com/phayes/freeport"
 	"github.com/rhysd/go-github-selfupdate/selfupdate"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/afero"
+	"net"
 	"os"
 	"path/filepath"
+	"strconv"
 	"strings"
 )
 
@@ -108,9 +111,33 @@ func main() {
 	e.POST("/exec", handler.Exec)
 	e.GET("/:pres", handler.Presentation)
 	e.GET("/", handler.Home)
-	logger.Infof("Starting server at: %s", fmt.Sprintf("http://%s", conf.ListenOn))
+	listenOn, err := getFreePort(conf.ListenOn)
+	if err != nil {
+		log.Error(err)
+		os.Exit(1)
+	}
+	logger.Infof("Starting server at: %s", fmt.Sprintf("http://%s", listenOn))
 	logger.Infof("=> Use Ctrl+c to quit Presla")
-	e.Start(conf.ListenOn)
+	e.Start(listenOn)
+}
+
+func getFreePort(connectionString string) (string, error) {
+	ln, err := net.Listen("tcp", connectionString)
+	if err != nil {
+		csParts := strings.Split(connectionString, ":")
+		if len(csParts) != 2 {
+			return "", fmt.Errorf("connection string invalid, must be in format 'host:port', got %s", connectionString)
+		}
+		logger.Warnf("Can't listen on port %q: %s", csParts[1], err)
+		freePort, err := freeport.GetFreePort()
+		if err != nil {
+			return "", err
+		}
+		logger.Warnf("Using %d as replacement port, please review your config!", freePort)
+		return csParts[0] + ":" + strconv.Itoa(freePort), nil
+	}
+	ln.Close()
+	return connectionString, nil
 }
 
 func (conf *Config) checkForUpdate() {
