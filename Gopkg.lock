@@ -110,6 +110,12 @@
   revision = "b8bc1bf767474819792c23f32d8286a45736f1c6"
 
 [[projects]]
+  name = "github.com/phayes/freeport"
+  packages = ["."]
+  revision = "b8543db493a5ed890c5499e935e2cad7504f3a04"
+  version = "1.0.2"
+
+[[projects]]
   name = "github.com/pmezard/go-difflib"
   packages = ["difflib"]
   revision = "792786c7400a136282c1664665ae0a8db921c6c2"
@@ -264,6 +270,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "c6fdcb9d7931f990c7877f3e90746a1ce45e65715d36f6daa3d685bc93619be4"
+  inputs-digest = "5798e076e67666c4e6c5f4a0295f797a8629102c5b864e72fb4b4f36ee172971"
   solver-name = "gps-cdcl"
   solver-version = 1
