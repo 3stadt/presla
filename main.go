@@ -289,14 +289,14 @@ ListenOn="localhost:8080"
 
 ## Optional: Path to your own template.
 ## Needs the index.html holding remarkjs, an info.md as starting point and footer-text.svg 
-# TemplatePath="/home/user/Documents/presla-theme/templates"
+# TemplatePath="./templates"
 
 ## Optional: path to the templates static files
 ## Holds css, js, fonts and images used in your template
-# StaticFiles="/home/user/Documents/presla-theme/static"
+# StaticFiles="./static"
 
 ## Optional, define your own Executors for running code from the presentation
-# CustomExecutors="/home/user/Documents/presla-executors"
+# CustomExecutors="./presla-executors"
 
 ## Can be set to "debug", defaults to "warning": Set log level to debug
 # LogLevel="debug"
@@ -311,7 +311,7 @@ ListenOn="localhost:8080"
 ## This way you can specify a template used for only one presentation
 # [[Presentations]]
 # PresentationName="my_presentation"
-# TemplatePath="/home/user/Documents/presla-theme-my-presentation/static"
-# StaticFiles="/home/user/Documents/presla-theme-my-presentation/templates"
+# TemplatePath="./presla-theme-my-presentation/static"
+# StaticFiles="./presla-theme-my-presentation/templates"
 `
 }
