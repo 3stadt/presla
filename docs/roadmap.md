@@ -6,6 +6,11 @@ Expect changes as this is a spare time project.
 
 ## v0.0.11
 
+- Template download from [presla-templates](https://github.com/3stadt/presla-templates) via console command
+- Configuration via webbrowser
+
+## v0.0.12
+
 - More executors
 - One alternative template
 - More beautiful default template
@@ -13,8 +18,6 @@ Expect changes as this is a spare time project.
 - Default and alternative templates downloadable via zip from default presentation // generally better docs on custom templates
 - Better [decktape](https://github.com/astefanutti/decktape) integration or documentation for PDF generation
 - Some sort of [slideshare](https://slideshare.net)/[speakerdeck](https://speakerdeck.com/) integration of documentation
-
-> After v0.0.7 it's currently planned to gather feedback and gain some users.
 
 ---
 
