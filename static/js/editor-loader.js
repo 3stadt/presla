@@ -129,9 +129,14 @@ slideshow.on('showSlide', function () {
         editor.on('click', function (evt) {
             sendCursorPosition(editor.getCursorPosition(), editorId);
         });
-
+        outputPre.onscroll = function(){
+            if (!document.hasFocus()) { // prevent event listener loop
+                return
+            }
+            sendLogScrollUpdate(editorId, outputPre.scrollTop)
+        };
         textarea.addEventListener('keydown', function (evt) {
-            if (document.activeElement !== textarea) { // prevent event listener loop
+            if (!document.hasFocus()) { // prevent event listener loop
                 return
             }
             sendKeyEvent(editor.getValue(), evt, editorId);
@@ -141,7 +146,7 @@ slideshow.on('showSlide', function () {
         });
 
         textarea.addEventListener('keyup', function (evt) {
-            if (document.activeElement !== textarea) { // prevent event listener loop
+            if (!document.hasFocus()) { // prevent event listener loop
                 return
             }
             sendKeyEvent(editor.getValue(), evt, editorId);
@@ -152,7 +157,7 @@ slideshow.on('showSlide', function () {
 
         if (cmdLine) {
             cmdLine.addEventListener('keyup', function (evt) {
-                if (document.activeElement !== cmdLine) { // prevent event listener loop
+                if (!document.hasFocus()) { // prevent event listener loop
                     return
                 }
                 sendCmdKeyEvent(cmdLine.value, editorId);
@@ -177,7 +182,10 @@ slideshow.on('showSlide', function () {
                 }
                 outputPre.scrollTop = outputPre.scrollHeight;
             }
-            else if (editorId === event.editorId && document.activeElement !== textarea) {
+            else if (editorId === event.editorId && event.type === 'logscrollupdate' && !document.hasFocus()) {
+                outputPre.scrollTop = event.scrollTop;
+            }
+            else if (editorId === event.editorId && !document.hasFocus()) {
                 if (event.type === 'click') {
                     editor.selection.moveTo(event.row, event.column);
                     return;

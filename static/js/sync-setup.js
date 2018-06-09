@@ -102,3 +102,12 @@ function sendLogUpdate(editorId, clear, stdout, stderr){
     };
     ws.send(JSON.stringify(event));
 }
+
+function sendLogScrollUpdate(editorId, scrollTop){
+    let event = {
+        type: 'logscrollupdate',
+        editorId: editorId,
+        scrollTop: scrollTop,
+    };
+    ws.send(JSON.stringify(event));
+}
