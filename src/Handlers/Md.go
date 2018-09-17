@@ -6,6 +6,7 @@ import (
 	"github.com/labstack/echo"
 	"github.com/spf13/afero"
 	"html/template"
+	"io/ioutil"
 	"net/http"
 	"path/filepath"
 	"strings"
@@ -50,10 +51,19 @@ func (conf *Conf) showInfo(c echo.Context) error {
 		"TempDir":       tmpDir,
 	}
 
-	tpl, err := Asset("templates/info.md")
+	var tpl []byte
+
+	if conf.TemplatePath != "" && fileExists(conf.TemplatePath+"/info.md") {
+		// Load from root of template folder if it exists. https://github.com/3stadt/presla/issues/63
+		tpl, err = ioutil.ReadFile(conf.TemplatePath + "/info.md")
+	} else {
+		tpl, err = Asset("templates/info.md")
+	}
+
 	if err != nil {
 		return err
 	}
+
 	return render(c, tpl, data)
 }
 
